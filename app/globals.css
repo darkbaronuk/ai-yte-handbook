@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0f172a;
+  --paper: #fafaf7;
+  --accent: #0f766e;
+}
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose h1, .prose h2, .prose h3 {
+  scroll-margin-top: 6rem;
+}
+.prose table {
+  font-size: 0.9rem;
+}
+.prose blockquote {
+  border-left-color: var(--accent);
+}
