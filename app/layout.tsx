@@ -26,6 +26,7 @@ export default function RootLayout({
               <Link href="/ma-tran" className="hover:text-accent">Ma trận</Link>
               <Link href="/dashboard" className="hover:text-accent">Tiến độ</Link>
               <Link href="/dong-gop" className="hover:text-accent">Đóng góp</Link>
+              <a href="/admin/" className="text-accent font-semibold hover:underline">✏️ Soạn</a>
             </nav>
           </div>
         </header>

@@ -25,22 +25,41 @@ export default function DongGop() {
         </li>
       </ul>
 
-      <h2>Quy trình sửa một chương</h2>
+      <h2>Ba cách chỉnh sửa — chọn theo thói quen</h2>
+      <p>Mỗi trang chương có sẵn 3 nút. Chọn cái bạn thấy tiện nhất.</p>
+
+      <h3>1. ✨ Soạn trong CMS (không cần biết Git)</h3>
+      <p>
+        Mở trực tiếp <a href="/admin/">ai-yte.vn/admin</a>. Login bằng GitHub.
+        Thấy danh sách 18 chương dạng bảng, lọc theo trạng thái / phần. Bấm
+        chương → editor Markdown có preview, upload ảnh kéo thả, form frontmatter
+        dạng dropdown. Save → CMS tự tạo branch và PR, không cần biết Git.
+      </p>
+      <p>
+        Có sẵn panel <b><a href="/admin/ai.html">✨ Chấp bút với AI</a></b> —
+        dán đoạn Markdown, chọn nhiệm vụ (viết tiếp / tóm tắt / dịch / chuẩn
+        hoá thuật ngữ), AI trả về kết quả để bạn sao chép về CMS. API key của
+        bạn lưu ở trình duyệt, không gửi lên server ai-yte.vn.
+      </p>
+
+      <h3>2. 💻 VS Code trong trình duyệt (github.dev)</h3>
+      <p>
+        Bấm nút <b>Mở VS Code trong trình duyệt</b> trên mỗi chương — GitHub mở
+        VS Code full trong tab mới, có sidebar duyệt file, search toàn repo,
+        markdown preview. Nếu bạn có GitHub Copilot, Copilot Chat hoạt động
+        ngay. Commit thuận tiện cho ai biết VS Code.
+      </p>
+
+      <h3>3. Sửa nhanh trên GitHub</h3>
+      <p>
+        Editor cổ điển — chỉ textarea. Dùng khi cần sửa 1–2 dòng.
+      </p>
+
+      <h2>Quy trình chung sau khi chỉnh sửa</h2>
       <ol>
-        <li>Vào chương muốn sửa từ mục lục.</li>
-        <li>
-          Bấm nút <b>✏️ Sửa chương này trên GitHub</b>. GitHub tự tạo branch
-          mới.
-        </li>
-        <li>Chỉnh sửa Markdown ngay trên web GitHub, viết mô tả thay đổi.</li>
-        <li>
-          Bấm <b>Propose changes</b> → GitHub tạo Pull Request.
-        </li>
-        <li>
-          Vercel tự tạo <b>preview URL</b> cho PR đó, bạn xem trực tiếp bản
-          render trước khi merge.
-        </li>
-        <li>Coordinator review, comment theo dòng, merge khi ổn.</li>
+        <li>Dù chọn cách nào ở trên, thay đổi sẽ đi đến một Pull Request.</li>
+        <li>Vercel tự tạo <b>preview URL</b> cho PR — xem bản render trước merge.</li>
+        <li>Reviewer comment theo dòng, approve. Coordinator merge → tự deploy.</li>
       </ol>
 
       <h2>Frontmatter mỗi chương</h2>

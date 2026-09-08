@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>✨ Chấp bút với AI — Cẩm nang AI Y tế</title>
+    <style>
+      :root { --ink:#0f172a; --paper:#fafaf7; --accent:#0f766e; }
+      * { box-sizing: border-box; }
+      body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; margin:0; background:var(--paper); color:var(--ink); }
+      .wrap { max-width: 820px; margin: 24px auto; padding: 0 20px; }
+      h1 { font-size: 22px; margin: 0 0 6px; }
+      p.sub { color:#64748b; margin:0 0 20px; font-size:14px; }
+      .card { background:white; border:1px solid #e2e8f0; border-radius:10px; padding:20px; margin-bottom:16px; }
+      label { display:block; font-size:12px; text-transform:uppercase; color:#64748b; margin-bottom:6px; letter-spacing:0.05em; }
+      select, textarea, input { width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px; font-family:inherit; }
+      textarea { min-height: 120px; resize:vertical; }
+      .row { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+      button { background:var(--accent); color:white; border:none; padding:10px 18px; border-radius:6px; font-size:14px; font-weight:600; cursor:pointer; }
+      button.secondary { background:white; color:var(--ink); border:1px solid #cbd5e1; }
+      button:disabled { opacity:0.5; cursor:not-allowed; }
+      .out { background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; padding:14px; margin-top:12px; white-space:pre-wrap; font-family: "SF Mono", Consolas, monospace; font-size:13px; line-height:1.6; min-height:80px; }
+      .badge { display:inline-block; background:#f0fdfa; color:var(--accent); padding:2px 8px; border-radius:4px; font-size:12px; font-weight:600; }
+      .warn { background:#fef3c7; color:#78350f; padding:10px 14px; border-radius:6px; font-size:13px; margin-bottom:12px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>✨ Chấp bút với AI <span class="badge">beta</span></h1>
+      <p class="sub">Panel này giúp bạn nhờ AI viết tiếp, tóm tắt, dịch hoặc chuẩn hoá thuật ngữ y tế. Sao chép kết quả và dán về CMS.</p>
+
+      <div class="warn" id="keyWarn" style="display:none">
+        Chưa có API key AI. Bấm <b>Đặt API key</b> để lưu vào trình duyệt (localStorage, chỉ ở máy bạn).
+      </div>
+
+      <div class="card">
+        <div class="row" style="margin-bottom:12px">
+          <div>
+            <label>Nhà cung cấp</label>
+            <select id="provider">
+              <option value="perplexity">Perplexity (sonar-pro, có nguồn web)</option>
+              <option value="anthropic">Anthropic (Claude Sonnet 4.5)</option>
+              <option value="openai">OpenAI (GPT-4o / GPT-5)</option>
+            </select>
+          </div>
+          <div>
+            <label>Nhiệm vụ</label>
+            <select id="task">
+              <option>Viết tiếp đoạn này (200–400 chữ, giọng cẩm nang)</option>
+              <option>Tóm tắt đoạn dài thành 3–5 gạch đầu dòng</option>
+              <option>Dịch sang tiếng Anh học thuật</option>
+              <option>Kiểm tra thuật ngữ y tế và đề xuất chuẩn hoá theo Bộ Y tế</option>
+              <option>Đề xuất case Việt Nam minh hoạ (có nguồn)</option>
+              <option>Viết rubric chấm cho Lab (5 tiêu chí)</option>
+              <option>Kiểm tra tính chính xác lâm sàng (fact-check)</option>
+              <option>Đề xuất tài liệu tham khảo (Việt Nam + quốc tế)</option>
+            </select>
+          </div>
+        </div>
+
+        <label>Đoạn nguồn / ngữ cảnh</label>
+        <textarea id="ctx" placeholder="Dán đoạn Markdown bạn muốn AI xử lý, hoặc mô tả bối cảnh chương..."></textarea>
+
+        <div style="margin-top:14px; display:flex; gap:8px; flex-wrap:wrap">
+          <button id="run">Chạy AI</button>
+          <button class="secondary" id="setKey">Đặt API key</button>
+          <button class="secondary" id="copy">Sao chép kết quả</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <label>Kết quả</label>
+        <div class="out" id="out">Kết quả AI sẽ hiện ở đây.</div>
+      </div>
+
+      <p style="color:#94a3b8; font-size:12px; text-align:center">
+        API key lưu ở trình duyệt bạn, không gửi lên server ai-yte.vn. Không nhập dữ liệu bệnh nhân định danh vào đây.
+      </p>
+    </div>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const KEY_PREFIX = "aiyte_key_";
+
+      function getKey(prov) { return localStorage.getItem(KEY_PREFIX + prov) || ""; }
+      function setKey(prov, k) { localStorage.setItem(KEY_PREFIX + prov, k); }
+
+      function refreshWarn() {
+        const p = $("provider").value;
+        $("keyWarn").style.display = getKey(p) ? "none" : "block";
+      }
+      $("provider").addEventListener("change", refreshWarn);
+      refreshWarn();
+
+      $("setKey").onclick = () => {
+        const p = $("provider").value;
+        const cur = getKey(p);
+        const k = prompt(`Dán API key cho ${p} (lưu ở máy bạn):`, cur);
+        if (k !== null) { setKey(p, k.trim()); refreshWarn(); alert("Đã lưu."); }
+      };
+
+      $("copy").onclick = () => {
+        navigator.clipboard.writeText($("out").innerText);
+        const b = $("copy"); const t = b.innerText; b.innerText = "Đã sao chép"; setTimeout(() => b.innerText = t, 1500);
+      };
+
+      const SYSTEM = `Bạn là biên tập viên cẩm nang AI Y tế Việt Nam.
+- Giọng: cẩm nang thực hành, không hàn lâm, không marketing.
+- Ưu tiên thuật ngữ chuẩn Bộ Y tế Việt Nam.
+- Trích dẫn nguồn khi đưa số liệu.
+- Không đưa lời khuyên chẩn đoán/điều trị trực tiếp cho bệnh nhân.`;
+
+      async function callPerplexity(key, task, ctx) {
+        const r = await fetch("https://api.perplexity.ai/chat/completions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
+          body: JSON.stringify({
+            model: "sonar-pro",
+            messages: [
+              { role: "system", content: SYSTEM },
+              { role: "user", content: `Nhiệm vụ: ${task}\n\nĐoạn nguồn:\n${ctx}` }
+            ]
+          })
+        });
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.error?.message || JSON.stringify(j));
+        return j.choices[0].message.content;
+      }
+
+      async function callAnthropic(key, task, ctx) {
+        const r = await fetch("https://api.anthropic.com/v1/messages", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-api-key": key,
+            "anthropic-version": "2023-06-01",
+            "anthropic-dangerous-direct-browser-access": "true"
+          },
+          body: JSON.stringify({
+            model: "claude-sonnet-4-5",
+            max_tokens: 2000,
+            system: SYSTEM,
+            messages: [{ role: "user", content: `Nhiệm vụ: ${task}\n\nĐoạn nguồn:\n${ctx}` }]
+          })
+        });
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.error?.message || JSON.stringify(j));
+        return j.content.map(c => c.text).join("\n");
+      }
+
+      async function callOpenAI(key, task, ctx) {
+        const r = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
+          body: JSON.stringify({
+            model: "gpt-4o",
+            messages: [
+              { role: "system", content: SYSTEM },
+              { role: "user", content: `Nhiệm vụ: ${task}\n\nĐoạn nguồn:\n${ctx}` }
+            ]
+          })
+        });
+        const j = await r.json();
+        if (!r.ok) throw new Error(j.error?.message || JSON.stringify(j));
+        return j.choices[0].message.content;
+      }
+
+      $("run").onclick = async () => {
+        const prov = $("provider").value;
+        const key = getKey(prov);
+        if (!key) return alert("Chưa có API key. Bấm 'Đặt API key' trước.");
+        const task = $("task").value;
+        const ctx = $("ctx").value.trim();
+        if (!ctx) return alert("Nhập đoạn nguồn hoặc ngữ cảnh trước.");
+        $("run").disabled = true; $("out").innerText = "⏳ AI đang viết...";
+        try {
+          const fn = prov === "perplexity" ? callPerplexity : prov === "anthropic" ? callAnthropic : callOpenAI;
+          const out = await fn(key, task, ctx);
+          $("out").innerText = out;
+        } catch (e) {
+          $("out").innerText = "Lỗi: " + e.message;
+        } finally {
+          $("run").disabled = false;
+        }
+      };
+    </script>
+  </body>
+</html>

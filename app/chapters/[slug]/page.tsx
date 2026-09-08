@@ -4,6 +4,8 @@ import {
   getChapter,
   getChapterSlugs,
   editUrl,
+  vscodeDevUrl,
+  cmsUrl,
   blobUrl,
   REPO_URL,
 } from "@/lib/chapters";
@@ -64,31 +66,53 @@ export default async function ChapterPage({
             <MetaItem label="Cập nhật" value={chapter.updated} />
           )}
         </dl>
-        <div className="mt-6 flex flex-wrap gap-2">
-          <a
-            href={editUrl(chapter.rawPath)}
-            target="_blank"
-            rel="noopener"
-            className="px-4 py-2 bg-accent text-white text-sm rounded-md hover:opacity-90"
-          >
-            ✏️ Sửa chương này trên GitHub
-          </a>
-          <a
-            href={blobUrl(chapter.rawPath)}
-            target="_blank"
-            rel="noopener"
-            className="px-4 py-2 border border-slate-300 text-sm rounded-md hover:border-accent"
-          >
-            Xem lịch sử
-          </a>
-          <a
-            href={issueUrl}
-            target="_blank"
-            rel="noopener"
-            className="px-4 py-2 border border-slate-300 text-sm rounded-md hover:border-accent"
-          >
-            💬 Mở góp ý
-          </a>
+        <div className="mt-6">
+          <p className="text-xs uppercase tracking-wider text-slate-400 mb-2">
+            Chọn cách chỉnh sửa
+          </p>
+          <div className="flex flex-wrap gap-2">
+            <a
+              href={cmsUrl(chapter.slug)}
+              className="px-4 py-2 bg-accent text-white text-sm rounded-md hover:opacity-90"
+              title="Editor gắn trên site, có AI chấp bút"
+            >
+              ✨ Soạn trong CMS (có AI)
+            </a>
+            <a
+              href={vscodeDevUrl(chapter.rawPath)}
+              target="_blank"
+              rel="noopener"
+              className="px-4 py-2 bg-slate-900 text-white text-sm rounded-md hover:opacity-90"
+              title="VS Code trong trình duyệt, dùng Copilot nếu có"
+            >
+              💻 Mở VS Code trong trình duyệt
+            </a>
+            <a
+              href={editUrl(chapter.rawPath)}
+              target="_blank"
+              rel="noopener"
+              className="px-4 py-2 border border-slate-300 text-sm rounded-md hover:border-accent"
+              title="Editor cơ bản của GitHub"
+            >
+              Sửa nhanh trên GitHub
+            </a>
+            <a
+              href={blobUrl(chapter.rawPath)}
+              target="_blank"
+              rel="noopener"
+              className="px-4 py-2 border border-slate-300 text-sm rounded-md hover:border-accent"
+            >
+              Xem lịch sử
+            </a>
+            <a
+              href={issueUrl}
+              target="_blank"
+              rel="noopener"
+              className="px-4 py-2 border border-slate-300 text-sm rounded-md hover:border-accent"
+            >
+              💬 Mở góp ý
+            </a>
+          </div>
         </div>
       </header>
 

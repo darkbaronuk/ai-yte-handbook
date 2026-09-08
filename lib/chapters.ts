@@ -35,8 +35,19 @@ const CONTENT_DIR = path.join(process.cwd(), "content", "chapters");
 export const REPO_URL = "https://github.com/darkbaronuk/ai-yte-handbook";
 export const REPO_BRANCH = "main";
 
+// Editor cổ điển của GitHub — chỉ textarea, không AI
 export function editUrl(rel: string): string {
   return `${REPO_URL}/edit/${REPO_BRANCH}/${rel}`;
+}
+
+// VS Code trong trình duyệt — sidebar, search, preview, Copilot nếu có sub
+export function vscodeDevUrl(rel: string): string {
+  return `https://github.dev/darkbaronuk/ai-yte-handbook/blob/${REPO_BRANCH}/${rel}`;
+}
+
+// CMS gắn trên chính site — form đẹp, có AI chấp bút
+export function cmsUrl(slug: string): string {
+  return `/admin/#/collections/chapters/entries/${slug}`;
 }
 
 export function blobUrl(rel: string): string {

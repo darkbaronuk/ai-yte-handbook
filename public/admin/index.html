@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Cẩm nang AI Y tế — Bảng biên tập</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        // Đăng ký widget AI Chấp bút — chèn nút vào toolbar editor
+        if (window.CMS) {
+          window.CMS.registerEditorComponent({
+            id: "ai-assist",
+            label: "✨ Chấp bút với AI",
+            fields: [
+              {
+                name: "prompt",
+                label: "Bạn muốn AI làm gì?",
+                widget: "select",
+                options: [
+                  "Viết tiếp đoạn này (200–400 chữ, giọng cẩm nang)",
+                  "Tóm tắt đoạn dài thành 3–5 gạch đầu dòng",
+                  "Dịch sang tiếng Anh học thuật",
+                  "Kiểm tra thuật ngữ y tế và đề xuất chuẩn hóa",
+                  "Đề xuất case Việt Nam minh hoạ",
+                  "Viết rubric chấm cho Lab này",
+                ],
+              },
+              { name: "context", label: "Ngữ cảnh / đoạn nguồn", widget: "text" },
+            ],
+            pattern: /^<!-- ai-assist:(.+?) -->\n([\s\S]*?)<!-- \/ai-assist -->$/,
+            fromBlock: (m) => ({ prompt: m[1], context: m[2] }),
+            toBlock: (d) =>
+              `<!-- ai-assist:${d.prompt} -->\n${d.context || ""}\n<!-- /ai-assist -->`,
+            toPreview: (d) =>
+              `<div style="border-left:4px solid #0f766e;background:#f0fdfa;padding:12px 16px;margin:16px 0;border-radius:6px"><b>✨ Chấp bút với AI</b><br><i>${d.prompt}</i><br><br>${d.context || ""}</div>`,
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
