@@ -85,9 +85,10 @@ async function saveToSheet(row: Record<string, unknown>) {
     return;
   }
   try {
+    // Apps Script quirk: gửi text/plain để tránh CORS preflight + redirect mất POST body
     await fetch(SHEET_WEBHOOK, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(row),
       redirect: "follow",
     });
