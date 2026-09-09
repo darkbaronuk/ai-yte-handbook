@@ -4,8 +4,7 @@ backend:
   branch: main
   # Sveltia CMS dùng GitHub OAuth Device Flow (không cần dựng OAuth server riêng)
   auth_type: pkce
-  app_id: Ov23liXXXXXXXXXXXXXX
-  # ↑ THAY BẰNG GitHub OAuth App Client ID sau (xem hướng dẫn cuối phiên)
+  app_id: Ov23libCG3TQ2aCkXIiW
 
 publish_mode: editorial_workflow
 # ↑ Mọi save → tự tạo branch cms/... → mở Pull Request, không đụng thẳng main
