@@ -22,8 +22,12 @@ export function getGlossary(): GlossaryEntry[] {
     return cache;
   }
   const raw = fs.readFileSync(GLOSSARY_PATH, "utf8");
-  const parsed = yaml.load(raw) as GlossaryEntry[];
-  cache = (parsed || []).map((e) => ({
+  const parsed = yaml.load(raw) as GlossaryEntry[] | { items?: GlossaryEntry[] };
+  // Hỗ trợ 2 format: top-level array (lịch sử) hoặc { items: [...] } (CMS cần key wrapper)
+  const arr: GlossaryEntry[] = Array.isArray(parsed)
+    ? parsed
+    : (parsed?.items ?? []);
+  cache = arr.map((e) => ({
     ...e,
     long: (e.long || "").trim(),
     short: (e.short || "").trim(),

@@ -6,6 +6,7 @@
 
 # ===== Nền tảng học máy =====
 
+items:
 - slug: ai
   vi: Trí tuệ nhân tạo
   en: Artificial Intelligence
@@ -15,7 +16,6 @@
     có khả năng thực hiện các nhiệm vụ vốn đòi hỏi trí tuệ con người: nhận dạng, hiểu ngôn ngữ,
     lập luận, ra quyết định, học từ kinh nghiệm. Trong y tế, AI được ứng dụng ở nhiều tầng, từ
     đọc ảnh chẩn đoán, hỗ trợ quyết định lâm sàng, đến quản trị vận hành bệnh viện.
-
 - slug: ml
   vi: Học máy
   en: Machine Learning (ML)
@@ -25,7 +25,6 @@
     và cải thiện hiệu năng theo thời gian mà không cần lập trình rõ ràng cho từng trường hợp.
     Các dòng chính gồm học có giám sát (supervised), không giám sát (unsupervised), và tăng cường
     (reinforcement).
-
 - slug: deep-learning
   vi: Học sâu
   en: Deep Learning
@@ -35,7 +34,6 @@
     trăm tầng) để tự động học các đặc trưng phân cấp từ dữ liệu thô. Đây là công nghệ cốt lõi
     đứng sau đa số đột phá AI hiện đại: đọc ảnh y khoa, nhận dạng giọng nói, và các mô hình
     ngôn ngữ lớn.
-
 - slug: neural-network
   vi: Mạng nơ-ron
   en: Neural Network
@@ -44,7 +42,6 @@
     Mạng nơ-ron nhân tạo là mô hình tính toán gồm nhiều nút (neuron) tổ chức thành các tầng, kết
     nối với nhau bằng trọng số. Mạng học bằng cách điều chỉnh trọng số qua thuật toán lan truyền
     ngược (backpropagation) để giảm sai số dự đoán.
-
 - slug: transformer
   vi: Kiến trúc Transformer
   en: Transformer
@@ -54,7 +51,6 @@
     All You Need". Điểm cốt lõi là cơ chế self-attention cho phép mô hình đánh giá quan hệ giữa
     mọi cặp phần tử trong chuỗi đầu vào cùng lúc, thay vì tuần tự như RNN. Đây là nền tảng của
     GPT, Claude, Gemini và mọi mô hình ngôn ngữ lớn hiện đại.
-
 - slug: cnn
   vi: Mạng nơ-ron tích chập
   en: Convolutional Neural Network (CNN)
@@ -63,7 +59,6 @@
     CNN là kiến trúc mạng nơ-ron dùng phép tích chập (convolution) để trích xuất đặc trưng cục bộ
     từ hình ảnh. Nó là công nghệ chuẩn cho đọc ảnh y khoa (X-quang, CT, MRI, giải phẫu bệnh) từ
     2015 đến gần đây, khi Vision Transformer bắt đầu cạnh tranh.
-
 - slug: gan
   vi: Mạng đối kháng sinh mẫu
   en: Generative Adversarial Network (GAN)
@@ -73,9 +68,6 @@
     phân biệt (discriminator) đánh giá thật/giả. Qua nhiều vòng, mạng sinh ngày càng giỏi tạo ra
     mẫu giống thật. Trong y tế, GAN được dùng bù dữ liệu hiếm (như XPGAN của VinBrain tạo ảnh
     X-quang COVID).
-
-# ===== Học có/không có giám sát =====
-
 - slug: supervised-learning
   vi: Học có giám sát
   en: Supervised Learning
@@ -83,7 +75,6 @@
   long: |
     Trong học có giám sát, mô hình học từ tập dữ liệu gồm cặp (đầu vào, nhãn đúng). Ví dụ y tế:
     học phân biệt X-quang bình thường/bất thường từ 15.000 ảnh đã được bác sĩ gán nhãn.
-
 - slug: unsupervised-learning
   vi: Học không giám sát
   en: Unsupervised Learning
@@ -91,7 +82,6 @@
   long: |
     Học không giám sát tìm cấu trúc ẩn trong dữ liệu chưa gán nhãn — ví dụ phân cụm bệnh nhân
     theo hồ sơ điều trị, phát hiện bất thường trong dữ liệu vận hành bệnh viện.
-
 - slug: reinforcement-learning
   vi: Học tăng cường
   en: Reinforcement Learning (RL)
@@ -100,7 +90,6 @@
     Trong học tăng cường, tác nhân (agent) học chính sách hành động tối ưu bằng cách thử nghiệm
     và nhận phần thưởng/hình phạt từ môi trường. Ứng dụng y tế đang trong nghiên cứu: liều thuốc
     tối ưu, chính sách điều trị hồi sức, robot phẫu thuật.
-
 - slug: transfer-learning
   vi: Học chuyển giao
   en: Transfer Learning
@@ -109,7 +98,6 @@
     Học chuyển giao lấy một mô hình đã huấn luyện trên dữ liệu lớn (ví dụ ImageNet cho ảnh
     thường) rồi tinh chỉnh cho tác vụ mới (đọc ảnh y khoa). Rất hữu ích khi dữ liệu chuyên biệt
     ít — điều thường gặp trong y tế.
-
 - slug: fine-tuning
   vi: Tinh chỉnh mô hình
   en: Fine-tuning
@@ -118,9 +106,6 @@
     Fine-tuning là quá trình tiếp tục huấn luyện một mô hình đã pre-trained trên tập dữ liệu
     chuyên ngành, để nó chuyển từ "biết tổng quát" thành "giỏi chuyên biệt". Ví dụ: fine-tune
     LLM tổng quát trên tập câu hỏi–đáp y khoa để có chatbot chuyên khoa.
-
-# ===== Mô hình ngôn ngữ và AI sinh tạo =====
-
 - slug: llm
   vi: Mô hình ngôn ngữ lớn
   en: Large Language Model (LLM)
@@ -129,7 +114,6 @@
     LLM là mô hình ngôn ngữ dựa trên kiến trúc Transformer, được huấn luyện trên khối lượng văn
     bản khổng lồ. Các LLM hàng đầu 2026 gồm GPT-6, Claude Opus 5, Gemini 3 Ultra. Trong y tế,
     LLM được dùng làm chatbot triệu chứng, trợ lý viết bệnh án, tóm tắt tài liệu, dịch thuật.
-
 - slug: generative-ai
   vi: AI sinh tạo
   en: Generative AI
@@ -138,7 +122,6 @@
     AI sinh tạo là nhóm mô hình AI tạo ra dữ liệu mới thay vì chỉ phân loại. Bao gồm LLM sinh
     văn bản, mô hình sinh ảnh (Stable Diffusion, DALL-E), sinh giọng nói, sinh video. Đây là
     làn sóng công nghệ chi phối chuyển đổi số y tế từ 2023.
-
 - slug: rag
   vi: Sinh văn bản có truy xuất
   en: Retrieval-Augmented Generation (RAG)
@@ -148,7 +131,6 @@
     truy xuất các đoạn tài liệu liên quan từ kho (ví dụ hướng dẫn điều trị của Bộ Y tế), rồi
     đưa vào ngữ cảnh để LLM sinh trả lời có căn cứ. Đây là kỹ thuật cốt lõi cho mọi chatbot
     y tế có kiểm soát nguồn.
-
 - slug: prompt
   vi: Câu lệnh dẫn
   en: Prompt
@@ -158,7 +140,6 @@
     output. Nghệ thuật viết prompt tốt (prompt engineering) là kỹ năng cốt lõi khi làm việc với
     LLM trong y tế: phải nêu rõ vai trò, ràng buộc an toàn, định dạng đầu ra, và ngữ cảnh bệnh
     nhân nếu có.
-
 - slug: embedding
   vi: Biểu diễn véc-tơ
   en: Embedding
@@ -167,7 +148,6 @@
     Embedding là véc-tơ số nhiều chiều (thường 512–4096) đại diện cho ngữ nghĩa của một đoạn
     văn bản, ảnh, hoặc thực thể. Hai đoạn có ý nghĩa gần nhau sẽ có embedding gần nhau trong
     không gian véc-tơ. Đây là nền của mọi hệ thống tìm kiếm ngữ nghĩa, RAG, và phân cụm.
-
 - slug: vector-db
   vi: Cơ sở dữ liệu véc-tơ
   en: Vector Database
@@ -175,7 +155,6 @@
   long: |
     Vector database (Pinecone, Weaviate, Qdrant, pgvector) lưu hàng triệu embedding và cho phép
     truy vấn "tìm k véc-tơ gần nhất" trong mili giây. Là hạ tầng bắt buộc cho hệ RAG quy mô.
-
 - slug: token
   vi: Token
   en: Token
@@ -184,7 +163,6 @@
     LLM không xử lý ký tự mà xử lý token — đơn vị đã được tokenizer chia. Với tiếng Anh,
     1 token ≈ 4 ký tự ≈ 0,75 từ. Với tiếng Việt có dấu, tokenization thường tốn nhiều token hơn.
     Chi phí gọi API LLM tính theo số token input và output.
-
 - slug: context-window
   vi: Cửa sổ ngữ cảnh
   en: Context Window
@@ -193,7 +171,6 @@
     Context window là giới hạn số token mà LLM xử lý trong một lượt. GPT-4 là 128k, Claude
     Opus 5 là 500k, Gemini 3 lên tới 2 triệu (2026). Ngữ cảnh dài giúp đưa cả bệnh án dài
     hoặc nhiều tài liệu vào prompt cùng lúc.
-
 - slug: hallucination
   vi: Ảo giác
   en: Hallucination
@@ -203,7 +180,6 @@
     liều thuốc sai, trích dẫn nghiên cứu không tồn tại, hoặc mô tả bệnh sai. Kỹ thuật giảm
     hallucination gồm RAG, đối chiếu chéo, chain-of-thought có kiểm soát, và luôn có bác sĩ
     duyệt cuối.
-
 - slug: agent
   vi: Tác nhân AI
   en: AI Agent
@@ -212,9 +188,6 @@
     Khác với chatbot chỉ trả lời từng lượt, AI agent có thể lập kế hoạch, gọi công cụ (API,
     database, phần mềm), phản hồi và điều chỉnh nhiều lần đến khi hoàn thành mục tiêu. Chi tiết
     xem Chương 9.
-
-# ===== AI y tế cụ thể =====
-
 - slug: cdss
   vi: Hệ hỗ trợ quyết định lâm sàng
   en: Clinical Decision Support System (CDSS)
@@ -223,7 +196,6 @@
     CDSS là hệ thống thông tin y tế cung cấp cho bác sĩ, dược sĩ và nhân viên y tế các gợi ý
     dựa trên bằng chứng — cảnh báo tương tác thuốc, gợi ý phác đồ, tính điểm nguy cơ. CDSS
     hiện đại tích hợp AI để cá nhân hóa gợi ý theo bệnh nhân. Xem Chương 6.
-
 - slug: cad
   vi: Hỗ trợ chẩn đoán có máy tính
   en: Computer-Aided Diagnosis (CAD)
@@ -232,7 +204,6 @@
     CAD là phần mềm dùng thuật toán (nay chủ yếu là học sâu) để tự động phát hiện, khoanh vùng
     và định lượng bất thường trên ảnh y khoa. Ứng dụng phổ biến: đọc X-quang phổi, chụp nhũ ảnh,
     nội soi, CT/MRI. Xem Chương 5.
-
 - slug: pacs
   vi: Hệ lưu trữ và truyền ảnh y khoa
   en: Picture Archiving and Communication System (PACS)
@@ -241,7 +212,6 @@
     PACS là hệ thống của khoa Chẩn đoán hình ảnh, lưu trữ và phân phối ảnh DICOM (X-quang, CT,
     MRI, siêu âm) giữa các máy chụp và trạm đọc. Mọi AI đọc ảnh phải tích hợp được với PACS
     theo chuẩn DICOM.
-
 - slug: dicom
   vi: Chuẩn dữ liệu ảnh y khoa
   en: DICOM
@@ -250,7 +220,6 @@
     DICOM (Digital Imaging and Communications in Medicine) là chuẩn toàn cầu cho ảnh y khoa số.
     Một file DICOM chứa ảnh + hàng trăm trường metadata (mã bệnh nhân, loại chụp, tham số máy).
     Mọi thiết bị chẩn đoán hình ảnh hiện đại đều theo chuẩn này.
-
 - slug: emr
   vi: Bệnh án điện tử
   en: Electronic Medical Record (EMR)
@@ -259,7 +228,6 @@
     EMR là hệ thống lưu trữ toàn bộ dữ liệu lâm sàng của bệnh nhân tại một bệnh viện: hành
     chính, tiền sử, khám, chỉ định, đơn thuốc, kết quả cận lâm sàng. Việt Nam đặt mục tiêu 100%
     bệnh viện có EMR đến 2030.
-
 - slug: ehr
   vi: Hồ sơ sức khỏe điện tử
   en: Electronic Health Record (EHR)
@@ -267,7 +235,6 @@
   long: |
     EHR rộng hơn EMR: dữ liệu di chuyển được giữa các cơ sở, có thể tích hợp dữ liệu bệnh nhân
     tự khai và thiết bị đo cá nhân. VietPHR là một hướng đi PHR/EHR cho Việt Nam.
-
 - slug: phr
   vi: Hồ sơ sức khỏe cá nhân
   en: Personal Health Record (PHR)
@@ -276,7 +243,6 @@
     PHR là bản ghi sức khỏe do bệnh nhân sở hữu và kiểm soát. Bệnh nhân quyết định chia sẻ với
     bác sĩ nào, cơ sở nào. PHR tốt cho phép nhập tay, đồng bộ từ EMR bệnh viện, và tiếp nhận
     dữ liệu từ wearable.
-
 - slug: fhir
   vi: Chuẩn dữ liệu y tế FHIR
   en: HL7 FHIR
@@ -285,7 +251,6 @@
     FHIR (Fast Healthcare Interoperability Resources) do HL7 phát hành, là chuẩn dữ liệu y tế
     thế hệ mới dùng REST API và JSON/XML. Đơn vị dữ liệu là "resource" (Patient, Observation,
     MedicationRequest…). Là chuẩn được khuyến nghị cho mọi hệ thống EMR/EHR mới ở Việt Nam.
-
 - slug: hl7
   vi: Chuẩn dữ liệu y tế HL7
   en: HL7
@@ -293,7 +258,6 @@
   long: |
     HL7 (Health Level 7) là tổ chức phi lợi nhuận phát hành nhiều chuẩn dữ liệu y tế từ thập
     niên 1980. HL7 v2 vẫn phổ biến trong tích hợp hệ thống bệnh viện; HL7 FHIR là thế hệ mới.
-
 - slug: telemedicine
   vi: Y tế từ xa
   en: Telemedicine
@@ -302,9 +266,6 @@
     Telemedicine là các hoạt động y tế thực hiện qua công nghệ viễn thông, không đòi hỏi bệnh
     nhân và bác sĩ cùng địa điểm. Bao gồm hội chẩn từ xa, khám tư vấn video, theo dõi bệnh
     mạn tính qua wearable, dạy học từ xa cho y sinh.
-
-# ===== Đạo đức và tuân thủ =====
-
 - slug: hipaa
   vi: Đạo luật HIPAA
   en: HIPAA
@@ -313,7 +274,6 @@
     HIPAA (Health Insurance Portability and Accountability Act) là chuẩn bảo mật dữ liệu y tế
     tại Mỹ từ 1996. Quy định các đơn vị y tế phải bảo vệ Protected Health Information (PHI).
     Việt Nam chưa có luật tương đương chuyên biệt cho y tế.
-
 - slug: gdpr
   vi: Quy định GDPR
   en: GDPR
@@ -322,7 +282,6 @@
     GDPR (General Data Protection Regulation) là quy định bảo vệ dữ liệu cá nhân của EU từ
     2018. Áp dụng cho mọi tổ chức xử lý dữ liệu công dân EU, kể cả ngoài EU. Có ảnh hưởng
     lớn đến các nghiên cứu y sinh đa quốc gia và các nhà cung cấp AI y tế toàn cầu.
-
 - slug: pdpd
   vi: Nghị định 13/2023/NĐ-CP
   en: Vietnam PDPD
@@ -331,7 +290,6 @@
     Nghị định 13/2023/NĐ-CP là văn bản pháp lý đầu tiên của Việt Nam quy định về bảo vệ dữ liệu
     cá nhân. Dữ liệu sức khỏe được xếp là dữ liệu cá nhân nhạy cảm, xử lý phải có sự đồng ý rõ
     ràng của chủ thể dữ liệu.
-
 - slug: fda-samd
   vi: SaMD của FDA
   en: FDA Software as a Medical Device
@@ -340,7 +298,6 @@
     FDA Hoa Kỳ phân loại phần mềm y tế (SaMD) theo mức rủi ro và yêu cầu phê duyệt tương ứng.
     Hầu hết AI đọc ảnh chẩn đoán rơi vào Class II (510(k) clearance). Nhiều AI Việt Nam (như
     DrAid) đang theo đuổi 510(k) để mở đường sang thị trường Mỹ.
-
 - slug: ce-mark
   vi: Chứng nhận CE
   en: CE Mark
@@ -349,9 +306,6 @@
     CE Mark là dấu chứng nhận hàng hóa đạt các quy chuẩn của EU. Với thiết bị y tế, CE Mark
     được cấp theo Medical Device Regulation (MDR) mới có hiệu lực 2021. AI y tế thường thuộc
     Class IIa hoặc IIb, phải qua Notified Body kiểm định.
-
-# ===== Đánh giá và triển khai =====
-
 - slug: auc
   vi: Diện tích dưới đường ROC
   en: Area Under the ROC Curve (AUC)
@@ -360,7 +314,6 @@
     AUC là chỉ số phổ biến để đánh giá mô hình phân loại y khoa. AUC = 1 là hoàn hảo, AUC =
     0,5 là ngẫu nhiên. AUC > 0,9 thường được coi là tốt cho ứng dụng lâm sàng, nhưng phải
     kết hợp thêm độ nhạy/đặc hiệu ở ngưỡng vận hành.
-
 - slug: sensitivity-specificity
   vi: Độ nhạy và độ đặc hiệu
   en: Sensitivity & Specificity
@@ -369,7 +322,6 @@
     Độ nhạy = tỷ lệ phát hiện đúng ca bệnh. Độ đặc hiệu = tỷ lệ loại trừ đúng ca không bệnh.
     Hai chỉ số này đánh đổi nhau qua ngưỡng phân loại. Trong sàng lọc, ưu tiên nhạy cao. Trong
     chẩn đoán xác định, ưu tiên đặc hiệu cao.
-
 - slug: ppv-npv
   vi: Giá trị tiên đoán dương và âm
   en: PPV & NPV
@@ -378,7 +330,6 @@
     PPV (Positive Predictive Value) = xác suất bệnh nhân thật sự có bệnh khi kết quả xét
     nghiệm dương. NPV = tương ứng cho kết quả âm. Cả hai phụ thuộc vào tỷ lệ mắc bệnh trong
     quần thể — quan trọng khi diễn giải AI sàng lọc.
-
 - slug: llm-as-judge
   vi: LLM làm giám khảo
   en: LLM-as-Judge
@@ -387,9 +338,6 @@
     LLM-as-Judge là kỹ thuật đánh giá tự động: đưa cho một LLM mạnh (thường là GPT-6 hoặc
     Claude Opus 5) một cặp câu hỏi-trả lời và rubric, yêu cầu chấm điểm. Rẻ và nhanh hơn thuê
     người, nhưng phải kiểm định lại bằng bộ mẫu người chấm.
-
-# ===== Hạ tầng =====
-
 - slug: gpu
   vi: Card đồ họa
   en: GPU
@@ -398,7 +346,6 @@
     GPU (Graphics Processing Unit) ban đầu dành cho đồ họa, nay là phần cứng chuẩn cho AI.
     NVIDIA thống trị thị trường với dòng chuyên dụng: RTX 6000 Ada/Blackwell cho workstation,
     H100/H200 cho datacenter, và các dòng consumer RTX 4090/5090.
-
 - slug: rtx-6000
   vi: NVIDIA RTX 6000
   en: NVIDIA RTX 6000
@@ -406,7 +353,6 @@
   long: |
     RTX 6000 Ada Generation có 48GB VRAM, đủ chạy các LLM 70B ở dạng đã lượng tử hóa. Phiên bản
     Blackwell (2025) tăng lên 96GB VRAM và cải thiện đáng kể hiệu năng inference. Xem Chương 13.
-
 - slug: h100
   vi: NVIDIA H100
   en: NVIDIA H100
@@ -415,7 +361,6 @@
     H100 là GPU datacenter đầu bảng của NVIDIA từ 2022, với 80GB HBM3 và Transformer Engine
     tối ưu cho LLM. Giá đơn cỡ 30.000 USD/chiếc và thường bán theo cụm DGX. Không phù hợp
     workstation lab nhỏ ở Việt Nam.
-
 - slug: quantization
   vi: Lượng tử hóa mô hình
   en: Quantization
@@ -424,7 +369,6 @@
     Quantization giảm độ chính xác trọng số mô hình từ FP32 xuống FP16, INT8, hoặc thậm chí
     INT4. Đánh đổi: tiết kiệm bộ nhớ và tăng tốc, nhưng giảm nhẹ chất lượng. Là kỹ thuật cần
     thiết để chạy LLM lớn trên GPU workstation.
-
 - slug: inference
   vi: Suy luận
   en: Inference
@@ -433,9 +377,6 @@
     Inference là công đoạn sau khi mô hình đã huấn luyện: đưa dữ liệu mới vào, mô hình trả ra
     kết quả. Chi phí và tốc độ inference quyết định tính khả thi triển khai lâm sàng — một mô
     hình đọc ảnh phải trả kết quả trong vài giây, không phải vài phút.
-
-# ===== Các thuật ngữ liên quan an toàn/tương lai =====
-
 - slug: agi
   vi: Trí tuệ nhân tạo tổng quát
   en: Artificial General Intelligence (AGI)
@@ -444,7 +385,6 @@
     AGI là khái niệm về AI có khả năng suy luận, học và giải quyết vấn đề ở mức tương đương
     hoặc vượt người trong hầu hết lĩnh vực. GPT-6 Astra (OpenAI, 2026) là bước gần AGI đầu
     tiên có công bố chính thức. Xem Chương 15.
-
 - slug: alignment
   vi: Căn chỉnh AI
   en: AI Alignment
@@ -453,7 +393,6 @@
     Alignment là bài toán trung tâm của AI an toàn: làm sao đảm bảo AI mạnh hành động phù hợp
     ý định người dùng, không lệch mục tiêu, không lừa dối, không gây hại. Đặc biệt cấp bách
     khi AI tiến gần AGI.
-
 - slug: red-teaming
   vi: Kiểm thử đối kháng
   en: Red-Teaming
@@ -462,16 +401,14 @@
     Red-teaming là quy trình có nhóm chuyên gia đóng vai kẻ tấn công/dùng sai để tìm lỗ hổng
     hệ thống AI: prompt injection, hallucination gây hại, thiên kiến. Bắt buộc trước khi triển
     khai AI trong bối cảnh lâm sàng.
-
 - slug: model-card
   vi: Thẻ mô tả mô hình
   en: Model Card
-  short: "Tài liệu mô tả tóm tắt mô hình AI: dữ liệu huấn luyện, hiệu năng, giới hạn, đạo đức."
+  short: 'Tài liệu mô tả tóm tắt mô hình AI: dữ liệu huấn luyện, hiệu năng, giới hạn, đạo đức.'
   long: |
     Model card là chuẩn tài liệu do Google/Mitchell (2019) đề xuất, mô tả mô hình AI theo
     bảng nhất quán: mục đích, dữ liệu, hiệu năng phân theo nhóm nhân khẩu, giới hạn, khuyến
     cáo dùng. Nay là chuẩn bắt buộc trong xuất bản AI y tế.
-
 - slug: foundation-model
   vi: Mô hình nền
   en: Foundation Model
@@ -480,7 +417,6 @@
     Foundation model là mô hình lớn (thường LLM hoặc multimodal) huấn luyện tự giám sát
     trên khối dữ liệu lớn, sau đó tinh chỉnh cho tác vụ cụ thể. GPT-4, Claude, Gemini,
     LLaMA đều là foundation model. Đặc điểm: khả năng chuyển giao mạnh, nhưng khó kiểm soát.
-
 - slug: instruction-tuning
   vi: Tinh chỉnh theo hướng dẫn
   en: Instruction Tuning
@@ -490,7 +426,6 @@
     foundation model, giúp mô hình trả lời đúng ý người dùng thay vì tiếp tục sinh văn bản
     ngẫu nhiên. FLAN, InstructGPT là ví dụ điển hình. Là bước quan trọng biến base model
     thành chatbot dùng được.
-
 - slug: rlhf
   vi: Học tăng cường từ phản hồi con người
   en: RLHF (Reinforcement Learning from Human Feedback)
@@ -499,7 +434,6 @@
     RLHF thu thập phản hồi so sánh của người (câu trả lời nào tốt hơn), huấn luyện reward
     model, rồi dùng reinforcement learning tối ưu mô hình theo reward đó. Là chìa khóa
     khiến ChatGPT vượt xa GPT-3 về mức độ hữu ích. Nhược: reward hack, tốn kém, khó mở rộng.
-
 - slug: hallucination
   vi: Ảo giác
   en: Hallucination
@@ -508,7 +442,6 @@
     Hallucination là khi LLM sinh ra thông tin không có trong dữ liệu huấn luyện hoặc trái
     sự thật, nhưng trình bày với văn phong tự tin. Trong y tế cực nguy hiểm vì bs có thể tin.
     Cách giảm: RAG grounding, citation buộc, chain-of-thought, chọn model có safety training.
-
 - slug: context-window
   vi: Cửa sổ ngữ cảnh
   en: Context Window
@@ -517,7 +450,6 @@
     Context window quyết định LLM "nhớ" được bao nhiêu văn bản. GPT-3 chỉ 4K tokens, Claude 3
     lên 200K, Gemini 1.5 lên 1M+, GPT-6 Astra là 2M native. Context lớn cho phép nhét toàn bộ
     hồ sơ bệnh án, bài báo, guideline vào prompt - nhưng cost tuyến tính với input.
-
 - slug: chain-of-thought
   vi: Suy luận chuỗi
   en: Chain-of-Thought (CoT)
@@ -526,7 +458,6 @@
     Chain-of-thought yêu cầu mô hình "think step by step" trước khi trả lời. Tăng độ chính
     xác trên toán, logic, chẩn đoán y khoa. Là nền tảng của reasoning models như o1/o3
     (OpenAI), Claude 4 Sonnet Thinking, Astra Deep-Think.
-
 - slug: leapspace
   vi: LeapSpace
   en: LeapSpace
@@ -536,16 +467,14 @@
     cho phép hỏi đáp có dẫn nguồn từ 20+ triệu bài báo y sinh peer-reviewed. Dùng foundation
     model tinh chỉnh cho biomedical + RAG grounding chặt. Được nhiều bs Việt Nam dùng thay
     UpToDate cho tra cứu kỳ thi ghép hạng.
-
 - slug: multi-modal
   vi: Đa phương thức
   en: Multi-modal
-  short: "Mô hình AI xử lý được nhiều loại input: text, ảnh, âm thanh, video."
+  short: 'Mô hình AI xử lý được nhiều loại input: text, ảnh, âm thanh, video.'
   long: |
     Multi-modal LLM có thể nhận input hỗn hợp: bác sĩ đưa ảnh X-quang + câu hỏi văn bản +
     lịch sử bệnh nhân, mô hình trả lời tích hợp. GPT-4V, Gemini, Claude 3 Opus đều đa
     phương thức. Đến 2026, đa số foundation model y tế đều native multi-modal.
-
 - slug: agi
   vi: Trí tuệ nhân tạo tổng quát
   en: AGI (Artificial General Intelligence)
@@ -555,9 +484,6 @@
     hoạch, sáng tạo, chuyển giao kiến thức giữa lĩnh vực. GPT-6 Astra (OpenAI 2026) là
     ứng viên đầu tiên đạt mức "narrow AGI" trên nhiều benchmark. Chưa có định nghĩa chuẩn
     được đồng thuận.
-
-# ===== Chương 3: Chính sách =====
-
 - slug: nq57
   vi: Nghị quyết 57-NQ/TW
   en: Resolution No. 57-NQ/TW
@@ -567,7 +493,6 @@
     và chuyển đổi số là "đột phá quan trọng hàng đầu" của quốc gia. Với ngành y tế, Bộ Y tế
     được giao 386 nhiệm vụ, hoàn thành 375 tính đến 5/2026. NQ57 mở đường pháp lý cho
     Luật AI, Luật CN CNS và các thông tư chuyên ngành sau đó.
-
 - slug: nq72
   vi: Nghị quyết 72-NQ/TW
   en: Resolution No. 72-NQ/TW
@@ -577,7 +502,6 @@
     khám sức khỏe miễn phí ít nhất 1 lần/năm cho mọi người dân từ 2026, sổ sức khỏe điện tử
     toàn dân, mỗi trạm y tế xã có 4-5 bác sĩ đến 2027, tuổi thọ trung bình 75,5 (68 năm khỏe
     mạnh) đến 2030. Đây là cơ sở chính sách cho hạ tầng dữ liệu y tế toàn dân.
-
 - slug: luatai
   vi: Luật Trí tuệ nhân tạo 134/2025/QH15
   en: AI Law 134/2025/QH15
@@ -587,7 +511,6 @@
     hệ thống AI theo rủi ro (y tế thuộc nhóm rủi ro cao), quy định quyền của người bị tác động
     (biết mình đang tương tác với AI, yêu cầu con người can thiệp), yêu cầu đánh giá tác động
     trước triển khai, và cho phép sandbox thử nghiệm có kiểm soát.
-
 - slug: tt13
   vi: Thông tư 13/2025/TT-BYT
   en: Circular 13/2025/TT-BYT
@@ -597,7 +520,6 @@
     tại các cơ sở khám chữa bệnh. Mọi bệnh viện công lập và tư nhân phải hoàn thành trước
     30/9/2026. Đến 5/2026, đã có 1.231/1.650 bệnh viện triển khai (~75%). Không có EMR đồng
     nghĩa với không có dữ liệu cho AI.
-
 - slug: vrhain
   vi: V-RHAIN
   en: Vietnam Responsible Healthcare AI Network
@@ -607,7 +529,6 @@
     Network. Mục tiêu 2026: triển khai AI tại 3.321 trạm y tế xã cho tầm soát lao, tim mạch,
     dinh dưỡng, chẩn đoán suy thận cấp và suy hô hấp. V-RHAIN cũng cung cấp môi trường sandbox
     chính sách để thử nghiệm AI có kiểm soát.
-
 - slug: aicotranhiem
   vi: AI có trách nhiệm
   en: Responsible AI

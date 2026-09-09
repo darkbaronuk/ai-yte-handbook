@@ -23,10 +23,11 @@ collections:
     label: "Chương"
     label_singular: "Chương"
     folder: content/chapters
-    create: false
+    create: true
     slug: "{{slug}}"
     identifier_field: title
     summary: "Ch.{{number}} — {{title}} [{{status}}]"
+    preview_path: "chapters/{{slug}}"
     sortable_fields: [number, status, updated]
     view_groups:
       - label: Theo phần
@@ -90,5 +91,24 @@ collections:
         widget: list
         field: { name: name, label: Tên, widget: string }
       - { name: updated, label: Cập nhật, widget: datetime, format: "YYYY-MM-DD", date_format: true, time_format: false }
-      - { name: summary, label: Tóm tắt, widget: text }
+      - { name: summary, label: Tóm tắt, widget: text, required: false }
       - { name: body, label: Nội dung, widget: markdown }
+
+  - name: glossary
+    label: "Thuật ngữ (Glossary)"
+    label_singular: "Mục thuật ngữ"
+    files:
+      - name: glossary
+        label: "Toàn bộ thuật ngữ"
+        file: content/glossary.yml
+        fields:
+          - name: items
+            label: Danh sách thuật ngữ
+            widget: list
+            summary: "{{fields.vi}} ({{fields.slug}})"
+            fields:
+              - { name: slug, label: "Slug (không dấu, gạch nối)", widget: string }
+              - { name: vi, label: "Tiếng Việt", widget: string }
+              - { name: en, label: "Tiếng Anh", widget: string }
+              - { name: short, label: "Định nghĩa ngắn (1 câu)", widget: string }
+              - { name: long, label: "Giải thích dài", widget: text, required: false }
