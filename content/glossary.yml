@@ -466,7 +466,7 @@
 - slug: model-card
   vi: Thẻ mô tả mô hình
   en: Model Card
-  short: Tài liệu mô tả tóm tắt mô hình AI: dữ liệu huấn luyện, hiệu năng, giới hạn, đạo đức.
+  short: "Tài liệu mô tả tóm tắt mô hình AI: dữ liệu huấn luyện, hiệu năng, giới hạn, đạo đức."
   long: |
     Model card là chuẩn tài liệu do Google/Mitchell (2019) đề xuất, mô tả mô hình AI theo
     bảng nhất quán: mục đích, dữ liệu, hiệu năng phân theo nhóm nhân khẩu, giới hạn, khuyến
