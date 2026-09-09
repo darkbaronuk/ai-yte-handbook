@@ -10,6 +10,7 @@ import {
   REPO_URL,
 } from "@/lib/chapters";
 import { StatusPill } from "@/components/StatusPill";
+import ChapterRenderer from "@/components/ChapterRenderer";
 
 export async function generateStaticParams() {
   return getChapterSlugs().map((slug) => ({ slug }));
@@ -116,10 +117,7 @@ export default async function ChapterPage({
         </div>
       </header>
 
-      <div
-        className="prose prose-slate max-w-none"
-        dangerouslySetInnerHTML={{ __html: chapter.html }}
-      />
+      <ChapterRenderer blocks={chapter.blocks} />
 
       <nav className="mt-16 pt-6 border-t border-slate-200 flex justify-between text-sm">
         <Link href="/muc-luc" className="text-accent hover:underline">

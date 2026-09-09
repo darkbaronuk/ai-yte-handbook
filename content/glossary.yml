@@ -471,3 +471,87 @@
     Model card là chuẩn tài liệu do Google/Mitchell (2019) đề xuất, mô tả mô hình AI theo
     bảng nhất quán: mục đích, dữ liệu, hiệu năng phân theo nhóm nhân khẩu, giới hạn, khuyến
     cáo dùng. Nay là chuẩn bắt buộc trong xuất bản AI y tế.
+
+- slug: foundation-model
+  vi: Mô hình nền
+  en: Foundation Model
+  short: Mô hình AI khổng lồ huấn luyện trên dữ liệu đa dạng, thích ứng cho nhiều nhiệm vụ.
+  long: |
+    Foundation model là mô hình lớn (thường LLM hoặc multimodal) huấn luyện tự giám sát
+    trên khối dữ liệu lớn, sau đó tinh chỉnh cho tác vụ cụ thể. GPT-4, Claude, Gemini,
+    LLaMA đều là foundation model. Đặc điểm: khả năng chuyển giao mạnh, nhưng khó kiểm soát.
+
+- slug: instruction-tuning
+  vi: Tinh chỉnh theo hướng dẫn
+  en: Instruction Tuning
+  short: Bước huấn luyện dạy mô hình làm theo yêu cầu ngôn ngữ tự nhiên.
+  long: |
+    Instruction tuning dùng dataset gồm cặp (chỉ dẫn, câu trả lời chuẩn) để tinh chỉnh
+    foundation model, giúp mô hình trả lời đúng ý người dùng thay vì tiếp tục sinh văn bản
+    ngẫu nhiên. FLAN, InstructGPT là ví dụ điển hình. Là bước quan trọng biến base model
+    thành chatbot dùng được.
+
+- slug: rlhf
+  vi: Học tăng cường từ phản hồi con người
+  en: RLHF (Reinforcement Learning from Human Feedback)
+  short: Kỹ thuật huấn luyện mô hình dựa trên đánh giá của con người về chất lượng câu trả lời.
+  long: |
+    RLHF thu thập phản hồi so sánh của người (câu trả lời nào tốt hơn), huấn luyện reward
+    model, rồi dùng reinforcement learning tối ưu mô hình theo reward đó. Là chìa khóa
+    khiến ChatGPT vượt xa GPT-3 về mức độ hữu ích. Nhược: reward hack, tốn kém, khó mở rộng.
+
+- slug: hallucination
+  vi: Ảo giác
+  en: Hallucination
+  short: Hiện tượng LLM tạo thông tin sai nhưng nghe hợp lý và tự tin.
+  long: |
+    Hallucination là khi LLM sinh ra thông tin không có trong dữ liệu huấn luyện hoặc trái
+    sự thật, nhưng trình bày với văn phong tự tin. Trong y tế cực nguy hiểm vì bs có thể tin.
+    Cách giảm: RAG grounding, citation buộc, chain-of-thought, chọn model có safety training.
+
+- slug: context-window
+  vi: Cửa sổ ngữ cảnh
+  en: Context Window
+  short: Số lượng token tối đa mà LLM có thể xử lý trong 1 lần gọi.
+  long: |
+    Context window quyết định LLM "nhớ" được bao nhiêu văn bản. GPT-3 chỉ 4K tokens, Claude 3
+    lên 200K, Gemini 1.5 lên 1M+, GPT-6 Astra là 2M native. Context lớn cho phép nhét toàn bộ
+    hồ sơ bệnh án, bài báo, guideline vào prompt - nhưng cost tuyến tính với input.
+
+- slug: chain-of-thought
+  vi: Suy luận chuỗi
+  en: Chain-of-Thought (CoT)
+  short: Kỹ thuật cho LLM viết ra các bước suy luận trước khi đưa đáp án cuối.
+  long: |
+    Chain-of-thought yêu cầu mô hình "think step by step" trước khi trả lời. Tăng độ chính
+    xác trên toán, logic, chẩn đoán y khoa. Là nền tảng của reasoning models như o1/o3
+    (OpenAI), Claude 4 Sonnet Thinking, Astra Deep-Think.
+
+- slug: leapspace
+  vi: LeapSpace
+  en: LeapSpace
+  short: Nền tảng AI hỗ trợ nghiên cứu y sinh do Elsevier phát triển từ ScienceDirect.
+  long: |
+    LeapSpace là hệ thống AI được Elsevier ra mắt cuối 2024, tích hợp trên ScienceDirect
+    cho phép hỏi đáp có dẫn nguồn từ 20+ triệu bài báo y sinh peer-reviewed. Dùng foundation
+    model tinh chỉnh cho biomedical + RAG grounding chặt. Được nhiều bs Việt Nam dùng thay
+    UpToDate cho tra cứu kỳ thi ghép hạng.
+
+- slug: multi-modal
+  vi: Đa phương thức
+  en: Multi-modal
+  short: "Mô hình AI xử lý được nhiều loại input: text, ảnh, âm thanh, video."
+  long: |
+    Multi-modal LLM có thể nhận input hỗn hợp: bác sĩ đưa ảnh X-quang + câu hỏi văn bản +
+    lịch sử bệnh nhân, mô hình trả lời tích hợp. GPT-4V, Gemini, Claude 3 Opus đều đa
+    phương thức. Đến 2026, đa số foundation model y tế đều native multi-modal.
+
+- slug: agi
+  vi: Trí tuệ nhân tạo tổng quát
+  en: AGI (Artificial General Intelligence)
+  short: Mức AI có khả năng nhận thức và học rộng ngang hoặc vượt con người trên nhiều lĩnh vực.
+  long: |
+    AGI là mốc AI có thể học và làm mọi việc trí tuệ như một người bình thường - lập kế
+    hoạch, sáng tạo, chuyển giao kiến thức giữa lĩnh vực. GPT-6 Astra (OpenAI 2026) là
+    ứng viên đầu tiên đạt mức "narrow AGI" trên nhiều benchmark. Chưa có định nghĩa chuẩn
+    được đồng thuận.

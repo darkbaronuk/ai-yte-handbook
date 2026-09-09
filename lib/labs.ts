@@ -36,6 +36,29 @@ export const LABS: Lab[] = [
     minLength: 300,
     suggestedTimeMin: 15,
   },
+  {
+    id: "lab-02",
+    chapter: "02-ai-sinh-tao",
+    title: "Lab 2 — Thiết kế quy trình dùng AI sinh tạo cho một ca khó",
+    intro:
+      "Chương 02 phân tích ba làn sóng AI sinh tạo và bốn giới hạn của nó. Trong lab này, bạn đảo ngược vấn đề: thiết kế một quy trình cụ thể để dùng AI sinh tạo giúp tra cứu một ca khó tại đơn vị của bạn — có tính đến 3 nguyên tắc (grounding trước, cite hoặc bỏ, hai lần đọc).",
+    question:
+      "Chọn 1 ca lâm sàng khó bạn đã gặp hoặc giả định (ví dụ: bệnh nhân ung thư phổi EGFR+ kháng thuốc đích thế hệ 3, hoặc tiểu đường type 2 không đáp ứng GLP-1). Thiết kế quy trình 4–6 bước sử dụng AI sinh tạo để hỗ trợ quyết định cho ca này. Quy trình phải nêu rõ: (1) công cụ gì cho bước nào và vì sao chọn công cụ đó; (2) câu prompt mẫu bạn sẽ dùng; (3) bước nào bắt buộc phải có cite nguồn gốc; (4) bước kiểm tra chéo và quyết định cuối. Viết 250–400 từ.",
+    rubric: `
+- **Tính cụ thể**: Ca lâm sàng rõ ràng, có đủ thông tin để hiểu vấn đề cần tra. Không chung chung.
+- **Chọn công cụ có lý**: Nêu rõ vì sao chọn công cụ nào cho bước nào (ví dụ LeapSpace cho tra RCT, ChatGPT cho viết tóm tắt, guideline BYT cho đối chiếu). Thể hiện hiểu điểm mạnh yếu của từng công cụ.
+- **Prompt chất lượng**: Câu prompt mẫu có bối cảnh + câu hỏi cụ thể + ràng buộc cần thiết. Không phải câu hỏi trống.
+- **Grounding & cite**: Chỉ rõ bước nào bắt buộc có cite nguồn, bước nào chấp nhận không cite. Thể hiện nguyên tắc "cite hoặc bỏ".
+- **Kiểm tra chéo**: Có bước xác minh output trước khi đặt vào bệnh án/hội chẩn. Không "tin AI mù quáng".
+
+**Grade 5**: Đạt 5/5, quy trình dùng được ngay tại đơn vị.
+**Grade 4**: Đạt 4/5, hiểu nguyên tắc nhưng thiếu 1 bước.
+**Grade 3**: Đạt 3/5, đúng hướng nhưng prompt/công cụ chung chung.
+**Grade 2**: Đạt 2/5, thiếu grounding hoặc kiểm tra chéo.
+**Grade 1**: Không đạt, không thể hiện nguyên tắc của chương.`,
+    minLength: 500,
+    suggestedTimeMin: 20,
+  },
 ];
 
 export function getLab(id: string): Lab | undefined {

@@ -11,6 +11,14 @@ import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 import rehypeExternalLinks from "rehype-external-links";
 import { getGlossaryMap } from "./glossary";
+import { splitBlocks, parseCalloutHeader } from "./chapter-blocks";
+
+export type RenderedBlock =
+  | { kind: "html"; html: string }
+  | { kind: "chart"; props: Record<string, unknown> }
+  | { kind: "callout"; kind_: string; title?: string; html: string }
+  | { kind: "metrics"; metrics: Array<{ value: string; label: string; hint?: string }> }
+  | { kind: "timeline"; items: Array<{ year: string; event: string; kind?: string }> };
 
 // Chuyển cú pháp {t:slug}text{/t} thành <span class="term" data-slug="slug">text</span>
 // trước khi qua remark. Slug không hợp lệ vẫn được hiển thị nhưng đánh dấu để dev thấy.
@@ -41,6 +49,7 @@ export type ChapterMeta = {
 export type Chapter = ChapterMeta & {
   content: string;
   html: string;
+  blocks: RenderedBlock[];
   rawPath: string;
 };
 
@@ -76,6 +85,10 @@ export function getChapterSlugs(): string[] {
     .map((f) => f.replace(/\.md$/, ""));
 }
 
+export async function mdChunkToHtml(md: string): Promise<string> {
+  return markdownToHtml(md);
+}
+
 async function markdownToHtml(md: string): Promise<string> {
   const expanded = expandTermSyntax(md);
   const file = await unified()
@@ -91,11 +104,46 @@ async function markdownToHtml(md: string): Promise<string> {
   return String(file);
 }
 
+async function buildBlocks(md: string): Promise<RenderedBlock[]> {
+  const parts = splitBlocks(md);
+  const out: RenderedBlock[] = [];
+  for (const p of parts) {
+    if (p.kind === "md") {
+      const html = await markdownToHtml(p.text);
+      out.push({ kind: "html", html });
+    } else if (p.kind === "chart") {
+      try {
+        out.push({ kind: "chart", props: JSON.parse(p.text) });
+      } catch {
+        out.push({ kind: "html", html: `<pre>Chart JSON lỗi: ${p.text.slice(0, 60)}</pre>` });
+      }
+    } else if (p.kind === "metrics") {
+      try {
+        out.push({ kind: "metrics", metrics: JSON.parse(p.text) });
+      } catch {
+        out.push({ kind: "html", html: `<pre>Metrics JSON lỗi</pre>` });
+      }
+    } else if (p.kind === "timeline") {
+      try {
+        out.push({ kind: "timeline", items: JSON.parse(p.text) });
+      } catch {
+        out.push({ kind: "html", html: `<pre>Timeline JSON lỗi</pre>` });
+      }
+    } else if (p.kind === "callout") {
+      const meta = parseCalloutHeader(p.header);
+      const html = await markdownToHtml(p.text);
+      out.push({ kind: "callout", kind_: meta.kind, title: meta.title, html });
+    }
+  }
+  return out;
+}
+
 export async function getChapter(slug: string): Promise<Chapter> {
   const full = path.join(CONTENT_DIR, `${slug}.md`);
   const raw = fs.readFileSync(full, "utf8");
   const { data, content } = matter(raw);
   const html = await markdownToHtml(content);
+  const blocks = await buildBlocks(content);
   return {
     slug,
     number: Number(data.number ?? 0),
@@ -109,6 +157,7 @@ export async function getChapter(slug: string): Promise<Chapter> {
     summary: String(data.summary ?? ""),
     content,
     html,
+    blocks,
     rawPath: `content/chapters/${slug}.md`,
   };
 }
