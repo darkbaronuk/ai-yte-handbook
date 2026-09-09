@@ -2,7 +2,7 @@
 number: 3
 title: "Bước ngoặt chính sách 2024–2026"
 part: "Phần I — Tiến trình"
-status: published
+status: draft
 domains: ["Digital Professionalism", "Administration"]
 miller: "Knows How"
 owners: ["Tú"]
