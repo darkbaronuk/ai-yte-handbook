@@ -86,6 +86,36 @@ export default function LabRunner({ lab }: { lab: Lab }) {
         <p className="text-slate-800 leading-relaxed">{lab.question}</p>
       </section>
 
+      {/* Công cụ AI gợi ý (miễn phí) */}
+      {lab.tools && lab.tools.length > 0 && (
+        <section className="bg-indigo-50 border border-indigo-200 rounded-lg p-5">
+          <h2 className="font-semibold text-lg mb-1 text-indigo-900">
+            🧰 Công cụ AI miễn phí gợi ý
+          </h2>
+          <p className="text-sm text-indigo-700 mb-3">
+            Bạn có thể dùng bất kỳ công cụ nào dưới đây để nghiên cứu, so
+            sánh, hoặc draft. Mục tiêu là giúp bạn làm bài có chất lượng — không
+            phải nộp output của AI.
+          </p>
+          <ul className="space-y-2">
+            {lab.tools.map((t) => (
+              <li key={t.url}>
+                <a
+                  href={t.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-semibold text-indigo-700 hover:text-indigo-900 hover:underline"
+                >
+                  ↳ {t.name}
+                  <span aria-hidden>↗</span>
+                </a>
+                <div className="text-sm text-slate-600 ml-4">{t.note}</div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Rubric collapsible */}
       <details className="bg-white border border-slate-200 rounded-lg">
         <summary className="cursor-pointer p-4 font-semibold hover:bg-slate-50">

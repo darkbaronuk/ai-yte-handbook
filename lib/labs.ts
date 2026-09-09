@@ -1,6 +1,13 @@
 // Định nghĩa Lab — câu hỏi + rubric cho mỗi chương.
 // Thêm Lab mới bằng cách push vào array này.
 
+export type LabTool = {
+  name: string;
+  url: string;
+  note: string;
+  free: boolean;
+};
+
 export type Lab = {
   id: string;
   chapter: string;
@@ -10,6 +17,7 @@ export type Lab = {
   rubric: string;
   minLength: number;
   suggestedTimeMin: number;
+  tools?: LabTool[];
 };
 
 export const LABS: Lab[] = [
@@ -35,6 +43,26 @@ export const LABS: Lab[] = [
 **Grade 1**: Không đạt, lạc đề hoặc quá sơ sài.`,
     minLength: 300,
     suggestedTimeMin: 15,
+    tools: [
+      {
+        name: "Perplexity (Auto)",
+        url: "https://www.perplexity.ai",
+        note: "Miễn phí. Tắt đăng nhập cũng dùng được. Tìm nhanh tư liệu về DrAid, VinDr, Bluezone để lấy ví dụ.",
+        free: true,
+      },
+      {
+        name: "Google Gemini",
+        url: "https://gemini.google.com",
+        note: "Miễn phí với tài khoản Google. Viết đoạn văn bằng tiếng Việt tốt.",
+        free: true,
+      },
+      {
+        name: "ChatGPT (bản miễn phí)",
+        url: "https://chat.openai.com",
+        note: "Cần đăng nhập. Phù hợp để draft nhanh, kiểm tra câu chữ.",
+        free: true,
+      },
+    ],
   },
   {
     id: "lab-02",
@@ -58,6 +86,32 @@ export const LABS: Lab[] = [
 **Grade 1**: Không đạt, không thể hiện nguyên tắc của chương.`,
     minLength: 500,
     suggestedTimeMin: 20,
+    tools: [
+      {
+        name: "Perplexity Pro (Academic mode)",
+        url: "https://www.perplexity.ai",
+        note: "Có mode 'Academic' tra cứu peer-reviewed. Miễn phí 5 lượt/ngày không đăng nhập.",
+        free: true,
+      },
+      {
+        name: "OpenEvidence",
+        url: "https://www.openevidence.com",
+        note: "Miễn phí cho bác sĩ đăng ký. Grounding vào PubMed, NEJM, Lancet. Rất tốt cho ca lâm sàng.",
+        free: true,
+      },
+      {
+        name: "Google Gemini",
+        url: "https://gemini.google.com",
+        note: "Dùng để viết prompt mẫu và quy trình. Tiếng Việt tốt.",
+        free: true,
+      },
+      {
+        name: "ChatGPT (bản miễn phí)",
+        url: "https://chat.openai.com",
+        note: "Dùng để kiểm tra chéo, so sánh với Gemini.",
+        free: true,
+      },
+    ],
   },
 ];
 
