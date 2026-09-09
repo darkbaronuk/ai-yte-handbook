@@ -16,6 +16,11 @@ export async function generateStaticParams() {
   return getChapterSlugs().map((slug) => ({ slug }));
 }
 
+// ISR: rebuild chương ở background sau 60s nếu có request
+// Phối hợp với /api/revalidate để GitHub push -> update instant
+export const revalidate = 60;
+export const dynamicParams = true;
+
 export default async function ChapterPage({
   params,
 }: {

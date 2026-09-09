@@ -111,11 +111,12 @@ Giới hạn thứ nhất là **ảo giác không loại trừ được**. Ngay 
 grounding, mô hình vẫn có thể diễn giải sai nguồn, trộn lẫn hai nghiên cứu, hoặc
 tổng hợp một liều dùng không có trong bất kỳ hướng dẫn nào. Nghiên cứu bedside
 consultation của Med-PaLM 2 công bố trên [Nature Medicine 2025](https://www.nature.com/articles/s41591-024-03423-7)
-cho thấy: với câu hỏi lâm sàng thực tế, chuyên gia thích câu trả lời của Med-PaLM 2
-hơn của bác sĩ tổng quát 65% lần, nhưng vẫn thua rõ chuyên gia — chuyên gia được
-ưa thích hơn ~60%. Nghĩa là AI đã ngang bác sĩ tổng quát trong ngữ cảnh cụ thể,
-nhưng chưa ngang chuyên gia. Bác sĩ phải giữ nguyên tắc: **mọi con số liều/dose
-từ AI đều phải kiểm chứng lại với dược thư/hướng dẫn gốc trước khi kê**.
+cho thấy: với câu hỏi lâm sàng thực tế, chuyên gia đánh giá câu trả lời của Med-PaLM 2
+là đầy đủ hơn câu trả lời của bác sĩ tổng quát trong 65% tình huống, nhưng vẫn thua
+rõ chuyên gia — câu trả lời của chuyên gia được ưu tiên khoảng 60% tình huống. AI
+đã ngang bác sĩ tổng quát trong ngữ cảnh cụ thể, nhưng chưa ngang chuyên gia. Bác sĩ
+phải giữ nguyên tắc: **mọi con số liều/dose từ AI đều phải kiểm chứng lại với
+dược thư/hướng dẫn gốc trước khi kê**.
 
 Giới hạn thứ hai là **thiên kiến từ dữ liệu huấn luyện**. Đa số foundation model
 huấn luyện chủ yếu trên y văn tiếng Anh, tập trung vào Bắc Mỹ và Tây Âu. Tần suất
@@ -216,8 +217,7 @@ Việt Nam tham khảo cho V-RHAIN.
   {"year":"09/2024","event":"SingHealth ra mắt Note Buddy (đa ngôn ngữ)","kind":"milestone"},
   {"year":"03/2025","event":"Elsevier ScienceDirect AI: giảm 50% thời gian đọc y văn","kind":"success"},
   {"year":"2025","event":"JAMA nghiên cứu: Mass General giảm 21,2% burnout với ambient scribe","kind":"success"},
-  {"year":"01/2026","event":"Elsevier LeapSpace GA; Bộ Y tế VN ra mắt V-RHAIN","kind":"milestone"},
-  {"year":"03/2026","event":"Hà Nội pilot AI hình ảnh tại 3 bệnh viện (Đức Giang, Saint Paul, Ung bướu)","kind":"milestone"}
+  {"year":"01/2026","event":"Elsevier LeapSpace GA; Bộ Y tế VN ra mắt V-RHAIN","kind":"milestone"}
 ]
 ```
 
@@ -228,7 +228,7 @@ mẫu chung mà bất kỳ cơ sở y tế Việt Nam nào cân nhắc AI sinh t
 vào.
 
 **Thứ nhất, ambient scribe cho ghi chép có bằng chứng mạnh hơn chatbot chẩn
-đoán.** Kết quả JAMA đa trung tâm cho thấy tiết kiệm 13,4–27% thời gian là ổn
+đoán.** Kết quả JAMA đa trung tâm cho thấy tiết kiệm 17–27% thời gian ghi chép là ổn
 định; trong khi các nghiên cứu về AI chẩn đoán như Med-PaLM 2 tuy ấn tượng
 benchmark nhưng chưa có triển khai lâm sàng cấp hệ thống với số liệu tương
 đương. Nếu tuyến tỉnh Việt Nam bắt đầu, nên bắt đầu ở ghi chép và tổng hợp bệnh
