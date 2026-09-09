@@ -5,7 +5,7 @@ part: "Phần I — Tiến trình"
 status: draft
 domains: ["Administration", "Informatics"]
 miller: "Knows"
-owners: ["Tú"]
+owners: ["Nguyễn Hữu Tú"]
 updated: "2026-09-09"
 summary: "Đại dịch COVID-19 không chỉ để lại vết thương y tế mà còn tạo ra một bước ngoặt số hóa cho ngành y Việt Nam. Chương mở đầu dựng lại bối cảnh 2020–2022, phân tích ba sản phẩm biểu tượng, và rút ra bốn bài học then chốt vẫn còn nguyên giá trị cho các dự án AI y tế hôm nay."
 ---
