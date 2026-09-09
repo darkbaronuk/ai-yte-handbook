@@ -115,23 +115,16 @@ VinBrain triển khai DrAid tại chín bệnh viện thu dung TP.HCM và một 
 
 Đây cũng là mô hình sẽ được nhắc lại xuyên suốt cẩm nang: AI làm sàng lọc và hỗ trợ, bác sĩ giữ vai trò quyết định. Không có gì đảo ngược trật tự này — kể cả khi các mô hình {t:generative-ai}AI sinh tạo{/t} và {t:llm}mô hình ngôn ngữ lớn{/t} đã tiến bộ vượt bậc đến 2026.
 
-## 6. Lab 1 — Timeline AI y tế Việt Nam
+## 6. Lab 1 — Bài học từ COVID cho AI y tế 2026
 
-Bài thực hành đầu tiên của cẩm nang được thiết kế cho tầng nhận thức đầu tiên trong thang Miller: "Biết" — nắm được dòng thời gian, các tác nhân chính, và mối liên hệ nguyên nhân–kết quả của giai đoạn 2020–2022.
+Bài thực hành đầu tiên của cẩm nang được thiết kế cho tầng nhận thức đầu tiên trong thang Miller: "Biết" — nắm được dòng thời gian, các tác nhân chính, và mối liên hệ nguyên nhân–kết quả của giai đoạn 2020–2022. Bạn sẽ viết một đoạn văn ngắn trả lời câu hỏi phản biện, và AI sẽ chấm theo rubric 1–5 ngay tại chỗ, gợi ý điểm cải thiện cụ thể.
 
-**Nhiệm vụ ba phần**. Phần một: sắp xếp 20 sự kiện được cấp thành timeline chính xác theo mốc thời gian, sử dụng giao diện kéo-thả trên trang lab. Phần hai: viết một đoạn văn khoảng 200 chữ trả lời câu hỏi "Bài học nào từ COVID còn giá trị nhất đến 2026 và tại sao?", dẫn ít nhất hai nguồn sơ cấp. Phần ba: trình bày trước nhóm trong 5 phút, tập trung vào phần lập luận thay vì kể lại số liệu.
-
-**Rubric chấm điểm 1–5**:
-
-| Điểm | Mô tả |
-|:---:|---|
-| 5 | Timeline chính xác 100%; bài viết dẫn từ 2 nguồn sơ cấp trở lên, phân tích liên hệ tới 2026 sắc bén và có nhận định độc lập; trình bày mạch lạc, phản biện tốt |
-| 4 | Timeline sai không quá 1 sự kiện; bài viết có dẫn nguồn, phân tích rõ ràng nhưng thiếu nhận định độc lập; trình bày ổn |
-| 3 | Timeline sai không quá 3 sự kiện; bài viết đủ ý nhưng thiếu dẫn nguồn hoặc trích dẫn không chính xác; trình bày cứng nhắc |
-| 2 | Timeline nhiều sai sót; bài viết lạc đề hoặc quá ngắn; trình bày không rõ ràng |
-| 1 | Không hoàn thành nhiệm vụ hoặc bài viết sao chép nội dung có sẵn |
-
-Cơ chế chấm: phần một chấm tự động theo đáp án; phần hai và ba dùng {t:llm-as-judge}LLM-as-Judge{/t} với rubric trên, sau đó bác sĩ mentor duyệt lại kết quả trước khi trả điểm cuối cho học viên.
+<div class="lab-cta">
+<a href="/lab/lab-01" target="_blank" rel="noopener noreferrer" class="lab-btn">
+▶ Mở Lab 1 trong tab mới
+</a>
+<div class="lab-meta">~15 phút · AI chấm tự động · Lưu tiến độ vào sổ grading</div>
+</div>
 
 ## Tài liệu tham khảo
 

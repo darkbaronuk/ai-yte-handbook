@@ -9,6 +9,7 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
+import rehypeExternalLinks from "rehype-external-links";
 import { getGlossaryMap } from "./glossary";
 
 // Chuyển cú pháp {t:slug}text{/t} thành <span class="term" data-slug="slug">text</span>
@@ -84,6 +85,7 @@ async function markdownToHtml(md: string): Promise<string> {
     .use(rehypeRaw)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
+    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
     .use(rehypeStringify)
     .process(expanded);
   return String(file);
