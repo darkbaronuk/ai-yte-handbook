@@ -193,7 +193,7 @@ export default function LabRunner({ lab }: { lab: Lab }) {
           </div>
 
           <div className="text-xs text-slate-400 pt-2">
-            Ch\u1ea5m b\u1edfi Llama 3.3 70B (Groq) \u00b7 K\u1ebft qu\u1ea3 \u0111\u00e3 l\u01b0u v\u00e0o Sheet grading n\u1ebfu b\u1ea1n \u0111i\u1ec1n email.
+            Ch\u1ea5m b\u1edfi GPT-OSS 120B (Groq) \u00b7 K\u1ebft qu\u1ea3 \u0111\u00e3 l\u01b0u v\u00e0o Sheet grading n\u1ebfu b\u1ea1n \u0111i\u1ec1n email.
           </div>
         </section>
       )}

@@ -11,7 +11,7 @@ const GROQ_URL = process.env.CUSTOM_CRED_API_GROQ_COM_URL || "https://api.groq.c
 const GROQ_TOKEN = process.env.CUSTOM_CRED_API_GROQ_COM_TOKEN || "";
 const SHEET_WEBHOOK = process.env.GOOGLE_APPS_SCRIPT_WEBHOOK || "";
 
-const MODEL = "llama-3.3-70b-versatile";
+const MODEL = "openai/gpt-oss-120b";
 
 const SYSTEM_PROMPT = `B\u1ea1n l\u00e0 gi\u1ea3ng vi\u00ean AI y t\u1ebf ch\u1ea5m b\u00e0i cho c\u1ea9m nang "AI trong Y t\u1ebf Vi\u1ec7t Nam". Nhi\u1ec7m v\u1ee5:
 

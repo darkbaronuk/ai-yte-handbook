@@ -34,7 +34,7 @@ export default function LabPage({ params }: { params: { id: string } }) {
         <div className="mt-3 flex gap-4 text-sm text-slate-500">
           <span>\u23f1 ~{lab.suggestedTimeMin} ph\u00fat</span>
           <span>\u270d T\u1ed1i thi\u1ec3u {lab.minLength} k\u00fd t\u1ef1</span>
-          <span>\ud83e\udd16 Ch\u1ea5m b\u1eb1ng Llama 3.3 70B</span>
+          <span>\ud83e\udd16 Ch\u1ea5m b\u1eb1ng GPT-OSS 120B</span>
         </div>
       </header>
       <LabRunner lab={lab} />
