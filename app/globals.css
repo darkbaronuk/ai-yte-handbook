@@ -29,3 +29,20 @@ html, body {
 .prose blockquote {
   border-left-color: var(--accent);
 }
+
+/* Thuật ngữ có tooltip */
+.term {
+  border-bottom: 1px dashed var(--accent);
+  cursor: help;
+  color: var(--accent);
+  font-weight: 500;
+  transition: background-color 0.15s;
+}
+.term:hover {
+  background-color: rgba(15, 118, 110, 0.08);
+  border-radius: 2px;
+}
+.term-unknown {
+  border-bottom-color: #dc2626;
+  color: #dc2626;
+}

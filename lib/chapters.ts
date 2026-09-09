@@ -8,6 +8,19 @@ import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeStringify from "rehype-stringify";
+import rehypeRaw from "rehype-raw";
+import { getGlossaryMap } from "./glossary";
+
+// Chuyển cú pháp {t:slug}text{/t} thành <span class="term" data-slug="slug">text</span>
+// trước khi qua remark. Slug không hợp lệ vẫn được hiển thị nhưng đánh dấu để dev thấy.
+function expandTermSyntax(md: string): string {
+  const glossary = getGlossaryMap();
+  return md.replace(/\{t:([a-z0-9\-]+)\}([\s\S]*?)\{\/t\}/g, (_, slug, text) => {
+    const known = glossary.has(slug);
+    const cls = known ? "term" : "term term-unknown";
+    return `<span class="${cls}" data-slug="${slug}">${text}</span>`;
+  });
+}
 
 export type ChapterStatus = "draft" | "review" | "final";
 
@@ -63,14 +76,16 @@ export function getChapterSlugs(): string[] {
 }
 
 async function markdownToHtml(md: string): Promise<string> {
+  const expanded = expandTermSyntax(md);
   const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeRaw)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: "wrap" })
     .use(rehypeStringify)
-    .process(md);
+    .process(expanded);
   return String(file);
 }
 

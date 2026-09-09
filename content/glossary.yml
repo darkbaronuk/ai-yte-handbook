@@ -1,0 +1,473 @@
+# Glossary — thuật ngữ AI trong y tế
+# Dùng trong markdown: {t:slug}Chữ hiển thị{/t}
+# Ví dụ: {t:rag}RAG{/t}, {t:llm}mô hình ngôn ngữ lớn{/t}
+#
+# Slug phải viết thường, không dấu, dùng gạch nối.
+
+# ===== Nền tảng học máy =====
+
+- slug: ai
+  vi: Trí tuệ nhân tạo
+  en: Artificial Intelligence
+  short: Ngành khoa học tạo ra máy có khả năng suy luận, học và ra quyết định như người.
+  long: |
+    Trí tuệ nhân tạo (AI) là lĩnh vực nghiên cứu và kỹ thuật hướng tới xây dựng hệ thống máy tính
+    có khả năng thực hiện các nhiệm vụ vốn đòi hỏi trí tuệ con người: nhận dạng, hiểu ngôn ngữ,
+    lập luận, ra quyết định, học từ kinh nghiệm. Trong y tế, AI được ứng dụng ở nhiều tầng, từ
+    đọc ảnh chẩn đoán, hỗ trợ quyết định lâm sàng, đến quản trị vận hành bệnh viện.
+
+- slug: ml
+  vi: Học máy
+  en: Machine Learning (ML)
+  short: Nhóm phương pháp AI cho phép máy "học" quy luật từ dữ liệu thay vì được lập trình cứng.
+  long: |
+    Học máy là nhánh AI nghiên cứu các thuật toán cho phép máy tính học các quy luật từ dữ liệu
+    và cải thiện hiệu năng theo thời gian mà không cần lập trình rõ ràng cho từng trường hợp.
+    Các dòng chính gồm học có giám sát (supervised), không giám sát (unsupervised), và tăng cường
+    (reinforcement).
+
+- slug: deep-learning
+  vi: Học sâu
+  en: Deep Learning
+  short: Nhánh học máy dùng mạng nơ-ron nhiều tầng để học các biểu diễn phân cấp từ dữ liệu.
+  long: |
+    Học sâu là nhánh học máy dùng mạng nơ-ron nhân tạo có nhiều tầng ẩn (thường vài chục đến vài
+    trăm tầng) để tự động học các đặc trưng phân cấp từ dữ liệu thô. Đây là công nghệ cốt lõi
+    đứng sau đa số đột phá AI hiện đại: đọc ảnh y khoa, nhận dạng giọng nói, và các mô hình
+    ngôn ngữ lớn.
+
+- slug: neural-network
+  vi: Mạng nơ-ron
+  en: Neural Network
+  short: Mô hình tính toán mô phỏng mạng lưới nơ-ron thần kinh, gồm các nút liên kết trọng số.
+  long: |
+    Mạng nơ-ron nhân tạo là mô hình tính toán gồm nhiều nút (neuron) tổ chức thành các tầng, kết
+    nối với nhau bằng trọng số. Mạng học bằng cách điều chỉnh trọng số qua thuật toán lan truyền
+    ngược (backpropagation) để giảm sai số dự đoán.
+
+- slug: transformer
+  vi: Kiến trúc Transformer
+  en: Transformer
+  short: Kiến trúc mạng nơ-ron dựa trên cơ chế self-attention, nền tảng của các LLM hiện đại.
+  long: |
+    Transformer là kiến trúc mạng nơ-ron được Google giới thiệu năm 2017 trong bài "Attention Is
+    All You Need". Điểm cốt lõi là cơ chế self-attention cho phép mô hình đánh giá quan hệ giữa
+    mọi cặp phần tử trong chuỗi đầu vào cùng lúc, thay vì tuần tự như RNN. Đây là nền tảng của
+    GPT, Claude, Gemini và mọi mô hình ngôn ngữ lớn hiện đại.
+
+- slug: cnn
+  vi: Mạng nơ-ron tích chập
+  en: Convolutional Neural Network (CNN)
+  short: Kiến trúc mạng nơ-ron chuyên xử lý dữ liệu dạng lưới, đặc biệt là hình ảnh.
+  long: |
+    CNN là kiến trúc mạng nơ-ron dùng phép tích chập (convolution) để trích xuất đặc trưng cục bộ
+    từ hình ảnh. Nó là công nghệ chuẩn cho đọc ảnh y khoa (X-quang, CT, MRI, giải phẫu bệnh) từ
+    2015 đến gần đây, khi Vision Transformer bắt đầu cạnh tranh.
+
+- slug: gan
+  vi: Mạng đối kháng sinh mẫu
+  en: Generative Adversarial Network (GAN)
+  short: Kiến trúc gồm hai mạng cạnh tranh nhau để sinh dữ liệu giả trông thật.
+  long: |
+    GAN gồm hai mạng nơ-ron thi đấu với nhau: một mạng sinh (generator) tạo mẫu giả, một mạng
+    phân biệt (discriminator) đánh giá thật/giả. Qua nhiều vòng, mạng sinh ngày càng giỏi tạo ra
+    mẫu giống thật. Trong y tế, GAN được dùng bù dữ liệu hiếm (như XPGAN của VinBrain tạo ảnh
+    X-quang COVID).
+
+# ===== Học có/không có giám sát =====
+
+- slug: supervised-learning
+  vi: Học có giám sát
+  en: Supervised Learning
+  short: Học từ dữ liệu đã được gán nhãn để dự đoán nhãn cho dữ liệu mới.
+  long: |
+    Trong học có giám sát, mô hình học từ tập dữ liệu gồm cặp (đầu vào, nhãn đúng). Ví dụ y tế:
+    học phân biệt X-quang bình thường/bất thường từ 15.000 ảnh đã được bác sĩ gán nhãn.
+
+- slug: unsupervised-learning
+  vi: Học không giám sát
+  en: Unsupervised Learning
+  short: Học tìm quy luật ẩn trong dữ liệu không có nhãn.
+  long: |
+    Học không giám sát tìm cấu trúc ẩn trong dữ liệu chưa gán nhãn — ví dụ phân cụm bệnh nhân
+    theo hồ sơ điều trị, phát hiện bất thường trong dữ liệu vận hành bệnh viện.
+
+- slug: reinforcement-learning
+  vi: Học tăng cường
+  en: Reinforcement Learning (RL)
+  short: Học bằng thử-sai, tối ưu phần thưởng dài hạn qua tương tác với môi trường.
+  long: |
+    Trong học tăng cường, tác nhân (agent) học chính sách hành động tối ưu bằng cách thử nghiệm
+    và nhận phần thưởng/hình phạt từ môi trường. Ứng dụng y tế đang trong nghiên cứu: liều thuốc
+    tối ưu, chính sách điều trị hồi sức, robot phẫu thuật.
+
+- slug: transfer-learning
+  vi: Học chuyển giao
+  en: Transfer Learning
+  short: Tận dụng mô hình đã huấn luyện trên tác vụ khác để giải bài toán mới với ít dữ liệu.
+  long: |
+    Học chuyển giao lấy một mô hình đã huấn luyện trên dữ liệu lớn (ví dụ ImageNet cho ảnh
+    thường) rồi tinh chỉnh cho tác vụ mới (đọc ảnh y khoa). Rất hữu ích khi dữ liệu chuyên biệt
+    ít — điều thường gặp trong y tế.
+
+- slug: fine-tuning
+  vi: Tinh chỉnh mô hình
+  en: Fine-tuning
+  short: Huấn luyện thêm một mô hình đã có sẵn trên dữ liệu chuyên biệt để nó phù hợp tác vụ mới.
+  long: |
+    Fine-tuning là quá trình tiếp tục huấn luyện một mô hình đã pre-trained trên tập dữ liệu
+    chuyên ngành, để nó chuyển từ "biết tổng quát" thành "giỏi chuyên biệt". Ví dụ: fine-tune
+    LLM tổng quát trên tập câu hỏi–đáp y khoa để có chatbot chuyên khoa.
+
+# ===== Mô hình ngôn ngữ và AI sinh tạo =====
+
+- slug: llm
+  vi: Mô hình ngôn ngữ lớn
+  en: Large Language Model (LLM)
+  short: Mô hình AI được huấn luyện trên hàng ngàn tỷ từ, có khả năng hiểu và sinh văn bản tự nhiên.
+  long: |
+    LLM là mô hình ngôn ngữ dựa trên kiến trúc Transformer, được huấn luyện trên khối lượng văn
+    bản khổng lồ. Các LLM hàng đầu 2026 gồm GPT-6, Claude Opus 5, Gemini 3 Ultra. Trong y tế,
+    LLM được dùng làm chatbot triệu chứng, trợ lý viết bệnh án, tóm tắt tài liệu, dịch thuật.
+
+- slug: generative-ai
+  vi: AI sinh tạo
+  en: Generative AI
+  short: Các mô hình AI có khả năng tạo ra nội dung mới — văn bản, hình ảnh, âm thanh, video.
+  long: |
+    AI sinh tạo là nhóm mô hình AI tạo ra dữ liệu mới thay vì chỉ phân loại. Bao gồm LLM sinh
+    văn bản, mô hình sinh ảnh (Stable Diffusion, DALL-E), sinh giọng nói, sinh video. Đây là
+    làn sóng công nghệ chi phối chuyển đổi số y tế từ 2023.
+
+- slug: rag
+  vi: Sinh văn bản có truy xuất
+  en: Retrieval-Augmented Generation (RAG)
+  short: Kỹ thuật để LLM trả lời dựa trên tài liệu bên ngoài thay vì chỉ dựa trên kiến thức đã học.
+  long: |
+    RAG là kiến trúc kết hợp LLM với hệ thống tìm kiếm tài liệu. Khi nhận câu hỏi, hệ thống
+    truy xuất các đoạn tài liệu liên quan từ kho (ví dụ hướng dẫn điều trị của Bộ Y tế), rồi
+    đưa vào ngữ cảnh để LLM sinh trả lời có căn cứ. Đây là kỹ thuật cốt lõi cho mọi chatbot
+    y tế có kiểm soát nguồn.
+
+- slug: prompt
+  vi: Câu lệnh dẫn
+  en: Prompt
+  short: Đoạn văn bản đầu vào cho LLM, chỉ dẫn nó làm gì và trả lời ra sao.
+  long: |
+    Prompt là đầu vào của LLM. Chất lượng và định dạng prompt quyết định phần lớn chất lượng
+    output. Nghệ thuật viết prompt tốt (prompt engineering) là kỹ năng cốt lõi khi làm việc với
+    LLM trong y tế: phải nêu rõ vai trò, ràng buộc an toàn, định dạng đầu ra, và ngữ cảnh bệnh
+    nhân nếu có.
+
+- slug: embedding
+  vi: Biểu diễn véc-tơ
+  en: Embedding
+  short: Chuyển văn bản/ảnh thành véc-tơ số học để máy hiểu và so sánh ngữ nghĩa.
+  long: |
+    Embedding là véc-tơ số nhiều chiều (thường 512–4096) đại diện cho ngữ nghĩa của một đoạn
+    văn bản, ảnh, hoặc thực thể. Hai đoạn có ý nghĩa gần nhau sẽ có embedding gần nhau trong
+    không gian véc-tơ. Đây là nền của mọi hệ thống tìm kiếm ngữ nghĩa, RAG, và phân cụm.
+
+- slug: vector-db
+  vi: Cơ sở dữ liệu véc-tơ
+  en: Vector Database
+  short: Kho lưu embedding và tìm kiếm các véc-tơ gần nhau nhanh chóng.
+  long: |
+    Vector database (Pinecone, Weaviate, Qdrant, pgvector) lưu hàng triệu embedding và cho phép
+    truy vấn "tìm k véc-tơ gần nhất" trong mili giây. Là hạ tầng bắt buộc cho hệ RAG quy mô.
+
+- slug: token
+  vi: Token
+  en: Token
+  short: Đơn vị nhỏ nhất mà LLM xử lý — thường là 1 từ hoặc 1 phần của từ.
+  long: |
+    LLM không xử lý ký tự mà xử lý token — đơn vị đã được tokenizer chia. Với tiếng Anh,
+    1 token ≈ 4 ký tự ≈ 0,75 từ. Với tiếng Việt có dấu, tokenization thường tốn nhiều token hơn.
+    Chi phí gọi API LLM tính theo số token input và output.
+
+- slug: context-window
+  vi: Cửa sổ ngữ cảnh
+  en: Context Window
+  short: Số token tối đa LLM có thể "nhớ" trong một lượt hội thoại.
+  long: |
+    Context window là giới hạn số token mà LLM xử lý trong một lượt. GPT-4 là 128k, Claude
+    Opus 5 là 500k, Gemini 3 lên tới 2 triệu (2026). Ngữ cảnh dài giúp đưa cả bệnh án dài
+    hoặc nhiều tài liệu vào prompt cùng lúc.
+
+- slug: hallucination
+  vi: Ảo giác
+  en: Hallucination
+  short: Hiện tượng LLM tự bịa ra thông tin sai nhưng nói với giọng tự tin.
+  long: |
+    Hallucination là rủi ro nghiêm trọng nhất khi dùng LLM trong y tế: mô hình tự tin đưa ra
+    liều thuốc sai, trích dẫn nghiên cứu không tồn tại, hoặc mô tả bệnh sai. Kỹ thuật giảm
+    hallucination gồm RAG, đối chiếu chéo, chain-of-thought có kiểm soát, và luôn có bác sĩ
+    duyệt cuối.
+
+- slug: agent
+  vi: Tác nhân AI
+  en: AI Agent
+  short: Hệ AI có khả năng lập kế hoạch nhiều bước và tự thao tác công cụ để hoàn thành nhiệm vụ.
+  long: |
+    Khác với chatbot chỉ trả lời từng lượt, AI agent có thể lập kế hoạch, gọi công cụ (API,
+    database, phần mềm), phản hồi và điều chỉnh nhiều lần đến khi hoàn thành mục tiêu. Chi tiết
+    xem Chương 9.
+
+# ===== AI y tế cụ thể =====
+
+- slug: cdss
+  vi: Hệ hỗ trợ quyết định lâm sàng
+  en: Clinical Decision Support System (CDSS)
+  short: Phần mềm gợi ý cho bác sĩ về chẩn đoán, điều trị dựa trên dữ liệu bệnh nhân.
+  long: |
+    CDSS là hệ thống thông tin y tế cung cấp cho bác sĩ, dược sĩ và nhân viên y tế các gợi ý
+    dựa trên bằng chứng — cảnh báo tương tác thuốc, gợi ý phác đồ, tính điểm nguy cơ. CDSS
+    hiện đại tích hợp AI để cá nhân hóa gợi ý theo bệnh nhân. Xem Chương 6.
+
+- slug: cad
+  vi: Hỗ trợ chẩn đoán có máy tính
+  en: Computer-Aided Diagnosis (CAD)
+  short: Công cụ giúp bác sĩ đọc ảnh y khoa chính xác hơn.
+  long: |
+    CAD là phần mềm dùng thuật toán (nay chủ yếu là học sâu) để tự động phát hiện, khoanh vùng
+    và định lượng bất thường trên ảnh y khoa. Ứng dụng phổ biến: đọc X-quang phổi, chụp nhũ ảnh,
+    nội soi, CT/MRI. Xem Chương 5.
+
+- slug: pacs
+  vi: Hệ lưu trữ và truyền ảnh y khoa
+  en: Picture Archiving and Communication System (PACS)
+  short: Kho lưu trữ tập trung ảnh y khoa DICOM của bệnh viện.
+  long: |
+    PACS là hệ thống của khoa Chẩn đoán hình ảnh, lưu trữ và phân phối ảnh DICOM (X-quang, CT,
+    MRI, siêu âm) giữa các máy chụp và trạm đọc. Mọi AI đọc ảnh phải tích hợp được với PACS
+    theo chuẩn DICOM.
+
+- slug: dicom
+  vi: Chuẩn dữ liệu ảnh y khoa
+  en: DICOM
+  short: Chuẩn quốc tế để lưu và truyền ảnh y khoa cùng metadata bệnh nhân.
+  long: |
+    DICOM (Digital Imaging and Communications in Medicine) là chuẩn toàn cầu cho ảnh y khoa số.
+    Một file DICOM chứa ảnh + hàng trăm trường metadata (mã bệnh nhân, loại chụp, tham số máy).
+    Mọi thiết bị chẩn đoán hình ảnh hiện đại đều theo chuẩn này.
+
+- slug: emr
+  vi: Bệnh án điện tử
+  en: Electronic Medical Record (EMR)
+  short: Hồ sơ y tế điện tử của bệnh nhân tại một cơ sở khám chữa bệnh.
+  long: |
+    EMR là hệ thống lưu trữ toàn bộ dữ liệu lâm sàng của bệnh nhân tại một bệnh viện: hành
+    chính, tiền sử, khám, chỉ định, đơn thuốc, kết quả cận lâm sàng. Việt Nam đặt mục tiêu 100%
+    bệnh viện có EMR đến 2030.
+
+- slug: ehr
+  vi: Hồ sơ sức khỏe điện tử
+  en: Electronic Health Record (EHR)
+  short: Hồ sơ sức khỏe liên thông giữa nhiều cơ sở, bao gồm cả tự khai và wearable.
+  long: |
+    EHR rộng hơn EMR: dữ liệu di chuyển được giữa các cơ sở, có thể tích hợp dữ liệu bệnh nhân
+    tự khai và thiết bị đo cá nhân. VietPHR là một hướng đi PHR/EHR cho Việt Nam.
+
+- slug: phr
+  vi: Hồ sơ sức khỏe cá nhân
+  en: Personal Health Record (PHR)
+  short: Bản sao hồ sơ y tế thuộc quyền quản lý của bệnh nhân, có thể chia sẻ khi cần.
+  long: |
+    PHR là bản ghi sức khỏe do bệnh nhân sở hữu và kiểm soát. Bệnh nhân quyết định chia sẻ với
+    bác sĩ nào, cơ sở nào. PHR tốt cho phép nhập tay, đồng bộ từ EMR bệnh viện, và tiếp nhận
+    dữ liệu từ wearable.
+
+- slug: fhir
+  vi: Chuẩn dữ liệu y tế FHIR
+  en: HL7 FHIR
+  short: Chuẩn quốc tế để trao đổi dữ liệu y tế giữa các hệ thống qua web API hiện đại.
+  long: |
+    FHIR (Fast Healthcare Interoperability Resources) do HL7 phát hành, là chuẩn dữ liệu y tế
+    thế hệ mới dùng REST API và JSON/XML. Đơn vị dữ liệu là "resource" (Patient, Observation,
+    MedicationRequest…). Là chuẩn được khuyến nghị cho mọi hệ thống EMR/EHR mới ở Việt Nam.
+
+- slug: hl7
+  vi: Chuẩn dữ liệu y tế HL7
+  en: HL7
+  short: Bộ chuẩn dữ liệu y tế lâu đời, tiền thân của FHIR.
+  long: |
+    HL7 (Health Level 7) là tổ chức phi lợi nhuận phát hành nhiều chuẩn dữ liệu y tế từ thập
+    niên 1980. HL7 v2 vẫn phổ biến trong tích hợp hệ thống bệnh viện; HL7 FHIR là thế hệ mới.
+
+- slug: telemedicine
+  vi: Y tế từ xa
+  en: Telemedicine
+  short: Cung cấp dịch vụ y tế qua kênh viễn thông — video, tin nhắn, tư vấn từ xa.
+  long: |
+    Telemedicine là các hoạt động y tế thực hiện qua công nghệ viễn thông, không đòi hỏi bệnh
+    nhân và bác sĩ cùng địa điểm. Bao gồm hội chẩn từ xa, khám tư vấn video, theo dõi bệnh
+    mạn tính qua wearable, dạy học từ xa cho y sinh.
+
+# ===== Đạo đức và tuân thủ =====
+
+- slug: hipaa
+  vi: Đạo luật HIPAA
+  en: HIPAA
+  short: Luật liên bang Hoa Kỳ về bảo vệ dữ liệu sức khỏe.
+  long: |
+    HIPAA (Health Insurance Portability and Accountability Act) là chuẩn bảo mật dữ liệu y tế
+    tại Mỹ từ 1996. Quy định các đơn vị y tế phải bảo vệ Protected Health Information (PHI).
+    Việt Nam chưa có luật tương đương chuyên biệt cho y tế.
+
+- slug: gdpr
+  vi: Quy định GDPR
+  en: GDPR
+  short: Luật bảo vệ dữ liệu cá nhân của Liên minh châu Âu.
+  long: |
+    GDPR (General Data Protection Regulation) là quy định bảo vệ dữ liệu cá nhân của EU từ
+    2018. Áp dụng cho mọi tổ chức xử lý dữ liệu công dân EU, kể cả ngoài EU. Có ảnh hưởng
+    lớn đến các nghiên cứu y sinh đa quốc gia và các nhà cung cấp AI y tế toàn cầu.
+
+- slug: pdpd
+  vi: Nghị định 13/2023/NĐ-CP
+  en: Vietnam PDPD
+  short: Nghị định của Chính phủ Việt Nam về bảo vệ dữ liệu cá nhân, có hiệu lực từ 01/07/2023.
+  long: |
+    Nghị định 13/2023/NĐ-CP là văn bản pháp lý đầu tiên của Việt Nam quy định về bảo vệ dữ liệu
+    cá nhân. Dữ liệu sức khỏe được xếp là dữ liệu cá nhân nhạy cảm, xử lý phải có sự đồng ý rõ
+    ràng của chủ thể dữ liệu.
+
+- slug: fda-samd
+  vi: SaMD của FDA
+  en: FDA Software as a Medical Device
+  short: Phần mềm được FDA phân loại là thiết bị y tế và phải qua kiểm định trước khi lưu hành.
+  long: |
+    FDA Hoa Kỳ phân loại phần mềm y tế (SaMD) theo mức rủi ro và yêu cầu phê duyệt tương ứng.
+    Hầu hết AI đọc ảnh chẩn đoán rơi vào Class II (510(k) clearance). Nhiều AI Việt Nam (như
+    DrAid) đang theo đuổi 510(k) để mở đường sang thị trường Mỹ.
+
+- slug: ce-mark
+  vi: Chứng nhận CE
+  en: CE Mark
+  short: Chứng nhận cần thiết để lưu hành thiết bị y tế (kể cả AI) tại EU.
+  long: |
+    CE Mark là dấu chứng nhận hàng hóa đạt các quy chuẩn của EU. Với thiết bị y tế, CE Mark
+    được cấp theo Medical Device Regulation (MDR) mới có hiệu lực 2021. AI y tế thường thuộc
+    Class IIa hoặc IIb, phải qua Notified Body kiểm định.
+
+# ===== Đánh giá và triển khai =====
+
+- slug: auc
+  vi: Diện tích dưới đường ROC
+  en: Area Under the ROC Curve (AUC)
+  short: Chỉ số đo hiệu năng phân loại nhị phân, càng gần 1 càng tốt.
+  long: |
+    AUC là chỉ số phổ biến để đánh giá mô hình phân loại y khoa. AUC = 1 là hoàn hảo, AUC =
+    0,5 là ngẫu nhiên. AUC > 0,9 thường được coi là tốt cho ứng dụng lâm sàng, nhưng phải
+    kết hợp thêm độ nhạy/đặc hiệu ở ngưỡng vận hành.
+
+- slug: sensitivity-specificity
+  vi: Độ nhạy và độ đặc hiệu
+  en: Sensitivity & Specificity
+  short: Hai chỉ số cơ bản đo khả năng của mô hình phát hiện đúng bệnh (nhạy) và loại trừ đúng (đặc hiệu).
+  long: |
+    Độ nhạy = tỷ lệ phát hiện đúng ca bệnh. Độ đặc hiệu = tỷ lệ loại trừ đúng ca không bệnh.
+    Hai chỉ số này đánh đổi nhau qua ngưỡng phân loại. Trong sàng lọc, ưu tiên nhạy cao. Trong
+    chẩn đoán xác định, ưu tiên đặc hiệu cao.
+
+- slug: ppv-npv
+  vi: Giá trị tiên đoán dương và âm
+  en: PPV & NPV
+  short: Xác suất bệnh nhân thực sự có/không bệnh khi kết quả xét nghiệm là dương/âm.
+  long: |
+    PPV (Positive Predictive Value) = xác suất bệnh nhân thật sự có bệnh khi kết quả xét
+    nghiệm dương. NPV = tương ứng cho kết quả âm. Cả hai phụ thuộc vào tỷ lệ mắc bệnh trong
+    quần thể — quan trọng khi diễn giải AI sàng lọc.
+
+- slug: llm-as-judge
+  vi: LLM làm giám khảo
+  en: LLM-as-Judge
+  short: Dùng một LLM mạnh để đánh giá chất lượng câu trả lời của LLM khác.
+  long: |
+    LLM-as-Judge là kỹ thuật đánh giá tự động: đưa cho một LLM mạnh (thường là GPT-6 hoặc
+    Claude Opus 5) một cặp câu hỏi-trả lời và rubric, yêu cầu chấm điểm. Rẻ và nhanh hơn thuê
+    người, nhưng phải kiểm định lại bằng bộ mẫu người chấm.
+
+# ===== Hạ tầng =====
+
+- slug: gpu
+  vi: Card đồ họa
+  en: GPU
+  short: Bộ xử lý đồ họa, dùng cho tính toán song song lớn, là trụ cột huấn luyện AI.
+  long: |
+    GPU (Graphics Processing Unit) ban đầu dành cho đồ họa, nay là phần cứng chuẩn cho AI.
+    NVIDIA thống trị thị trường với dòng chuyên dụng: RTX 6000 Ada/Blackwell cho workstation,
+    H100/H200 cho datacenter, và các dòng consumer RTX 4090/5090.
+
+- slug: rtx-6000
+  vi: NVIDIA RTX 6000
+  en: NVIDIA RTX 6000
+  short: Dòng GPU workstation cao cấp của NVIDIA, phù hợp phòng lab AI y tế quy mô nhỏ đến trung.
+  long: |
+    RTX 6000 Ada Generation có 48GB VRAM, đủ chạy các LLM 70B ở dạng đã lượng tử hóa. Phiên bản
+    Blackwell (2025) tăng lên 96GB VRAM và cải thiện đáng kể hiệu năng inference. Xem Chương 13.
+
+- slug: h100
+  vi: NVIDIA H100
+  en: NVIDIA H100
+  short: GPU datacenter chuyên dụng cho huấn luyện AI quy mô lớn.
+  long: |
+    H100 là GPU datacenter đầu bảng của NVIDIA từ 2022, với 80GB HBM3 và Transformer Engine
+    tối ưu cho LLM. Giá đơn cỡ 30.000 USD/chiếc và thường bán theo cụm DGX. Không phù hợp
+    workstation lab nhỏ ở Việt Nam.
+
+- slug: quantization
+  vi: Lượng tử hóa mô hình
+  en: Quantization
+  short: Nén mô hình bằng cách giảm độ chính xác của trọng số, để chạy được trên phần cứng yếu hơn.
+  long: |
+    Quantization giảm độ chính xác trọng số mô hình từ FP32 xuống FP16, INT8, hoặc thậm chí
+    INT4. Đánh đổi: tiết kiệm bộ nhớ và tăng tốc, nhưng giảm nhẹ chất lượng. Là kỹ thuật cần
+    thiết để chạy LLM lớn trên GPU workstation.
+
+- slug: inference
+  vi: Suy luận
+  en: Inference
+  short: Giai đoạn chạy mô hình đã huấn luyện để cho ra dự đoán/kết quả.
+  long: |
+    Inference là công đoạn sau khi mô hình đã huấn luyện: đưa dữ liệu mới vào, mô hình trả ra
+    kết quả. Chi phí và tốc độ inference quyết định tính khả thi triển khai lâm sàng — một mô
+    hình đọc ảnh phải trả kết quả trong vài giây, không phải vài phút.
+
+# ===== Các thuật ngữ liên quan an toàn/tương lai =====
+
+- slug: agi
+  vi: Trí tuệ nhân tạo tổng quát
+  en: Artificial General Intelligence (AGI)
+  short: AI có năng lực nhận thức ngang hoặc vượt người trên hầu hết nhiệm vụ trí tuệ.
+  long: |
+    AGI là khái niệm về AI có khả năng suy luận, học và giải quyết vấn đề ở mức tương đương
+    hoặc vượt người trong hầu hết lĩnh vực. GPT-6 Astra (OpenAI, 2026) là bước gần AGI đầu
+    tiên có công bố chính thức. Xem Chương 15.
+
+- slug: alignment
+  vi: Căn chỉnh AI
+  en: AI Alignment
+  short: Lĩnh vực nghiên cứu đảm bảo AI hoạt động theo giá trị và ý định của con người.
+  long: |
+    Alignment là bài toán trung tâm của AI an toàn: làm sao đảm bảo AI mạnh hành động phù hợp
+    ý định người dùng, không lệch mục tiêu, không lừa dối, không gây hại. Đặc biệt cấp bách
+    khi AI tiến gần AGI.
+
+- slug: red-teaming
+  vi: Kiểm thử đối kháng
+  en: Red-Teaming
+  short: Thử nghiệm có tổ chức để tìm điểm yếu, lỗ hổng an toàn của hệ thống AI.
+  long: |
+    Red-teaming là quy trình có nhóm chuyên gia đóng vai kẻ tấn công/dùng sai để tìm lỗ hổng
+    hệ thống AI: prompt injection, hallucination gây hại, thiên kiến. Bắt buộc trước khi triển
+    khai AI trong bối cảnh lâm sàng.
+
+- slug: model-card
+  vi: Thẻ mô tả mô hình
+  en: Model Card
+  short: Tài liệu mô tả tóm tắt mô hình AI: dữ liệu huấn luyện, hiệu năng, giới hạn, đạo đức.
+  long: |
+    Model card là chuẩn tài liệu do Google/Mitchell (2019) đề xuất, mô tả mô hình AI theo
+    bảng nhất quán: mục đích, dữ liệu, hiệu năng phân theo nhóm nhân khẩu, giới hạn, khuyến
+    cáo dùng. Nay là chuẩn bắt buộc trong xuất bản AI y tế.

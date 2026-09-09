@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import TermTooltip from "@/components/TermTooltip";
+import { getGlossary } from "@/lib/glossary";
 
 export const metadata: Metadata = {
   title: "Cẩm nang AI trong Y tế Việt Nam",
@@ -25,12 +27,18 @@ export default function RootLayout({
               <Link href="/muc-luc" className="hover:text-accent">Mục lục</Link>
               <Link href="/ma-tran" className="hover:text-accent">Ma trận</Link>
               <Link href="/dashboard" className="hover:text-accent">Tiến độ</Link>
+              <Link href="/thuat-ngu" className="hover:text-accent">Thuật ngữ</Link>
               <Link href="/dong-gop" className="hover:text-accent">Đóng góp</Link>
               <a href="/admin/" className="text-accent font-semibold hover:underline">✏️ Soạn</a>
             </nav>
           </div>
         </header>
         <main className="max-w-6xl mx-auto px-6 py-10">{children}</main>
+        <TermTooltip
+          glossary={Object.fromEntries(
+            getGlossary().map((e) => [e.slug, { vi: e.vi, en: e.en, short: e.short, long: e.long }])
+          )}
+        />
         <footer className="border-t border-slate-200 mt-20">
           <div className="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500 flex justify-between">
             <span>Bản v0.1 — 2026. Cẩm nang cộng tác cộng đồng.</span>
