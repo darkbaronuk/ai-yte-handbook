@@ -113,6 +113,55 @@ export const LABS: Lab[] = [
       },
     ],
   },
+  {
+    id: "lab-03",
+    chapter: "03-buoc-ngoat-chinh-sach",
+    title: "Lab 3 — Đọc Luật AI 134/2025 và phân tích tác động",
+    intro:
+      "Luật AI 134/2025/QH15 có hiệu lực 1/1/2026 và đặt nhiều yêu cầu mới cho AI y tế. Trong lab này, bạn đọc một điều luật cụ thể và phân tích tác động lên một ứng dụng AI y tế bạn quan tâm — vậy bạn thực sự hiểu luật và không chỉ trích dẫn sáo rỗng.",
+    question:
+      "Chọn 1 ứng dụng AI y tế cụ thể (ví dụ: chatbot tư vấn sức khỏe cộng đồng, AI đọc phim X-quang, trợ lý ảo cho bác sĩ, hay AI sàng lọc lao tại trạm y tế). Truy cập bản toàn văn Luật AI 134/2025/QH15, chọn ra 2 điều luật liên quan trực tiếp đến ứng dụng đó. Với mỗi điều luật: (1) tóm tắt nội dung bắng 2-3 câu; (2) xác định 2 tác động cụ thể lên thiết kế, vận hành hoặc chi phí của ứng dụng; (3) đề xuất 1 hành động cụ thể bạn hoặc tổ chức cần làm để tuân thủ. Viết 300-500 từ.",
+    rubric: `
+- **Đúng điều luật**: Chọn được 2 điều thực sự liên quan (không phải trích dẫn cho có), trích đúng số điều và tên.
+- **Tóm tắt chính xác**: Không bóp méo nội dung, giữ nguyên tính pháp lý (thuật ngữ "bắt buộc", "khuyến nghị", "quyền", "nghĩa vụ").
+- **Tác động thực tế**: Phải nêu tác động cụ thể (ví dụ: "cần thêm màn hiển thị 'bạn đang tương tác với AI'" chứ không phải "cần minh bạch hơn").
+- **Hành động khả thi**: Đề xuất làm được trong 3-6 tháng, không chung chung như "nâng cao nhận thức".
+- **Tư duy độc lập**: Không chỉ tóm tắt luật, có góc nhìn của người triển khai.
+
+**Grade 5**: Đạt 5/5, phân tích dùng được ngay vào tài liệu tuân thủ của tổ chức.
+**Grade 4**: Đạt 4/5, hiểu luật nhưng thiếu 1 tác động hoặc hành động.
+**Grade 3**: Đạt 3/5, đúng hướng nhưng tác động chung chung.
+**Grade 2**: Đạt 2/5, chọn sai điều luật hoặc tóm tắt lệch.
+**Grade 1**: Không đạt, không thể hiện hiểu văn bản gốc.`,
+    minLength: 600,
+    suggestedTimeMin: 25,
+    tools: [
+      {
+        name: "Toàn văn Luật AI 134/2025/QH15 (Chính phủ)",
+        url: "https://vanban.chinhphu.vn/?pageid=27160&docid=216334&classid=1&typegroupid=3",
+        note: "Bản gốc toàn văn đăng trên Cổng Thông tin Chính phủ. Miễn phí.",
+        free: true,
+      },
+      {
+        name: "Video \"10 điểm đáng chú ý của Luật AI\" (LuatVietnam)",
+        url: "https://www.youtube.com/watch?v=0t10A9w7XWQ",
+        note: "Video 15 phút giới thiệu nhanh 10 điểm chính. Xem trước để định hướng.",
+        free: true,
+      },
+      {
+        name: "Perplexity (Auto)",
+        url: "https://www.perplexity.ai",
+        note: "Dùng để tra cứu điều luật, so sánh với luật AI quốc tế (EU AI Act, US AI EO).",
+        free: true,
+      },
+      {
+        name: "Google Gemini",
+        url: "https://gemini.google.com",
+        note: "Viết bản phân tích, kiểm tra logic lập luận.",
+        free: true,
+      },
+    ],
+  },
 ];
 
 export function getLab(id: string): Lab | undefined {

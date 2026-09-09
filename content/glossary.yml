@@ -555,3 +555,65 @@
     hoạch, sáng tạo, chuyển giao kiến thức giữa lĩnh vực. GPT-6 Astra (OpenAI 2026) là
     ứng viên đầu tiên đạt mức "narrow AGI" trên nhiều benchmark. Chưa có định nghĩa chuẩn
     được đồng thuận.
+
+# ===== Chương 3: Chính sách =====
+
+- slug: nq57
+  vi: Nghị quyết 57-NQ/TW
+  en: Resolution No. 57-NQ/TW
+  short: Nghị quyết Bộ Chính trị 22/12/2024 về đột phá KHCN, đổi mới sáng tạo, chuyển đổi số quốc gia.
+  long: |
+    Nghị quyết 57-NQ/TW của Bộ Chính trị ngày 22/12/2024 xác định KHCN, đổi mới sáng tạo
+    và chuyển đổi số là "đột phá quan trọng hàng đầu" của quốc gia. Với ngành y tế, Bộ Y tế
+    được giao 386 nhiệm vụ, hoàn thành 375 tính đến 5/2026. NQ57 mở đường pháp lý cho
+    Luật AI, Luật CN CNS và các thông tư chuyên ngành sau đó.
+
+- slug: nq72
+  vi: Nghị quyết 72-NQ/TW
+  en: Resolution No. 72-NQ/TW
+  short: Nghị quyết Bộ Chính trị 9/9/2025 về bảo vệ, chăm sóc và nâng cao sức khỏe nhân dân.
+  long: |
+    Nghị quyết 72-NQ/TW do Tổng Bí thư Tô Lâm ký ngày 9/9/2025 đặt các mục tiêu cụ thể:
+    khám sức khỏe miễn phí ít nhất 1 lần/năm cho mọi người dân từ 2026, sổ sức khỏe điện tử
+    toàn dân, mỗi trạm y tế xã có 4-5 bác sĩ đến 2027, tuổi thọ trung bình 75,5 (68 năm khỏe
+    mạnh) đến 2030. Đây là cơ sở chính sách cho hạ tầng dữ liệu y tế toàn dân.
+
+- slug: luatai
+  vi: Luật Trí tuệ nhân tạo 134/2025/QH15
+  en: AI Law 134/2025/QH15
+  short: Luật riêng về AI được Quốc hội thông qua 12/2025, hiệu lực từ 1/1/2026.
+  long: |
+    Luật AI 134/2025/QH15 là luật đầu tiên ở châu Á đưa AI thành đạo luật riêng. Luật phân loại
+    hệ thống AI theo rủi ro (y tế thuộc nhóm rủi ro cao), quy định quyền của người bị tác động
+    (biết mình đang tương tác với AI, yêu cầu con người can thiệp), yêu cầu đánh giá tác động
+    trước triển khai, và cho phép sandbox thử nghiệm có kiểm soát.
+
+- slug: tt13
+  vi: Thông tư 13/2025/TT-BYT
+  en: Circular 13/2025/TT-BYT
+  short: Thông tư Bộ Y tế bắt buộc mọi bệnh viện triển khai bệnh án điện tử chậm nhất 30/9/2026.
+  long: |
+    Thông tư 13/2025/TT-BYT ban hành ngày 6/6/2025 hướng dẫn triển khai hồ sơ bệnh án điện tử
+    tại các cơ sở khám chữa bệnh. Mọi bệnh viện công lập và tư nhân phải hoàn thành trước
+    30/9/2026. Đến 5/2026, đã có 1.231/1.650 bệnh viện triển khai (~75%). Không có EMR đồng
+    nghĩa với không có dữ liệu cho AI.
+
+- slug: vrhain
+  vi: V-RHAIN
+  en: Vietnam Responsible Healthcare AI Network
+  short: Mạng lưới AI y tế có trách nhiệm Việt Nam, ra mắt 14/1/2026.
+  long: |
+    V-RHAIN được Bộ Y tế công bố ngày 14/1/2026, đồng thời gia nhập HealthAI Global Regulatory
+    Network. Mục tiêu 2026: triển khai AI tại 3.321 trạm y tế xã cho tầm soát lao, tim mạch,
+    dinh dưỡng, chẩn đoán suy thận cấp và suy hô hấp. V-RHAIN cũng cung cấp môi trường sandbox
+    chính sách để thử nghiệm AI có kiểm soát.
+
+- slug: aicotranhiem
+  vi: AI có trách nhiệm
+  en: Responsible AI
+  short: Nguyên tắc phát triển và sử dụng AI đảm bảo an toàn, minh bạch, có trách nhiệm giải trình.
+  long: |
+    AI có trách nhiệm là khung nguyên tắc phổ biến trong luật AI quốc tế (EU AI Act, OECD AI
+    Principles, WHO Health AI Ethics). Bao gồm bảy nguyên tắc chính: lấy con người làm trung
+    tâm, an toàn người bệnh, bảo mật dữ liệu, minh bạch, không thiên lệch, có trách nhiệm giải
+    trình, phù hợp pháp luật quốc gia. V-RHAIN chọn bảy nguyên tắc này làm nền tảng.
