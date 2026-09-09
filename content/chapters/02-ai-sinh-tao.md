@@ -27,7 +27,7 @@ summary: >
 > AI hay không", mà là **có quy trình đo lường, kiểm chứng và thẩm định output
 > hay không**.
 
-## Ba làn sóng, bốn năm
+## Bốn năm, ba làn sóng
 
 Cuối tháng 11/2022, khi OpenAI mở ChatGPT miễn phí cho công chúng, ít ai trong
 ngành y tế Việt Nam tin rằng một chatbot văn phòng có thể liên quan gì đến bàn
