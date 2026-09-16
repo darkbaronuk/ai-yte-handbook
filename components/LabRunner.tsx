@@ -83,7 +83,7 @@ export default function LabRunner({ lab }: { lab: Lab }) {
       {/* Câu hỏi */}
       <section className="bg-slate-50 border-l-4 border-accent p-5 rounded-r-lg">
         <h2 className="font-semibold text-lg mb-2">Câu hỏi</h2>
-        <p className="text-slate-800 leading-relaxed">{lab.question}</p>
+        <p className="text-slate-800 leading-relaxed whitespace-pre-line">{lab.question}</p>
       </section>
 
       {/* Công cụ AI gợi ý (miễn phí) */}
