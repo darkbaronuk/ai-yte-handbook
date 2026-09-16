@@ -350,175 +350,45 @@ hình mới có thể có hành vi khác mô hình cũ.
 
 ## Phần VII — Bốn tình huống thực hành
 
-Bảy phần trên đưa ra khung khái niệm. Phần này đưa bốn tình huống rút
-từ thực tế bệnh viện Việt Nam trong hai năm 2025–2026 để độc giả tự
-đối chiếu với công việc của mình. Ở cuối mỗi tình huống có bảng phân
-tích năm chiều: an toàn lâm sàng, bảo mật và dữ liệu, pháp lý, xử trí
-tại chỗ trong 24 giờ và 30 ngày, và chuỗi báo cáo. Đây cũng chính là
-khung mà lớp học nên dùng khi thảo luận.
+Bảy phần trên đưa ra khung khái niệm. Phần này giới thiệu bốn tình huống
+rút từ thực tế bệnh viện Việt Nam trong hai năm 2025–2026 để độc giả tự
+đối chiếu với công việc của mình. Mỗi tình huống đan xen cả an toàn lâm
+sàng, bảo mật dữ liệu và tuân thủ pháp luật — không phải câu chuyện đơn
+tuyến. Bài tập chi tiết cho từng tình huống được đưa vào Lab 14 kèm gợi
+ý phương pháp, danh sách công cụ AI miễn phí để dùng ngay, và rubric
+chấm điểm tự động.
 
-### Tình huống 1: điều dưỡng hỏi ChatGPT về liều thuốc
+**Tình huống 1 — Điều dưỡng hỏi ChatGPT về liều thuốc.** Một điều dưỡng
+Hồi sức tích cực nghi ngờ liều vancomycin trên bệnh nhân nữ 72 tuổi có
+suy thận, paste tuổi, cân nặng, creatinine và tên thuốc vào ChatGPT bản
+miễn phí để hỏi ý kiến, rồi tiếp tục tiêm theo khẳng định của AI.
 
-Điều dưỡng M tại khoa Hồi sức tích cực của bệnh viện tuyến tỉnh. Một
-bệnh nhân nữ 72 tuổi, cân nặng 48 kg, creatinine 1,8 mg/dL được bác
-sĩ chỉ định vancomycin 1 g mỗi 12 giờ. Cuối ca trực, điều dưỡng thấy
-hơi nghi ngờ liều, bèn paste vào ChatGPT bản miễn phí: "Bệnh nhân nữ
-72 tuổi, 48 kg, creatinine 1,8 mg/dL, dose vancomycin 1 g/12h có sao
-không?". AI trả lời có vẻ chắc chắn: "Liều này an toàn cho bệnh nhân
-lớn tuổi, không cần điều chỉnh". Điều dưỡng tiếp tục tiêm.
+**Tình huống 2 — Bác sĩ tin AI đọc CT "bình thường".** Bác sĩ chẩn đoán
+hình ảnh liếc phim CT ngực của bệnh nhân hút thuốc 40 gói-năm, đồng ý
+với gợi ý "không phát hiện bất thường" của AI ở độ tự tin 94%, ký kết
+quả. Ba tháng sau, ung thư phổi giai đoạn IIIB được phát hiện ở chính
+nốt đã bị bỏ sót.
 
-Về an toàn lâm sàng, bệnh nhân đang có creatinine tăng ứng với suy
-thận nhẹ đến trung bình, và ở cân nặng 48 kg thì liều 1 g mỗi 12 giờ
-là cao — chuẩn lâm sàng cần dựa vào độ thanh thải creatinine tính
-theo Cockcroft-Gault và đo nồng độ đáy. Đây là kiểu lỗi ảo giác kết
-hợp automation bias: AI đưa ra khẳng định thiếu căn cứ và điều dưỡng
-tin theo. Về bảo mật, dữ liệu tuổi, giới, cân nặng, creatinine cùng
-tên thuốc đã ra khỏi vùng kiểm soát của bệnh viện, đi tới máy chủ
-của OpenAI ở nước ngoài; dù chưa có họ tên đầy đủ, nhưng tổ hợp này
-vẫn có thể tái định danh nếu kết hợp với ngày và khoa. Về pháp lý,
-hành vi này chạm Điều 26 Luật 91/2025 (dữ liệu sức khỏe là nhạy cảm),
-Điều 22 (chuyển dữ liệu xuyên biên giới không có căn cứ), và Điều 45
-khoản 5 Luật KCB 15/2023 (bí mật thông tin đời tư người bệnh). Trách
-nhiệm phân bổ giữa điều dưỡng M — người trực tiếp thao tác — và bệnh
-viện — bên kiểm soát dữ liệu theo Điều 37 Luật 91/2025.
+**Tình huống 3 — Khoa huấn luyện mô hình AI da liễu.** Khoa Da liễu
+xuất 2.000 hồ sơ bệnh nhân có ảnh khuôn mặt cho một nhóm nghiên cứu ở
+trường đại học để huấn luyện mô hình nhận diện tổn thương da, che tên
+qua loa, không xin đồng ý, không hợp đồng xử lý dữ liệu, không đánh
+giá tác động.
 
-Trong 24 giờ, điều dưỡng cần báo bác sĩ điều trị và trưởng khoa để
-đánh giá lại liều, đo nồng độ đáy vancomycin, cân nhắc điều chỉnh
-theo hàm lượng thanh thải; đồng thời báo phòng CNTT về việc dữ liệu
-đã ra ngoài. Trong 30 ngày, khoa cần ban hành hoặc rà soát quy trình
-dùng AI công cộng, tổ chức đào tạo lại toàn bộ điều dưỡng và bác sĩ
-về sử dụng AI trong tính liều thuốc, và cân nhắc triển khai công cụ
-tính liều nội bộ (Dược thư quốc gia, calculator đã được thẩm định).
-Chuỗi báo cáo đi từ điều dưỡng M sang trưởng khoa Hồi sức, tới bác
-sĩ điều trị, phòng Điều dưỡng, phòng CNTT, và nếu xác định là sự cố
-dữ liệu đáng kể theo Điều 23 Luật 91/2025 thì Bộ phận bảo vệ dữ liệu
-(DPO) hoặc Ban giám đốc phải thông báo cơ quan có thẩm quyền trong
-bảy mươi hai giờ.
+**Tình huống 4 — Chatbot bệnh viện khuyên ngưng thuốc chống đông.**
+Chatbot trên website bệnh viện khuyên một bệnh nhân đã đặt stent mạch
+vành ngưng aspirin và clopidogrel 5–7 ngày trước khi nhổ răng. Bệnh
+nhân làm theo, ba ngày sau nhập cấp cứu vì nhồi máu cơ tim cấp do
+huyết khối trong stent.
 
-### Tình huống 2: bác sĩ tin AI đọc CT "bình thường"
+Với mỗi tình huống, Lab 14 yêu cầu học viên trả lời năm câu hỏi theo
+thứ tự: an toàn lâm sàng, bảo mật và dữ liệu, pháp lý (tối thiểu ba
+trích dẫn điều luật cụ thể), xử trí tại chỗ trong 24 giờ và 30 ngày,
+và chuỗi báo cáo cụ thể. Lab đi kèm gợi ý phương pháp làm bài từng
+bước, danh sách công cụ AI miễn phí sử dụng ngay (Perplexity, Gemini,
+ChatGPT), và AI chấm tự động theo rubric 1–5, lưu điểm vào sổ grading.
 
-Bệnh viện tuyến trung ương đang triển khai AI hỗ trợ đọc CT. Bác sĩ
-chẩn đoán hình ảnh X có 5 năm kinh nghiệm đọc phim CT ngực của một
-nam bệnh nhân 58 tuổi, tiền sử hút thuốc 40 gói-năm, đi khám vì ho
-kéo dài. AI trả về "không phát hiện bất thường" với độ tự tin 94%.
-Bác sĩ X liếc qua phim, đồng ý với AI, ký kết quả. Ba tháng sau,
-bệnh nhân quay lại vì khó thở, phát hiện ung thư phổi giai đoạn
-IIIB. Đọc lại CT cũ thì có nốt 12 mm ở thùy trên bên trái mà cả AI
-lẫn bác sĩ đều bỏ sót.
-
-Về an toàn lâm sàng, đây là ca automation bias điển hình: độ tự tin
-cao của mô hình làm bác sĩ giảm cảnh giác, bỏ qua bước đọc phim một
-cách độc lập. Nốt phổi ở kích thước 8–15 mm là kích thước dễ bỏ sót
-nhất khi đọc nhanh, và bệnh nhân có yếu tố nguy cơ cao (hút thuốc
-nặng) khiến việc bỏ sót có hậu quả nặng nề. Về bảo mật, tình huống
-này không có vi phạm bảo mật nếu hệ thống AI được chạy nội bộ bệnh
-viện. Về pháp lý, trách nhiệm chuyên môn cuối vẫn thuộc bác sĩ X
-theo Luật KCB 15/2023 — luật không loại trừ trách nhiệm khi có AI hỗ
-trợ. Nếu bệnh nhân khởi kiện, bệnh viện với tư cách deployer cũng
-chịu trách nhiệm liên đới theo Luật 134/2025, và nhà cung cấp AI có
-thể chịu trách nhiệm sản phẩm nếu chứng minh được mô hình có lỗi hệ
-thống hoặc thiếu cảnh báo phù hợp.
-
-Trong 24 giờ, bệnh viện cần thông báo cho bệnh nhân theo quy định
-minh bạch trong khám chữa bệnh, tổ chức hội chẩn đa chuyên khoa cho
-ca ung thư mới, và niêm phong hồ sơ CT gốc cùng log AI để phục vụ
-điều tra. Trong 30 ngày, khoa Chẩn đoán hình ảnh cần rà soát toàn
-bộ ca CT ngực mà AI báo "bình thường" trong ba tháng gần nhất để
-sàng lọc các trường hợp tương tự, ban hành quy trình bắt buộc bác
-sĩ đọc độc lập trước khi xem gợi ý AI, và tổ chức đào tạo về
-automation bias. Chuỗi báo cáo đi từ bác sĩ X (khi phát hiện lại)
-sang trưởng khoa, Ban giám đốc, phòng Quản lý chất lượng, và nhà
-cung cấp AI để rà soát mô hình; nếu là sự cố y khoa nghiêm trọng
-thì báo Sở Y tế theo quy định.
-
-### Tình huống 3: khoa huấn luyện mô hình AI da liễu
-
-Khoa Da liễu một bệnh viện đa khoa xuất 2.000 hồ sơ bệnh nhân, bao
-gồm ảnh lâm sàng, chẩn đoán, và phác đồ, từ HIS nội bộ để hợp tác
-với một nhóm nghiên cứu ở trường đại học huấn luyện mô hình nhận
-diện tổn thương da. Việc che tên làm qua loa — xóa họ tên nhưng
-giữ mã bệnh án, ngày sinh chi tiết, trường hợp bệnh, và ảnh khuôn
-mặt. Không xin đồng ý từng bệnh nhân vì "dữ liệu cũ", không có
-hợp đồng xử lý dữ liệu với trường đại học, không làm đánh giá tác
-động. Phòng CNTT chỉ cấp USB copy dữ liệu cho trưởng khoa.
-
-Về an toàn lâm sàng, bản thân việc huấn luyện không trực tiếp gây
-hại bệnh nhân trong tình huống này, nhưng mô hình huấn luyện trên
-dữ liệu thiên lệch (chỉ dân số một bệnh viện, một khu vực) có thể
-gây hại khi triển khai rộng. Về bảo mật và dữ liệu, đây là vi phạm
-nghiêm trọng nhất trong bốn ca: 2.000 hồ sơ chứa ảnh mặt bệnh nhân
-là dữ liệu sinh trắc học nhạy cảm, tổ hợp mã bệnh án cộng ngày sinh
-chi tiết dễ dàng tái định danh, không có căn cứ pháp lý cho mục
-đích huấn luyện, không có hợp đồng xử lý dữ liệu với bên xử lý là
-trường đại học. Về pháp lý, hành vi này vi phạm Điều 26 Luật 91/2025
-(dữ liệu sức khỏe nhạy cảm), Điều 30 (xử lý bằng AI phải đúng mục
-đích và có căn cứ), Điều 37 (nghĩa vụ bên kiểm soát dữ liệu và hợp
-đồng với bên xử lý), Điều 8 (mức phạt lên tới 3 tỷ đồng cho tổ chức),
-và các quy định về đánh giá tác động bảo vệ dữ liệu. Trách nhiệm
-chính thuộc bệnh viện với tư cách bên kiểm soát dữ liệu, trưởng khoa
-Da liễu với tư cách người quyết định, và trưởng phòng CNTT với tư
-cách người thực thi việc copy dữ liệu; trường đại học chịu trách
-nhiệm với tư cách bên xử lý dữ liệu không có hợp đồng.
-
-Trong 24 giờ, Ban giám đốc cần yêu cầu dừng ngay việc chuyển giao
-dữ liệu, thu hồi USB, yêu cầu trường đại học không xử lý dữ liệu
-đến khi có hợp đồng đầy đủ; đồng thời báo bộ phận bảo vệ dữ liệu và
-chuẩn bị hồ sơ báo cáo Bộ Công an theo Điều 23 Luật 91/2025 trong
-72 giờ. Trong 30 ngày, bệnh viện cần thực hiện đánh giá tác động bảo
-vệ dữ liệu (DPIA), ký hợp đồng xử lý dữ liệu với trường đại học nếu
-tiếp tục hợp tác, xây dựng quy trình xin đồng ý bệnh nhân cho mục
-đích nghiên cứu và huấn luyện AI, ẩn danh lại toàn bộ dữ liệu theo
-chuẩn (loại bỏ ảnh mặt hoặc dùng kỹ thuật xóa khuôn mặt, thay ngày
-sinh bằng năm sinh, thay mã bệnh án bằng ID nghiên cứu), và ban
-hành quy chế nội bộ về chia sẻ dữ liệu ngoài bệnh viện. Chuỗi báo
-cáo đi từ trưởng khoa Da liễu và phòng CNTT sang Ban giám đốc, DPO,
-sang trường đại học đối tác, và cần thông báo Bộ Công an theo quy
-định vi phạm dữ liệu; các bệnh nhân trong nhóm 2.000 ca cũng cần
-được thông báo theo Điều 4 Luật 91/2025 về quyền được biết.
-
-### Tình huống 4: chatbot bệnh viện khuyên ngưng thuốc chống đông
-
-Bệnh viện có chatbot trên website trả lời câu hỏi của bệnh nhân
-bằng tiếng Việt. Một bệnh nhân đã đặt stent mạch vành, đang dùng
-aspirin và clopidogrel, hỏi chatbot: "Tôi bị răng đau sắp nhổ, có
-cần ngưng thuốc chống đông không?". Chatbot trả lời: "Có, bạn nên
-ngưng aspirin và clopidogrel 5–7 ngày trước khi nhổ răng để tránh
-chảy máu". Bệnh nhân làm theo, ba ngày sau nhập cấp cứu vì nhồi
-máu cơ tim cấp, huyết khối trong stent.
-
-Về an toàn lâm sàng, đây là ca gây hại trực tiếp và cực nghiêm
-trọng: hướng dẫn hiện đại của Hiệp hội Nha khoa Hoa Kỳ, Hiệp hội
-Tim mạch Hoa Kỳ và tương tự các khuyến cáo Việt Nam đều **không**
-khuyến cáo ngưng thuốc chống đông với đa số thủ thuật nha khoa
-thông thường, đặc biệt là ở bệnh nhân đã đặt stent — nguy cơ huyết
-khối cao hơn nguy cơ chảy máu. Kiểu lỗi ở đây là ảo giác cộng
-thiếu ngữ cảnh: chatbot không hỏi tiền sử stent, không cảnh báo về
-nguy cơ huyết khối, đưa ra khuyến cáo trực tiếp cho người bệnh mà
-không có bác sĩ duyệt. Về bảo mật, tình huống này không có vi phạm
-bảo mật nếu chatbot chạy nội bộ, nhưng bản ghi hội thoại là dữ liệu
-sức khỏe và phải được bảo vệ theo Luật 91/2025. Về pháp lý, chatbot
-tư vấn trực tiếp cho bệnh nhân về ngưng thuốc thuộc nhóm rủi ro cao
-theo Luật 134/2025 vì ảnh hưởng trực tiếp đến quyết định điều trị;
-bệnh viện vi phạm nghĩa vụ giám sát của con người tại Điều 4 Luật
-134/2025, và nghĩa vụ minh bạch tại Điều 10 khoản 2 Luật KCB. Bệnh
-viện có nguy cơ bị kiện bồi thường thiệt hại theo Điều 28 khoản 1
-Luật KCB, và nhà cung cấp chatbot chịu trách nhiệm sản phẩm nếu
-không có cảnh báo phù hợp.
-
-Trong 24 giờ, bệnh viện cần **tạm dừng chatbot** với tất cả câu hỏi
-liên quan đến ngưng hoặc điều chỉnh thuốc, đặt banner cảnh báo trên
-website "Chatbot chỉ hỗ trợ thông tin chung, không tư vấn điều trị,
-mọi câu hỏi thuốc phải hỏi bác sĩ điều trị", báo Sở Y tế về sự cố y
-khoa, và liên hệ bệnh nhân đang điều trị để đảm bảo không có ca
-tương tự đang xảy ra. Trong 30 ngày, bệnh viện cần rà soát toàn bộ
-log chatbot ba tháng gần nhất để phát hiện các khuyến cáo tương tự,
-huấn luyện lại chatbot với ràng buộc từ chối tư vấn thuốc và luôn
-chuyển hướng đến bác sĩ, thiết lập cơ chế con người ở trong vòng
-lặp cho các câu hỏi thuốc/liều/ngưng thuốc theo Luật 134/2025, và
-làm đánh giá tác động cho hệ thống rủi ro cao trước khi bật lại.
-Chuỗi báo cáo đi từ khoa Tim mạch (nơi tiếp nhận ca) sang Ban giám
-đốc, phòng Quản lý chất lượng, nhà cung cấp chatbot, Sở Y tế, và
-báo cáo sự cố y khoa nghiêm trọng theo quy định Bộ Y tế.
+<div class="lab-cta"><a href="/lab/lab-14" target="_blank" rel="noopener noreferrer" class="lab-btn">▶ Mở Lab 14 trong tab mới</a><div class="lab-meta">~35 phút · Chọn 1 trong 4 case · AI chấm rubric 5 tiêu chí · Ghi tự động vào sổ grading</div></div>
 
 ## Đọc thêm
 
