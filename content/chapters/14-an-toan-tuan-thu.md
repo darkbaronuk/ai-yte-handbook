@@ -26,6 +26,14 @@ summary: >
 
 ## Bối cảnh: bốn tầng luật cùng lúc siết chặt
 
+> **Điểm neo của chương**
+>
+> Từ 1 tháng 3 năm 2026, cùng một hành vi — chẳng hạn dán bệnh án lên ChatGPT
+> để hỏi phác đồ — có thể vi phạm **đồng thời** ba khung: bảo vệ dữ liệu cá
+> nhân, an ninh mạng, và trách nhiệm chuyên môn khám chữa bệnh. Chương này
+> viết cho nhân viên y tế đang dùng AI mỗi ngày để **nhận ra ranh giới trước
+> khi vượt qua**, chứ không phải để tra cứu luật sau khi sự cố xảy ra.
+
 Trong khoảng một năm rưỡi, Việt Nam ban hành bốn văn bản gốc điều chỉnh
 hoạt động AI trong y tế, không có văn bản nào bao trùm ba cái còn lại.
 Nghị định [102/2025/NĐ-CP](https://vanban.chinhphu.vn/?pageid=27160&docid=213607)
@@ -48,6 +56,27 @@ môn, bí mật hồ sơ bệnh án và các dịch vụ khám chữa bệnh t�
 lên trên là Luật An ninh mạng, Luật An toàn thông tin mạng, và, khi AI
 được đóng gói như phần mềm chẩn đoán độc lập, cả các quy định về đăng
 ký lưu hành trang thiết bị y tế.
+
+```mermaid
+flowchart TB
+    APP["Ứng dụng AI trong y tế<br/>(từ 1/3/2026)"]
+    L1["Tầng 1 — Chuyên môn<br/>Luật KCB 15/2023<br/>hiệu lực 1/1/2024"]
+    L2["Tầng 2 — Dữ liệu y tế<br/>NĐ 102/2025/NĐ-CP<br/>hiệu lực 1/7/2025"]
+    L3["Tầng 3 — Dữ liệu cá nhân<br/>Luật 91/2025/QH15<br/>hiệu lực 1/1/2026"]
+    L4["Tầng 4 — Trí tuệ nhân tạo<br/>Luật 134/2025/QH15<br/>hiệu lực 1/3/2026"]
+    L5["Tầng nền — An ninh mạng<br/>+ Trang thiết bị y tế"]
+    L1 --> APP
+    L2 --> APP
+    L3 --> APP
+    L4 --> APP
+    L5 --> APP
+    style APP fill:#fef3c7,stroke:#d97706,stroke-width:3px
+    style L4 fill:#fee2e2,stroke:#dc2626
+    style L3 fill:#fed7aa,stroke:#ea580c
+    style L2 fill:#fef9c3,stroke:#ca8a04
+    style L1 fill:#dbeafe,stroke:#2563eb
+    style L5 fill:#e5e7eb,stroke:#6b7280
+```
 
 Bốn tầng luật này bắt mọi ứng dụng AI trong y tế phải trả lời được ba
 câu hỏi cùng lúc: nếu AI sai, bệnh nhân bị gì và ai chịu trách nhiệm;
@@ -81,47 +110,65 @@ không thiên lệch — và ba trục này không phải khẩu hiệu, chúng 
 khai.
 
 Bên cạnh câu hỏi phân loại rủi ro, mỗi mô hình AI hiện nay đều mang
-theo bảy nguy cơ cố hữu mà nhân viên y tế phải nhận diện được. **Ảo giác**
-là nguy cơ nổi tiếng nhất: AI bịa tên thuốc, bịa liều, bịa tương tác,
-dẫn guideline cũ như thật. Với nhân viên y tế thiếu kinh nghiệm, giọng
-văn chắc chắn của mô hình dễ làm người đọc tin theo. **Thiên lệch** đến
-từ dữ liệu huấn luyện: hầu hết mô hình lớn học trên dân số phương Tây,
-người trưởng thành, nên khi áp dụng cho người Việt, trẻ em, phụ nữ mang
-thai, hay bệnh nhân ở vùng sâu vùng xa, có thể bỏ sót các biểu hiện đặc
-thù như sốt xuất huyết, ung thư gan liên quan HBV, hay bệnh Basedow ở
-phụ nữ trẻ. **Lạc hậu dữ liệu** xuất hiện khi guideline lâm sàng thay
-đổi mỗi hai đến ba năm nhưng mô hình vẫn trả lời theo bản cũ nếu không
-được cập nhật; người dùng không kiểm tra năm ban hành của guideline dễ
-kê nhầm phác đồ. **Tự động hóa quá mức** — trong y văn quốc tế gọi là
-automation bias — là bẫy tâm lý đã được ghi nhận từ thời AI đọc
-mammography: bác sĩ tin AI hơn cả kết quả khám lâm sàng của chính mình.
-**Mất kỹ năng** đi kèm với thói quen dùng AI đọc ECG lâu ngày, khiến
-bác sĩ trẻ không còn khả năng tự đọc điện tim. **Sai ngữ cảnh** phát
-sinh khi copy-paste bệnh án lên AI mà thiếu tiền sử, thiếu cận lâm sàng
-— mô hình đâu biết những gì không có trong prompt để cảnh báo. Cuối
-cùng, **không truy vết** nghĩa là không lưu lại AI đã gợi ý gì, ở phiên
-bản nào, vào ngày nào; khi sự cố xảy ra, không có cơ sở để phân định
-trách nhiệm giữa người, thiết bị và phần mềm.
+theo bảy nguy cơ cố hữu mà nhân viên y tế phải nhận diện được trước
+khi đưa AI vào bất kỳ ca khám chữa bệnh nào.
+
+- 🎭 **Ảo giác (hallucination)** — nguy cơ nổi tiếng nhất. AI bịa tên
+  thuốc, bịa liều, bịa tương tác, dẫn guideline cũ như thật. Với nhân
+  viên y tế thiếu kinh nghiệm, giọng văn chắc chắn của mô hình dễ làm
+  người đọc tin theo mà không kiểm chứng đối chiếu.
+- ⚖️ **Thiên lệch (bias)** — hầu hết mô hình lớn học trên dân số phương
+  Tây, người trưởng thành. Khi áp dụng cho người Việt, trẻ em, phụ nữ
+  mang thai, hay bệnh nhân vùng sâu vùng xa, mô hình có thể bỏ sót các
+  biểu hiện đặc thù như sốt xuất huyết, ung thư gan liên quan HBV, hay
+  bệnh Basedow ở phụ nữ trẻ.
+- 📅 **Lạc hậu dữ liệu** — guideline lâm sàng thay đổi mỗi hai đến ba
+  năm nhưng mô hình vẫn trả lời theo bản cũ nếu không được cập nhật.
+  Người dùng không kiểm tra năm ban hành của guideline dễ kê nhầm
+  phác đồ theo phiên bản đã bị thu hồi.
+- 🤖 **Tự động hóa quá mức (automation bias)** — bẫy tâm lý đã được
+  ghi nhận từ thời AI đọc mammography: bác sĩ tin AI hơn cả kết quả
+  khám lâm sàng của chính mình, bỏ sót những dấu hiệu đáng lẽ đã nhận
+  ra nếu đọc phim với tư duy độc lập.
+- 📉 **Mất kỹ năng (deskilling)** — thói quen dùng AI đọc ECG lâu ngày
+  khiến bác sĩ trẻ không còn khả năng tự đọc điện tim, phản xạ chuyên
+  môn mòn dần theo thời gian và trở nên phụ thuộc vào công cụ.
+- 🧩 **Sai ngữ cảnh (context error)** — copy-paste bệnh án lên AI mà
+  thiếu tiền sử, thiếu cận lâm sàng, mô hình đâu biết những gì không
+  có trong prompt để cảnh báo; nó trả về gợi ý "đúng về nguyên tắc"
+  nhưng sai với ca cụ thể.
+- 📝 **Không truy vết (no audit trail)** — không lưu lại AI đã gợi ý
+  gì, ở phiên bản nào, vào ngày nào; khi sự cố xảy ra, không có cơ sở
+  để phân định trách nhiệm giữa người, thiết bị và phần mềm.
+
 
 Từ hai điểm trên — phân loại rủi ro và bảy nguy cơ cố hữu — có thể rút
-ra bảy quy tắc an toàn lâm sàng mà nhân viên y tế cần thuộc lòng. Thứ
-nhất, AI không thay khám bệnh, hỏi bệnh, chỉ định cận lâm sàng bắt
-buộc: đây là công cụ hỗ trợ, không phải công cụ thay thế. Thứ hai, mọi
-gợi ý AI dùng cho ca thật phải được người có chứng chỉ hành nghề xác
-nhận trước khi thực hiện, không có ngoại lệ. Thứ ba, không dùng AI công
-cộng, đặc biệt là các bản miễn phí của ChatGPT, Gemini, Claude, cho
-quyết định điều trị trên ca định danh — đây vừa là vấn đề an toàn vừa
-là vấn đề bảo mật. Thứ tư, phải đối chiếu nguồn: tên thuốc, hàm lượng,
-chống chỉ định, tương tác đều phải xác thực lại qua Dược thư quốc gia
-hoặc hướng dẫn của Bộ Y tế. Thứ năm, ghi hồ sơ đầy đủ theo mẫu "đã
-tham khảo công cụ X phiên bản Y ngày Z, bác sĩ đã kiểm tra và quyết
-định W" — truy vết được là điều kiện tối thiểu để bảo vệ chính người
-dùng khi có sự cố. Thứ sáu, khi AI và lâm sàng lệch nhau, tin lâm
-sàng, ghi rõ lý do không theo AI — đây là biểu hiện cụ thể của nguyên
-tắc "con người ở trong vòng lặp" mà Luật 134/2025 nhắc lại nhiều lần.
-Thứ bảy, với bệnh nhi, thai kỳ, hồi sức tích cực, thuốc độc, thuốc
-kiểm soát đặc biệt, ngưỡng kiểm tra phải cao hơn hẳn; nên có thêm một
-người kiểm chứng độc lập trước khi thực hiện.
+ra bảy quy tắc an toàn lâm sàng mà nhân viên y tế cần thuộc lòng.
+
+1. **AI không thay khám bệnh, hỏi bệnh, chỉ định cận lâm sàng bắt buộc.**
+   Đây là công cụ hỗ trợ, không phải công cụ thay thế — nguyên tắc gốc
+   của Luật KCB 15/2023 và Luật 134/2025 khi nói về "con người trong
+   vòng lặp".
+2. **Mọi gợi ý AI dùng cho ca thật phải được người có chứng chỉ hành
+   nghề xác nhận trước khi thực hiện.** Không có ngoại lệ, kể cả khi
+   độ tự tin của AI ở mức 99%.
+3. **Không dùng AI công cộng cho quyết định điều trị trên ca định
+   danh.** Đặc biệt là các bản miễn phí của ChatGPT, Gemini, Claude —
+   đây vừa là vấn đề an toàn (không kiểm soát chất lượng) vừa là vấn
+   đề bảo mật (dữ liệu chuyển xuyên biên giới).
+4. **Phải đối chiếu nguồn.** Tên thuốc, hàm lượng, chống chỉ định,
+   tương tác đều phải xác thực lại qua Dược thư quốc gia hoặc hướng
+   dẫn chính thức của Bộ Y tế trước khi thực hiện.
+5. **Ghi hồ sơ đầy đủ.** Mẫu chuẩn: "đã tham khảo công cụ X phiên bản
+   Y ngày Z, bác sĩ đã kiểm tra và quyết định W." Truy vết được là
+   điều kiện tối thiểu để bảo vệ chính người dùng khi có sự cố.
+6. **Khi AI và lâm sàng lệch nhau, tin lâm sàng — và ghi rõ lý do
+   không theo AI.** Đây là biểu hiện cụ thể của nguyên tắc "con người
+   ở trong vòng lặp" mà Luật 134/2025 nhắc lại nhiều lần.
+7. **Với ca đặc biệt, ngưỡng kiểm tra phải cao hơn hẳn.** Bệnh nhi,
+   thai kỳ, hồi sức tích cực, thuốc độc, thuốc kiểm soát đặc biệt —
+   nên có thêm một người kiểm chứng độc lập trước khi thực hiện.
+
 
 Cuối cùng, khi có sự cố xảy ra, trách nhiệm không tan biến vào không
 gian mà rơi xuống ba lớp chủ thể phía sau AI vì bản thân AI hiện nay
@@ -279,27 +326,37 @@ cùng với HIPAA khi hợp tác quốc tế hoặc điều trị bệnh nhân n
 ## Phần IV — Đạo đức nghề nghiệp
 
 Bên cạnh nghĩa vụ pháp lý, AI trong y tế còn được điều chỉnh bởi sáu
-nguyên tắc đạo đức nghề nghiệp. Nguyên tắc **có lợi và không gây hại**
-đòi hỏi cân đo giữa lợi ích mà AI mang lại và nguy cơ nó gây ra; một AI
-đọc CT trả lời "bình thường" cho ca thực tế có tổn thương nhỏ, nếu bác
-sĩ tin AI mà không kiểm tra, bệnh nhân bị bỏ sót ung thư giai đoạn sớm
-— hại đã lấn át lợi. Nguyên tắc **tự chủ của người bệnh** đòi hỏi tôn
-trọng quyền được biết mình đang được AI tham gia vào quyết định điều
-trị; với công cụ hỗ trợ thường xuyên, theo quy chế cơ sở là đủ, còn
-với quyết định hệ quả lớn như phẫu thuật, kê thuốc kiểm soát đặc biệt,
-hoặc tham gia nghiên cứu, cần thông tin và đồng ý rõ ràng. Nguyên tắc
-**công bằng** yêu cầu không để AI phân biệt đối xử theo dân tộc, giới,
-tôn giáo hay hoàn cảnh kinh tế — mô hình có thể có thiên lệch, và bác
-sĩ có trách nhiệm phát hiện và điều chỉnh. Nguyên tắc **minh bạch** đòi
-hỏi mỗi hệ thống AI phải nói được nó dùng để làm gì, ai chịu trách
-nhiệm, dữ liệu huấn luyện đến từ đâu; người bệnh có quyền hỏi và có
-quyền được trả lời. Nguyên tắc **trách nhiệm giải trình** yêu cầu ghi
-hồ sơ đầy đủ để khi sự cố xảy ra có thể phân định vai trò của người
-dùng, cơ sở y tế, và nhà cung cấp. Cuối cùng, nguyên tắc **bảo vệ nhóm
-yếu thế** — trẻ em, người già, bệnh nhân tâm thần, người nhiễm HIV,
-bệnh nhân vô sinh, người dân tộc thiểu số — yêu cầu ngưỡng bảo vệ cao
-hơn vì đây là các nhóm chịu nguy cơ kỳ thị và lộ thông tin cao hơn
-mức trung bình.
+nguyên tắc đạo đức nghề nghiệp mà [WHO Ethics and Governance of AI for
+Health](https://www.who.int/publications/i/item/9789240029200) đã tổng
+hợp và Việt Nam đang áp dụng qua V-RHAIN.
+
+- ❤️ **Có lợi và không gây hại (Beneficence & Non-maleficence)** —
+  cân đo giữa lợi ích AI mang lại và nguy cơ nó gây ra. Một AI đọc CT
+  trả lời "bình thường" cho ca thực tế có tổn thương nhỏ, nếu bác sĩ
+  tin AI mà không kiểm tra, bệnh nhân bị bỏ sót ung thư giai đoạn sớm
+  — hại đã lấn át lợi.
+- 🧭 **Tôn trọng tự chủ của người bệnh (Autonomy)** — người bệnh có
+  quyền biết mình đang được AI tham gia vào quyết định điều trị. Với
+  công cụ hỗ trợ thường xuyên, theo quy chế cơ sở là đủ; với quyết
+  định hệ quả lớn như phẫu thuật, kê thuốc kiểm soát đặc biệt, hoặc
+  tham gia nghiên cứu, cần thông tin và đồng ý rõ ràng.
+- ⚖️ **Công bằng (Justice & Equity)** — không để AI phân biệt đối xử
+  theo dân tộc, giới, tôn giáo hay hoàn cảnh kinh tế. Mô hình có thể
+  có thiên lệch từ dữ liệu huấn luyện, và bác sĩ có trách nhiệm phát
+  hiện và điều chỉnh khi kết quả AI có dấu hiệu bất công.
+- 🔍 **Minh bạch (Transparency)** — mỗi hệ thống AI phải nói được nó
+  dùng để làm gì, ai chịu trách nhiệm, dữ liệu huấn luyện đến từ đâu.
+  Người bệnh có quyền hỏi và có quyền được trả lời.
+- 📋 **Trách nhiệm giải trình (Accountability)** — ghi hồ sơ đầy đủ
+  để khi sự cố xảy ra có thể phân định vai trò của người dùng, cơ sở
+  y tế, và nhà cung cấp phần mềm. Đây cũng là yêu cầu của Luật
+  134/2025 đối với hệ thống AI rủi ro cao.
+- 🛡️ **Bảo vệ nhóm yếu thế (Protection of vulnerable groups)** — trẻ
+  em, người già, bệnh nhân tâm thần, người nhiễm HIV, bệnh nhân vô
+  sinh, người dân tộc thiểu số phải được đặt ngưỡng bảo vệ cao hơn,
+  vì đây là các nhóm chịu nguy cơ kỳ thị và lộ thông tin cao hơn mức
+  trung bình.
+
 
 Có một câu hỏi mà lớp học thường tranh luận: có phải nói với bệnh
 nhân "phim này có AI đọc hỗ trợ" không? Câu trả lời không đen trắng.
@@ -313,73 +370,81 @@ mức độ thông báo tỷ lệ thuận với mức độ tác động của A
 
 ## Phần V — Việc được làm và việc bị cấm
 
-Nhân viên y tế được dùng AI nội bộ đã phê duyệt để gợi ý phác đồ, tóm
-tắt hồ sơ, soạn thảo văn bản, dịch tài liệu, và làm checklist. Được
-dùng AI công cộng với dữ liệu đã tước định danh triệt để, hoặc với
-kiến thức y khoa công khai không liên quan đến bệnh nhân cụ thể.
-Được phản biện AI, ghi nhận bất đồng, và tin lâm sàng khi hai bên
-lệch nhau. Được và cần báo lỗi mô hình cũng như báo sự cố dữ liệu
-qua kênh chính thức của đơn vị.
+Bảng đối chiếu dưới đây tổng hợp danh mục hành vi cụ thể. Đây là công
+cụ để bác sĩ, điều dưỡng, dược sĩ tự kiểm tra trước mỗi lần dùng AI
+trong công việc — nếu hành vi rơi vào cột phải, dừng lại.
 
-Ngược lại, bị cấm để AI tự kê đơn hoặc tự trả kết quả cho người bệnh
-mà không có người có chứng chỉ hành nghề duyệt. Bị cấm đưa thông tin
-định danh bệnh nhân lên bất kỳ công cụ nào ngoài hệ thống được phê
-duyệt. Bị cấm dùng AI để từ chối khám chữa bệnh, phân loại đối xử,
-hoặc suy diễn theo dân tộc, tôn giáo, hành vi. Bị cấm tắt cơ chế
-giám sát của con người trong hệ thống rủi ro cao. Và không được dùng
-kết quả AI làm bằng chứng duy nhất trong giám định, pháp y, hay
-tranh chấp — AI có thể là một trong nhiều căn cứ, nhưng không thể là
-căn cứ duy nhất.
+| ✅ Được làm | ❌ Bị cấm |
+|:---|:---|
+| Dùng AI **nội bộ đã phê duyệt** để gợi ý phác đồ, tóm tắt hồ sơ, soạn thảo văn bản, dịch tài liệu, làm checklist | Để AI **tự kê đơn** hoặc tự trả kết quả cho người bệnh mà không có người có chứng chỉ hành nghề duyệt |
+| Dùng AI công cộng với dữ liệu **đã tước định danh triệt để**, hoặc với kiến thức y khoa công khai không liên quan đến bệnh nhân cụ thể | Đưa thông tin **định danh bệnh nhân** (tên, mã BA, ảnh, ngày sinh, số CCCD, BHYT) lên bất kỳ công cụ nào ngoài hệ thống được phê duyệt |
+| **Phản biện AI**, ghi nhận bất đồng, và tin lâm sàng khi hai bên lệch nhau | Dùng AI để **từ chối khám chữa bệnh**, phân loại đối xử, hoặc suy diễn theo dân tộc, tôn giáo, hành vi |
+| **Báo lỗi mô hình** cũng như báo sự cố dữ liệu qua kênh chính thức của đơn vị | **Tắt cơ chế giám sát của con người** trong hệ thống rủi ro cao |
+| Tham gia đào tạo lại khi bệnh viện đổi phần mềm hoặc nâng phiên bản | Dùng kết quả AI làm **bằng chứng duy nhất** trong giám định, pháp y, hay tranh chấp |
 
 ## Phần VI — Việc nhân viên y tế phải làm khi dùng AI
 
-Sáu việc cần trở thành nếp làm hằng ngày của mọi bác sĩ, điều dưỡng,
-dược sĩ, kỹ thuật viên. Việc thứ nhất: nếu bệnh viện đã triển khai AI
-nội bộ, ưu tiên dùng kênh đó; chỉ dùng AI công cộng cho các câu hỏi
-kiến thức không định danh. Việc thứ hai: không đưa thông tin có thể
-nhận diện bệnh nhân — tên, mã bệnh án, ảnh, số điện thoại, kết quả
-xét nghiệm — lên công cụ chưa được bệnh viện phê duyệt. Việc thứ ba:
-mọi gợi ý lâm sàng từ AI dùng cho ca thật phải có người có chứng chỉ
-hành nghề xác nhận và ghi vào hồ sơ. Việc thứ tư: khi phát hiện lộ dữ
-liệu hoặc AI trả lời nguy hiểm, báo lãnh đạo khoa và phòng CNTT trong
-ngày, phù hợp với yêu cầu thông báo vi phạm bảy mươi hai giờ tại Điều
-23 Luật 91/2025. Việc thứ năm: không tự cài app hay extension AI lên
-máy trạm lâm sàng khi chưa được CNTT cho phép. Việc thứ sáu: tham gia
-đào tạo lại khi bệnh viện đổi phần mềm hoặc nâng phiên bản, vì mô
-hình mới có thể có hành vi khác mô hình cũ.
+Sáu việc dưới đây cần trở thành nếp làm hằng ngày của mọi bác sĩ,
+điều dưỡng, dược sĩ, kỹ thuật viên khi dùng AI trong công việc chuyên
+môn.
+
+1. 🏥 **Ưu tiên kênh nội bộ.** Nếu bệnh viện đã triển khai AI nội bộ,
+   dùng kênh đó cho công việc lâm sàng; chỉ dùng AI công cộng cho các
+   câu hỏi kiến thức không định danh, không liên quan đến ca cụ thể.
+2. 🔒 **Không đưa thông tin định danh bệnh nhân** — tên, mã bệnh án,
+   ảnh, số điện thoại, kết quả xét nghiệm — lên công cụ chưa được
+   bệnh viện phê duyệt. Đây là nghĩa vụ trực tiếp từ Điều 26 Luật
+   91/2025.
+3. ✍️ **Xác nhận và ghi hồ sơ.** Mọi gợi ý lâm sàng từ AI dùng cho
+   ca thật phải có người có chứng chỉ hành nghề xác nhận và ghi vào
+   bệnh án theo mẫu "đã tham khảo công cụ X phiên bản Y ngày Z".
+4. 🚨 **Báo cáo trong ngày.** Khi phát hiện lộ dữ liệu hoặc AI trả
+   lời nguy hiểm, báo lãnh đạo khoa và phòng CNTT trong ngày — phù
+   hợp với yêu cầu thông báo vi phạm 72 giờ tại Điều 23 Luật 91/2025.
+5. 💻 **Không tự cài đặt.** Không tự cài app hay extension AI lên
+   máy trạm lâm sàng khi chưa được CNTT cho phép, kể cả tiện ích
+   trình duyệt tưởng chừng vô hại.
+6. 🎓 **Đào tạo lại khi có thay đổi.** Tham gia đào tạo lại khi bệnh
+   viện đổi phần mềm hoặc nâng phiên bản, vì mô hình mới có thể có
+   hành vi khác mô hình cũ, kể cả cùng nhà cung cấp.
 
 ## Phần VII — Bốn tình huống thực hành
 
-Bảy phần trên đưa ra khung khái niệm. Phần này giới thiệu bốn tình huống
-rút từ thực tế bệnh viện Việt Nam trong hai năm 2025–2026 để độc giả tự
-đối chiếu với công việc của mình. Mỗi tình huống đan xen cả an toàn lâm
-sàng, bảo mật dữ liệu và tuân thủ pháp luật — không phải câu chuyện đơn
-tuyến. Bài tập chi tiết cho từng tình huống được đưa vào Lab 14 kèm gợi
-ý phương pháp, danh sách công cụ AI miễn phí để dùng ngay, và rubric
-chấm điểm tự động.
+Bảy phần trên đưa ra khung khái niệm. Phần này giới thiệu bốn tình
+huống rút từ thực tế bệnh viện Việt Nam trong hai năm 2025–2026 để
+độc giả tự đối chiếu với công việc của mình. Mỗi tình huống đan xen
+cả an toàn lâm sàng, bảo mật dữ liệu và tuân thủ pháp luật — không
+phải câu chuyện đơn tuyến. Bài tập chi tiết cho từng tình huống được
+đưa vào Lab 14 kèm gợi ý phương pháp, danh sách công cụ AI miễn phí
+để dùng ngay, và rubric chấm điểm tự động.
 
-**Tình huống 1 — Điều dưỡng hỏi ChatGPT về liều thuốc.** Một điều dưỡng
-Hồi sức tích cực nghi ngờ liều vancomycin trên bệnh nhân nữ 72 tuổi có
-suy thận, paste tuổi, cân nặng, creatinine và tên thuốc vào ChatGPT bản
-miễn phí để hỏi ý kiến, rồi tiếp tục tiêm theo khẳng định của AI.
+> 💊 **Tình huống 1 — Điều dưỡng hỏi ChatGPT về liều thuốc**
+>
+> Một điều dưỡng Hồi sức tích cực nghi ngờ liều vancomycin trên bệnh
+> nhân nữ 72 tuổi có suy thận, paste tuổi, cân nặng, creatinine và
+> tên thuốc vào ChatGPT bản miễn phí để hỏi ý kiến, rồi tiếp tục tiêm
+> theo khẳng định của AI.
 
-**Tình huống 2 — Bác sĩ tin AI đọc CT "bình thường".** Bác sĩ chẩn đoán
-hình ảnh liếc phim CT ngực của bệnh nhân hút thuốc 40 gói-năm, đồng ý
-với gợi ý "không phát hiện bất thường" của AI ở độ tự tin 94%, ký kết
-quả. Ba tháng sau, ung thư phổi giai đoạn IIIB được phát hiện ở chính
-nốt đã bị bỏ sót.
+> 🫁 **Tình huống 2 — Bác sĩ tin AI đọc CT "bình thường"**
+>
+> Bác sĩ chẩn đoán hình ảnh liếc phim CT ngực của bệnh nhân hút thuốc
+> 40 gói-năm, đồng ý với gợi ý "không phát hiện bất thường" của AI ở
+> độ tự tin 94%, ký kết quả. Ba tháng sau, ung thư phổi giai đoạn
+> IIIB được phát hiện ở chính nốt đã bị bỏ sót.
 
-**Tình huống 3 — Khoa huấn luyện mô hình AI da liễu.** Khoa Da liễu
-xuất 2.000 hồ sơ bệnh nhân có ảnh khuôn mặt cho một nhóm nghiên cứu ở
-trường đại học để huấn luyện mô hình nhận diện tổn thương da, che tên
-qua loa, không xin đồng ý, không hợp đồng xử lý dữ liệu, không đánh
-giá tác động.
+> 🧬 **Tình huống 3 — Khoa huấn luyện mô hình AI da liễu**
+>
+> Khoa Da liễu xuất 2.000 hồ sơ bệnh nhân có ảnh khuôn mặt cho một
+> nhóm nghiên cứu ở trường đại học để huấn luyện mô hình nhận diện
+> tổn thương da, che tên qua loa, không xin đồng ý, không hợp đồng
+> xử lý dữ liệu, không đánh giá tác động.
 
-**Tình huống 4 — Chatbot bệnh viện khuyên ngưng thuốc chống đông.**
-Chatbot trên website bệnh viện khuyên một bệnh nhân đã đặt stent mạch
-vành ngưng aspirin và clopidogrel 5–7 ngày trước khi nhổ răng. Bệnh
-nhân làm theo, ba ngày sau nhập cấp cứu vì nhồi máu cơ tim cấp do
-huyết khối trong stent.
+> 💬 **Tình huống 4 — Chatbot bệnh viện khuyên ngưng thuốc chống đông**
+>
+> Chatbot trên website bệnh viện khuyên một bệnh nhân đã đặt stent
+> mạch vành ngưng aspirin và clopidogrel 5–7 ngày trước khi nhổ răng.
+> Bệnh nhân làm theo, ba ngày sau nhập cấp cứu vì nhồi máu cơ tim
+> cấp do huyết khối trong stent.
 
 Với mỗi tình huống, Lab 14 yêu cầu học viên trả lời năm câu hỏi theo
 thứ tự: an toàn lâm sàng, bảo mật và dữ liệu, pháp lý (tối thiểu ba
