@@ -5,6 +5,7 @@ import Chart from "./Chart";
 import Callout from "./Callout";
 import MetricGrid from "./MetricGrid";
 import Timeline from "./Timeline";
+import Mermaid from "./Mermaid";
 import type { RenderedBlock } from "@/lib/chapters";
 
 export default function ChapterRenderer({ blocks }: { blocks: RenderedBlock[] }) {
@@ -48,6 +49,8 @@ export default function ChapterRenderer({ blocks }: { blocks: RenderedBlock[] })
               <div dangerouslySetInnerHTML={{ __html: b.html }} />
             </Callout>
           );
+
+        if (b.kind === "mermaid") return <Mermaid key={i} code={b.code} />;
 
         return null;
       })}

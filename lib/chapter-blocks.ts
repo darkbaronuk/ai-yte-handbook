@@ -18,7 +18,8 @@ export type ChapterBlock =
   | { kind: "chart"; props: Record<string, unknown> }
   | { kind: "callout"; props: { kind?: string; title?: string }; body: string }
   | { kind: "metrics"; metrics: Array<{ value: string; label: string; hint?: string }> }
-  | { kind: "timeline"; items: Array<{ year: string; event: string; kind?: string }> };
+  | { kind: "timeline"; items: Array<{ year: string; event: string; kind?: string }> }
+  | { kind: "mermaid"; code: string };
 
 // Tách theo fenced code block ```<lang>
 export function splitBlocks(md: string): Array<
@@ -27,6 +28,7 @@ export function splitBlocks(md: string): Array<
   | { kind: "callout"; header: string; text: string }
   | { kind: "metrics"; text: string }
   | { kind: "timeline"; text: string }
+  | { kind: "mermaid"; text: string }
 > {
   const parts: Array<
     | { kind: "md"; text: string }
@@ -34,10 +36,11 @@ export function splitBlocks(md: string): Array<
     | { kind: "callout"; header: string; text: string }
     | { kind: "metrics"; text: string }
     | { kind: "timeline"; text: string }
+    | { kind: "mermaid"; text: string }
   > = [];
 
   // Regex fenced blocks với các lang đặc biệt
-  const re = /```(chart|callout[^\n]*|metrics|timeline)\n([\s\S]*?)```/g;
+  const re = /```(chart|callout[^\n]*|metrics|timeline|mermaid)\n([\s\S]*?)```/g;
   let last = 0;
   let m: RegExpExecArray | null;
   while ((m = re.exec(md)) !== null) {
@@ -47,6 +50,7 @@ export function splitBlocks(md: string): Array<
     if (lang === "chart") parts.push({ kind: "chart", text: body.trim() });
     else if (lang === "metrics") parts.push({ kind: "metrics", text: body.trim() });
     else if (lang === "timeline") parts.push({ kind: "timeline", text: body.trim() });
+    else if (lang === "mermaid") parts.push({ kind: "mermaid", text: body.trim() });
     else if (lang.startsWith("callout"))
       parts.push({ kind: "callout", header: lang.replace(/^callout/, "").trim(), text: body.trim() });
     last = m.index + full.length;

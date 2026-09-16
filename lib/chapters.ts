@@ -18,7 +18,8 @@ export type RenderedBlock =
   | { kind: "chart"; props: Record<string, unknown> }
   | { kind: "callout"; kind_: string; title?: string; html: string }
   | { kind: "metrics"; metrics: Array<{ value: string; label: string; hint?: string }> }
-  | { kind: "timeline"; items: Array<{ year: string; event: string; kind?: string }> };
+  | { kind: "timeline"; items: Array<{ year: string; event: string; kind?: string }> }
+  | { kind: "mermaid"; code: string };
 
 // Chuyển cú pháp {t:slug}text{/t} thành <span class="term" data-slug="slug">text</span>
 // trước khi qua remark. Slug không hợp lệ vẫn được hiển thị nhưng đánh dấu để dev thấy.
@@ -133,6 +134,8 @@ async function buildBlocks(md: string): Promise<RenderedBlock[]> {
       const meta = parseCalloutHeader(p.header);
       const html = await markdownToHtml(p.text);
       out.push({ kind: "callout", kind_: meta.kind, title: meta.title, html });
+    } else if (p.kind === "mermaid") {
+      out.push({ kind: "mermaid", code: p.text });
     }
   }
   return out;
