@@ -34,12 +34,16 @@ Nhân viên y tế không cần trở thành lập trình viên để sử dụn
 chứng và biết báo cho ai khi phát hiện bất thường. Chương này là cẩm nang
 thực hành, không thay thế tư vấn pháp lý hoặc quy trình chuyên môn tại cơ sở.
 
+Các thuật ngữ có gạch chân nét đứt kèm giải thích ngắn khi di chuột
+hoặc dùng phím Tab. Bấm vào từ để mở đúng mục trong danh mục thuật
+ngữ; trên điện thoại, chạm vào từ để đọc giải thích chi tiết.
+
 Bốn tầng dưới đây là **cách tổ chức nội dung của cẩm nang**, không phải
 thứ bậc hiệu lực giữa các văn bản. Tầng chuyên môn dựa trên Luật Khám bệnh,
 chữa bệnh 15/2023/QH15, có hiệu lực từ 1/1/2024; tầng dữ liệu y tế dựa trên
 Nghị định 102/2025/NĐ-CP, có hiệu lực từ 1/7/2025; tầng dữ liệu cá nhân
-dựa trên Luật 91/2025/QH15, có hiệu lực từ 1/1/2026; tầng AI dựa trên
-Luật 134/2025/QH15, có hiệu lực từ 1/3/2026. ([Luật Khám bệnh, chữa
+dựa trên {t:luatdlcn}Luật 91/2025/QH15{/t}, có hiệu lực từ 1/1/2026; tầng AI dựa trên
+{t:luatai}Luật 134/2025/QH15{/t}, có hiệu lực từ 1/3/2026. ([Luật Khám bệnh, chữa
 bệnh](https://xaydungchinhsach.chinhphu.vn/toan-van-luat-15-2023-qh15-kham-benh-chua-benh-119231127164453959.htm);
 [Nghị định 102 tại Công báo](https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-102-2025-nd-cp-44865/56285.htm);
 [Luật 91 bản tiếng Việt tại Bộ Công an](https://mps.gov.vn/chinh-sach-phap-luat/co-so-du-lieu-van-ban/luat-bao-ve-du-lieu-ca-nhan-1753688803);
@@ -67,7 +71,7 @@ flowchart TB
 ```
 
 Khi đọc, cần phân biệt ba loại phát biểu: luật quy định điều gì; bệnh
-viện cụ thể hóa thành quy trình thao tác chuẩn (SOP) như thế nào; và
+viện cụ thể hóa thành {t:sop}quy trình thao tác chuẩn (SOP){/t} như thế nào; và
 thực hành nào được khuyến cáo để giảm rủi ro. Bảng ở Phần III làm rõ
 ranh giới này; các SOP nêu trong chương là nội dung đề xuất để cơ sở
 phê duyệt, không mặc nhiên là quy chế đã có tại mọi bệnh viện.
@@ -88,14 +92,14 @@ khi tác động đến người bệnh?
 Bảng sau nhóm công cụ theo cách sử dụng để dễ nhận diện rủi ro, không
 phải danh mục phân loại pháp lý. Các nhóm có thể giao nhau: một hệ
 hỗ trợ quyết định có thể tích hợp mô hình ngôn ngữ hoặc AI đọc ảnh.
-Hệ hỗ trợ quyết định lâm sàng, viết tắt **CDSS** từ “clinical decision
+{t:cdss}Hệ hỗ trợ quyết định lâm sàng{/t}, viết tắt **CDSS** từ “clinical decision
 support system”, là hệ thống cung cấp thông tin, cảnh báo hoặc gợi ý
 để hỗ trợ quyết định chăm sóc; không phải mọi CDSS đều sử dụng AI.
 ([Tổng quan về CDSS, npj Digital Medicine](https://www.nature.com/articles/s41746-020-0221-y))
 
 | Nhóm công cụ | Gặp ở đâu | Rủi ro an toàn cần nhận diện | Điểm cần kiểm tra về dữ liệu |
 |---|---|---|---|
-| 🤖 **Mô hình ngôn ngữ lớn (LLM) và chatbot** | Trợ lý hỏi đáp, tóm tắt bệnh án, soạn hướng dẫn. | Có thể bịa thông tin, nguồn dẫn hoặc diễn giải sai ngữ cảnh. | Nội dung nhập vào, tệp tải lên và lịch sử trò chuyện có được lưu, chia sẻ hoặc dùng lại không? |
+| 🤖 **{t:llm}Mô hình ngôn ngữ lớn (LLM){/t} và chatbot** | Trợ lý hỏi đáp, tóm tắt bệnh án, soạn hướng dẫn. | Có thể bịa thông tin, nguồn dẫn hoặc diễn giải sai ngữ cảnh. | Nội dung nhập vào, tệp tải lên và lịch sử trò chuyện có được lưu, chia sẻ hoặc dùng lại không? |
 | 🚨 **Hệ hỗ trợ quyết định lâm sàng** | Cảnh báo tương tác thuốc, dị ứng; gợi ý hỗ trợ chẩn đoán. | Cảnh báo có thể không phù hợp; người dùng cũng có thể bỏ qua cảnh báo quan trọng do đã quen với quá nhiều cảnh báo. | Nhật ký cảnh báo có gắn với người bệnh và người thao tác không; ai được truy cập? |
 | 🩻 **AI đọc hình ảnh** | Hỗ trợ đọc X-quang, cắt lớp vi tính (CT), cộng hưởng từ (MRI). | Có thể bỏ sót tổn thương hoặc đánh dấu nhầm; kết luận của AI có thể khiến người đọc chủ quan. | Ảnh và thông tin đi kèm đã được kiểm tra trước khi chuyển ra ngoài chưa? |
 | 📈 **AI phân tích tín hiệu** | Điện tâm đồ (ECG), theo dõi điện tim kéo dài (Holter), điện não đồ (EEG). | Có thể diễn giải sai tín hiệu; kết luận tự động không thay thế đánh giá triệu chứng. | Thiết bị có kết nối dịch vụ bên ngoài không; gửi loại dữ liệu nào, theo cấu hình và hợp đồng nào? |
@@ -107,22 +111,22 @@ không phải mọi hệ thống đều có tất cả các nguy cơ ở cùng m
 Chúng giúp người dùng tự hỏi “có thể sai ở đâu?” thay vì mặc nhiên
 tin kết quả vì phần mềm được gắn nhãn AI.
 
-- 🤖 **Bịa thông tin nhưng diễn đạt chắc chắn:** Mô hình ngôn ngữ
+- 🤖 **{t:hallucination}Bịa thông tin nhưng diễn đạt chắc chắn{/t}:** Mô hình ngôn ngữ
   có thể tạo ra tên tài liệu, kết quả hoặc khuyến cáo không có thật.
   Cần mở nguồn gốc và đối chiếu nội dung, không chỉ nhìn thấy một đường dẫn.
-- 🤖🩻 **Thiên lệch giữa các nhóm người bệnh:** Nếu nhóm người đang
+- 🤖🩻 **{t:bias}Thiên lệch giữa các nhóm người bệnh{/t}:** Nếu nhóm người đang
   được khám chưa được đánh giá đầy đủ trong điều kiện sử dụng của công
   cụ, kết quả có thể kém tin cậy. Không suy ra độ phù hợp cho trẻ em,
   thai phụ hoặc nhóm bệnh hiếm chỉ từ kết quả chung của hệ thống.
 - 🤖🚨 **Kiến thức hoặc cảnh báo chưa được cập nhật:** Hướng dẫn
   chuyên môn có thể thay đổi trong khi công cụ vẫn sử dụng phiên bản
   cũ. Hãy kiểm tra ngày, phiên bản và phạm vi áp dụng của tài liệu.
-- 🩻📈 **Tin tự động hóa quá mức:** Người dùng có thể ưu tiên kết
+- 🩻📈 **{t:automation-bias}Tin tự động hóa quá mức{/t}:** Người dùng có thể ưu tiên kết
   luận của máy hơn bằng chứng mình đã quan sát. Khi có bất đồng, phải
   đánh giá lại và hội chẩn khi cần, không bỏ qua dấu hiệu cảnh báo.
 - 🚨 **Bỏ qua cảnh báo theo phản xạ:** Quá nhiều cảnh báo ít hữu ích
-  có thể làm người dùng mệt mỏi với cảnh báo, thường gọi là “alert
-  fatigue”. Cần báo các cảnh báo không phù hợp để đơn vị rà soát, thay
+  có thể làm người dùng {t:alert-fatigue}mệt mỏi với cảnh báo (alert fatigue){/t}.
+  Cần báo các cảnh báo không phù hợp để đơn vị rà soát, thay
   vì hình thành thói quen đóng mọi cảnh báo.
 - 🩻 **Ký kết quả hình ảnh khi chưa kiểm chứng:** Gợi ý “không phát
   hiện bất thường” không phải lý do để bỏ bước đọc và đối chiếu phim
@@ -217,7 +221,7 @@ chuyển dữ liệu, không yêu cầu họ tự cấu hình hệ thống.
   công cộng, phải kiểm tra chính sách theo đúng nhà cung cấp, loại
   tài khoản và cấu hình; không suy luận mọi bản miễn phí đều dùng
   dữ liệu để huấn luyện hoặc mọi bản trả phí đều an toàn.
-- 👥 **Xóa tên chưa đủ để khử nhận dạng.** Ngày sinh, thời điểm
+- 👥 **Xóa tên chưa đủ để {t:de-identification}khử nhận dạng{/t}.** Ngày sinh, thời điểm
   khám, mã khoa phòng, địa bàn và bệnh hiếm có thể kết hợp để nhận
   ra một người. Bộ phận hành chính và nghiên cứu cần rà cả các trường
   này, không chỉ cột họ tên.
@@ -254,8 +258,8 @@ cách sử dụng lại dữ liệu phù hợp với hướng giảm rủi ro tr
 
 ### Hiểu đúng k-anonymity và nguy cơ tái định danh
 
-**K-anonymity** có thể hiểu là tính không phân biệt được giữa ít nhất
-`k` bản ghi theo một tổ hợp trường có khả năng nhận diện gián tiếp.
+**{t:kanonymity}K-anonymity{/t}** có thể hiểu là tính không phân biệt được giữa ít nhất
+`k` bản ghi theo một tổ hợp {t:quasi-identifier}trường có khả năng nhận diện gián tiếp{/t}.
 Trong bảng dữ liệu đã xử lý, mỗi tổ hợp giá trị của các trường được
 chọn phải xuất hiện ở ít nhất `k` bản ghi; `k = 5` nghĩa là ít nhất
 năm bản ghi tính cả bản ghi đang xét, không phải năm người khác ngoài
@@ -282,7 +286,7 @@ chương này, không có quy định chung bắt buộc mọi bộ dữ liệu 
 Nam phải đạt `k ≥ 5`. Khoản 11 Điều 2 Luật 91 định nghĩa khử
 nhận dạng theo kết quả không thể xác định hoặc giúp xác định một
 người cụ thể; khoản 6 Điều 14 yêu cầu kiểm soát quá trình và không
-tái nhận dạng, trừ trường hợp pháp luật có quy định khác.
+{t:re-identification}tái nhận dạng{/t}, trừ trường hợp pháp luật có quy định khác.
 ([Luật 91 bản tiếng Việt](https://mps.gov.vn/chinh-sach-phap-luat/co-so-du-lieu-van-ban/luat-bao-ve-du-lieu-ca-nhan-1753688803);
 [Nghị định 356 bản tiếng Việt](https://vbpl.vn/TW/Lists/vbpq/Attachments/187276/ND.356.2025.doc))
 Do đó, có thể cân nhắc k-anonymity như một công cụ đánh giá trong
@@ -298,7 +302,7 @@ khử nhận dạng tuyệt đối.
 |---|---|---|
 | Ngày sinh đầy đủ + mã khoa phòng + ngày nhập viện. | Người có lịch hẹn hoặc danh sách tiếp nhận có thể ghép lại đúng hồ sơ dù tên đã bị xóa. | Chỉ giữ độ chi tiết thực sự cần; cân nhắc nhóm tuổi, khoảng thời gian và nhóm khoa, rồi đánh giá lại. |
 | Xã cư trú + giới + chẩn đoán bệnh hiếm. | Một người có thể là trường hợp duy nhất được cộng đồng biết đến. | Giảm chi tiết địa bàn hoặc chẩn đoán; với nghiên cứu cần độ chi tiết cao, ưu tiên truy cập có kiểm soát thay vì công khai bảng. |
-| Mã nghiên cứu + bảng đối chiếu với mã bệnh án. | Người giữ bảng đối chiếu vẫn có thể truy ngược về người bệnh. | Gọi đúng đây là dữ liệu được thay mã, không mặc nhiên là dữ liệu đã khử nhận dạng; tách và giới hạn quyền giữ bảng đối chiếu. |
+| Mã nghiên cứu + bảng đối chiếu với mã bệnh án. | Người giữ bảng đối chiếu vẫn có thể truy ngược về người bệnh. | Gọi đúng đây là dữ liệu được {t:pseudonymization}thay mã{/t}, không mặc nhiên là dữ liệu đã khử nhận dạng; tách và giới hạn quyền giữ bảng đối chiếu. |
 | Tóm tắt tự do có nghề nghiệp đặc biệt, sự kiện tai nạn và ngày điều trị. | Nội dung có thể khớp với tin tức hoặc bài đăng của gia đình. | Rà bằng người có chuyên môn, lược bỏ chi tiết không cần thiết; dùng ca mô phỏng cho hoạt động học tập. |
 | Ảnh lâm sàng, chữ in trên ảnh, hình xăm hoặc đặc điểm khuôn mặt. | Thông tin định danh có thể nằm trong chính hình ảnh, không chỉ ở tên tệp. | Kiểm tra nội dung ảnh và dữ liệu đi kèm bằng quy trình phù hợp; không chỉ đổi tên tệp. |
 
@@ -311,8 +315,9 @@ khử nhận dạng tuyệt đối.
   thuận xử lý; không coi lời hứa “chỉ để cải tiến” là đủ.
   ([Luật 91, Điều 30 và 37](https://mps.gov.vn/chinh-sach-phap-luat/co-so-du-lieu-van-ban/luat-bao-ve-du-lieu-ca-nhan-1753688803))
 - 🩻 **Ảnh DICOM có thể chứa định danh, nhưng không phải luôn còn
-  định danh.** DICOM là định dạng trao đổi ảnh y khoa; thông tin đi
-  kèm có thể có tên, ngày sinh hoặc mã bệnh án. Dữ liệu có thể được
+  định danh.** {t:dicom}DICOM{/t} là chuẩn lưu trữ, trao đổi ảnh và thông
+  tin y khoa; {t:metadata}thông tin mô tả đi kèm (metadata){/t} có thể
+  có tên, ngày sinh hoặc mã bệnh án. Dữ liệu có thể được
   khử nhận dạng theo quy trình, song vẫn phải kiểm tra chữ trên ảnh,
   đặc điểm nhận diện và các trường đi kèm; xử lý thuộc tính đơn thuần
   chưa bảo đảm toàn bộ ảnh đã an toàn.
@@ -327,25 +332,32 @@ khử nhận dạng tuyệt đối.
 ### OWASP 2025: mười rủi ro của LLM và ứng dụng AI tạo sinh
 
 [“2025 Top 10 Risk & Mitigations for LLMs and Gen AI Apps”](https://genai.owasp.org/llm-top-10/)
-là tài liệu nhận diện rủi ro và biện pháp giảm thiểu của OWASP cho mô
-hình ngôn ngữ lớn và ứng dụng AI tạo sinh, không phải luật Việt Nam
+là tài liệu nhận diện rủi ro và biện pháp giảm thiểu của {t:owasp}OWASP{/t} cho mô
+hình ngôn ngữ lớn và ứng dụng {t:generative-ai}AI tạo sinh{/t}, không phải luật Việt Nam
 hay bảng bao phủ toàn bộ AI đọc phim, điện tim. Các mã và tên gốc
 dưới đây theo [bản OWASP 2025](https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf);
 ví dụ y tế và cách diễn đạt thực hành do cẩm nang chuyển thể, không
 phải ca sự cố do OWASP công bố.
 
+Ở mục LLM08, {t:embedding}embedding{/t} là cách biểu diễn nội dung bằng
+một dãy số, gọi là véc-tơ, để hệ thống so sánh và tìm tài liệu liên
+quan. {t:rag}RAG{/t} là cách tìm tài liệu rồi đưa vào ngữ cảnh cho AI
+trả lời; việc tìm được tài liệu không có nghĩa người hỏi có quyền
+xem, và tài liệu được tìm thấy cũng chưa chắc đúng.
+([OWASP 2025, LLM08](https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf))
+
 | Rủi ro OWASP 2025 | Ví dụ mô phỏng trong công việc y tế | Cách giảm rủi ro ở mức người dùng và cơ sở |
 |---|---|---|
-| **LLM01: Prompt Injection.** Chèn chỉ dẫn để đánh lừa AI. | Một tệp tải vào trợ lý chứa chỉ dẫn ẩn yêu cầu bỏ nhiệm vụ và tìm dữ liệu không liên quan. | Người dùng báo hành vi bất thường, không làm theo yêu cầu chuyển dữ liệu lạ. Cơ sở giới hạn quyền của AI và yêu cầu người duyệt hành động nhạy cảm. |
-| **LLM02: Sensitive Information Disclosure.** Tiết lộ thông tin nhạy cảm. | Chatbot trả thông tin người bệnh khác hoặc người dùng tải bệnh án lên công cụ chưa được duyệt. | Chỉ nhập dữ liệu được phép; kiểm tra người nhận trước khi chia sẻ. Cơ sở giới hạn nguồn dữ liệu, quyền xem và chính sách lưu, dùng lại dữ liệu. |
-| **LLM03: Supply Chain.** Rủi ro từ thành phần và nhà cung cấp. | Một tiện ích AI mới tiếp cận hồ sơ nhưng chưa được kiểm tra nguồn gốc và quyền truy cập. | Không tự cài đặt. Cơ sở đánh giá nhà cung cấp, thành phần phần mềm và các thay đổi trước khi cho sử dụng. |
-| **LLM04: Data and Model Poisoning.** Làm sai lệch dữ liệu hoặc mô hình. | Tài liệu chuyên môn bị sửa trái phép được đưa vào kho tham khảo của trợ lý. | Báo nội dung khác nguồn chính thức. Cơ sở quản lý nguồn, phiên bản, quyền cập nhật và kiểm tra trước khi đưa tài liệu vào sử dụng. |
-| **LLM05: Improper Output Handling.** Xử lý đầu ra không an toàn. | Văn bản, đường dẫn hoặc chỉ dẫn do AI tạo được phần mềm tiếp nhận và thực thi mà chưa kiểm tra. | Không tự mở hoặc làm theo chỉ dẫn lạ. Cơ sở kiểm tra đầu ra trước khi chuyển sang hệ thống khác; không coi văn bản AI là lệnh đáng tin cậy. |
-| **LLM06: Excessive Agency.** Trao quyền hành động quá mức. | Trợ lý được phép tự sửa hồ sơ hoặc tự gửi hướng dẫn điều trị cho người bệnh. | Người có thẩm quyền duyệt trước hành động có hậu quả lớn. Cơ sở chỉ cấp quyền tối thiểu và có cách dừng hoạt động không phù hợp. |
-| **LLM07: System Prompt Leakage.** Lộ chỉ dẫn cấu hình của trợ lý. | Phần chỉ dẫn nền chứa mật khẩu hoặc thông tin nội bộ, rồi bị AI tiết lộ. | Không đưa bí mật vào phần cấu hình trò chuyện. Cơ sở quản lý thông tin xác thực riêng và không dùng câu “không tiết lộ” làm hàng rào bảo mật duy nhất. |
-| **LLM08: Vector and Embedding Weaknesses.** Điểm yếu ở cơ chế tìm và ghép tài liệu. | Trợ lý lấy hồ sơ thuộc nhóm người dùng khác để trả lời câu hỏi. | Dừng chia sẻ khi thấy tài liệu ngoài quyền được xem. Cơ sở kiểm soát quyền ngay ở nguồn và bước tìm tài liệu, không chỉ ở màn hình đăng nhập. |
-| **LLM09: Misinformation.** Thông tin sai hoặc gây hiểu lầm. | AI bịa điều luật, nguồn dẫn hoặc thêm một kết quả xét nghiệm không có trong hồ sơ. | Mở nguồn gốc và đối chiếu từng thông tin quan trọng; không ký hoặc gửi nội dung chưa xác minh. Cơ sở quy định người chịu trách nhiệm duyệt. |
-| **LLM10: Unbounded Consumption.** Tiêu thụ tài nguyên không được giới hạn. | Tác vụ lặp gây chậm dịch vụ hoặc phát sinh sử dụng ngoài dự kiến. | Dừng tác vụ bất thường, không gửi lặp liên tục. Cơ sở đặt giới hạn sử dụng, cảnh báo và phương án làm việc khi dịch vụ gián đoạn. |
+| **LLM01: {t:promptinjection}Prompt Injection{/t}.** Chèn chỉ dẫn để đánh lừa AI. | Một tệp tải vào trợ lý chứa chỉ dẫn ẩn yêu cầu bỏ nhiệm vụ và tìm dữ liệu không liên quan. | Người dùng báo hành vi bất thường, không làm theo yêu cầu chuyển dữ liệu lạ. Cơ sở giới hạn quyền của AI và yêu cầu người duyệt hành động nhạy cảm. |
+| **LLM02: {t:sensitive-disclosure}Sensitive Information Disclosure{/t}.** Tiết lộ thông tin nhạy cảm. | Chatbot trả thông tin người bệnh khác hoặc người dùng tải bệnh án lên công cụ chưa được duyệt. | Chỉ nhập dữ liệu được phép; kiểm tra người nhận trước khi chia sẻ. Cơ sở giới hạn nguồn dữ liệu, quyền xem và chính sách lưu, dùng lại dữ liệu. |
+| **LLM03: {t:ai-supply-chain}Supply Chain{/t}.** Rủi ro từ thành phần và nhà cung cấp. | Một tiện ích AI mới tiếp cận hồ sơ nhưng chưa được kiểm tra nguồn gốc và quyền truy cập. | Không tự cài đặt. Cơ sở đánh giá nhà cung cấp, thành phần phần mềm và các thay đổi trước khi cho sử dụng. |
+| **LLM04: {t:data-model-poisoning}Data and Model Poisoning{/t}.** Làm sai lệch dữ liệu hoặc mô hình. | Tài liệu chuyên môn bị sửa trái phép được đưa vào kho tham khảo của trợ lý. | Báo nội dung khác nguồn chính thức. Cơ sở quản lý nguồn, phiên bản, quyền cập nhật và kiểm tra trước khi đưa tài liệu vào sử dụng. |
+| **LLM05: {t:improper-output-handling}Improper Output Handling{/t}.** Xử lý đầu ra không an toàn. | Văn bản, đường dẫn hoặc chỉ dẫn do AI tạo được phần mềm tiếp nhận và thực thi mà chưa kiểm tra. | Không tự mở hoặc làm theo chỉ dẫn lạ. Cơ sở kiểm tra đầu ra trước khi chuyển sang hệ thống khác; không coi văn bản AI là lệnh đáng tin cậy. |
+| **LLM06: {t:excessive-agency}Excessive Agency{/t}.** Trao quyền hành động quá mức. | Trợ lý được phép tự sửa hồ sơ hoặc tự gửi hướng dẫn điều trị cho người bệnh. | Người có thẩm quyền duyệt trước hành động có hậu quả lớn. Cơ sở chỉ cấp quyền tối thiểu và có cách dừng hoạt động không phù hợp. |
+| **LLM07: {t:system-prompt-leakage}System Prompt Leakage{/t}.** Lộ chỉ dẫn cấu hình của trợ lý. | Phần chỉ dẫn nền chứa mật khẩu hoặc thông tin nội bộ, rồi bị AI tiết lộ. | Không đưa bí mật vào phần cấu hình trò chuyện. Cơ sở quản lý thông tin xác thực riêng và không dùng câu “không tiết lộ” làm hàng rào bảo mật duy nhất. |
+| **LLM08: {t:vector-embedding-weaknesses}Vector and Embedding Weaknesses{/t}.** Điểm yếu ở cơ chế tìm và ghép tài liệu. | Trợ lý lấy hồ sơ thuộc nhóm người dùng khác để trả lời câu hỏi. | Dừng chia sẻ khi thấy tài liệu ngoài quyền được xem. Cơ sở kiểm soát quyền ngay ở nguồn và bước tìm tài liệu, không chỉ ở màn hình đăng nhập. |
+| **LLM09: {t:misinformation}Misinformation{/t}.** Thông tin sai hoặc gây hiểu lầm. | AI bịa điều luật, nguồn dẫn hoặc thêm một kết quả xét nghiệm không có trong hồ sơ. | Mở nguồn gốc và đối chiếu từng thông tin quan trọng; không ký hoặc gửi nội dung chưa xác minh. Cơ sở quy định người chịu trách nhiệm duyệt. |
+| **LLM10: {t:unbounded-consumption}Unbounded Consumption{/t}.** Tiêu thụ tài nguyên không được giới hạn. | Tác vụ lặp gây chậm dịch vụ hoặc phát sinh sử dụng ngoài dự kiến. | Dừng tác vụ bất thường, không gửi lặp liên tục. Cơ sở đặt giới hạn sử dụng, cảnh báo và phương án làm việc khi dịch vụ gián đoạn. |
 
 Thông điệp thực hành là không trao cho AI nhiều dữ liệu, quyền truy
 cập và quyền hành động hơn mức cần thiết. Nhân viên y tế không phải
@@ -397,20 +409,20 @@ huống; cần đọc đúng chủ thể, điều kiện và ngoại lệ của 
   ngoại lệ khi diễn giải và không dùng ngoại lệ khẩn cấp như lý do
   chung để gửi bệnh án ra ngoài. ([Luật 91, Điều 19 và 26](https://mps.gov.vn/chinh-sach-phap-luat/co-so-du-lieu-van-ban/luat-bao-ve-du-lieu-ca-nhan-1753688803))
 - **Chuyển dữ liệu và đánh giá tác động:** Điều 20 quy định
-  chuyển dữ liệu cá nhân xuyên biên giới; Điều 21 quy định đánh
-  giá tác động xử lý dữ liệu cá nhân; Điều 22 quy định cập nhật
+  {t:cross-border-transfer}chuyển dữ liệu cá nhân xuyên biên giới{/t}; Điều 21 quy định {t:impact-assessment}đánh giá tác động xử lý dữ liệu cá nhân{/t}; Điều 22 quy định cập nhật
   hai loại hồ sơ đánh giá tác động. Khoản 2 Điều 20 và khoản 1
   Điều 21 có mốc gửi hồ sơ trong 60 ngày cùng các ngoại lệ được
   dẫn chiếu; đây không phải quyền cho nhân viên tự chuyển dữ liệu
   trước rồi xin phép sau. ([Luật 91, Điều 20–22](https://mps.gov.vn/chinh-sach-phap-luat/co-so-du-lieu-van-ban/luat-bao-ve-du-lieu-ca-nhan-1753688803))
 - **Xử lý dữ liệu bằng AI:** Điều 30 yêu cầu đúng mục đích,
-  trong phạm vi cần thiết, có biện pháp bảo mật, xác thực, định
-  danh phù hợp, phân quyền và phân loại rủi ro để bảo vệ dữ liệu.
+  trong phạm vi cần thiết, có biện pháp bảo mật, {t:authentication}xác thực{/t}, định
+  danh phù hợp, {t:authorization}phân quyền{/t} và phân loại rủi ro để bảo vệ dữ liệu.
   Quy tắc “không dùng chung tài khoản” là cách cơ sở cụ thể hóa
   an toàn trong SOP, không phải câu trích nguyên văn khoản 3.
   ([Luật 91, Điều 30](https://mps.gov.vn/chinh-sach-phap-luat/co-so-du-lieu-van-ban/luat-bao-ve-du-lieu-ca-nhan-1753688803))
 - **Quan hệ với nhà cung cấp:** Điều 37 phân định trách nhiệm
-  bên kiểm soát, bên xử lý, bên kiểm soát và xử lý dữ liệu; bên
+  {t:data-controller}bên kiểm soát{/t}, {t:data-processor}bên xử lý{/t},
+  bên kiểm soát và xử lý dữ liệu; bên
   xử lý chỉ tiếp nhận dữ liệu sau khi có thỏa thuận, hợp đồng theo
   quy định. Cần xác định vai trò thực tế của các bên, không mặc
   nhiên coi mọi nhà cung cấp đều chỉ là bên xử lý.
@@ -530,8 +542,8 @@ lý. ([WHO: sáu nguyên tắc định hướng](https://www.who.int/news/item/2
   Một hệ thống chỉ hoạt động tốt ở giai đoạn trình diễn chưa đủ
   để duy trì chăm sóc an toàn lâu dài.
 
-Tại Việt Nam, V-RHAIN ra mắt ngày 14/1/2026, được giới thiệu là mạng
-lưới thúc đẩy AI y tế có trách nhiệm, kết nối các bên và hỗ trợ thử
+Tại Việt Nam, {t:vrhain}V-RHAIN{/t} ra mắt ngày 14/1/2026, được giới thiệu là mạng
+lưới thúc đẩy {t:aicotranhiem}AI y tế có trách nhiệm{/t}, kết nối các bên và hỗ trợ thử
 nghiệm trong điều kiện có kiểm soát. ([Trung tâm Thông tin Y tế Quốc
 gia](https://nhic.vn/hoi-thao-ai-y-te-thanh-cong-ra-mat-mang-luoi-v-rhain-va-thuc-day-cac-giai-phap-ai-y-te-co-trach-nhiem/))
 Thông tin đó không phải căn cứ để gán toàn bộ nguyên tắc và SOP
@@ -649,9 +661,9 @@ hoạt động nghiên cứu. Mục tiêu là nhận diện điều cần kiểm
 > gửi bản ghi kèm định danh đến dịch vụ bên ngoài hay không.
 
 > **CẤM DÁN PHI VÀO CÔNG CỤ AI CÔNG CỘNG HOẶC Ô NỘP BÀI CỦA LAB.**
-> Trong cẩm nang này, PHI được dùng để chỉ thông tin sức khỏe có thể
+> Trong cẩm nang này, {t:phi}PHI{/t} được dùng để chỉ thông tin sức khỏe có thể
 > nhận diện người bệnh, trực tiếp hoặc khi kết hợp với dữ liệu khác;
-> đây không phải việc mặc nhiên áp dụng luật HIPAA của Hoa Kỳ tại
+> đây không phải việc mặc nhiên áp dụng luật {t:hipaa}HIPAA{/t} của Hoa Kỳ tại
 > Việt Nam. Chỉ sử dụng các ca mô phỏng đã cho, không thay bằng bệnh
 > án thật dù đã xóa tên.
 

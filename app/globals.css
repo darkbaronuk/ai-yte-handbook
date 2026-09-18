@@ -77,6 +77,18 @@ html, body {
   font-weight: 500;
   transition: background-color 0.15s;
 }
+.prose a.term {
+  text-decoration: none;
+}
+.term:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.glossary-entry:target {
+  background: #edf7f2;
+  box-shadow: inset 3px 0 var(--accent);
+}
 .term:hover {
   background-color: rgba(15, 118, 110, 0.08);
   border-radius: 2px;

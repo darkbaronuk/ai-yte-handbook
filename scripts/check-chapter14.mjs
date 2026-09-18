@@ -9,7 +9,7 @@ assert.match(chapter, /status: draft/);
 assert.equal((between("### Mười nguy cơ cần nhận diện", "### Mười quy tắc").match(/^- /gm) || []).length, 10);
 assert.equal((between("### Mười quy tắc", "## Phần II").match(/^\d+\. /gm) || []).length, 10);
 assert.equal((chapter.match(/^\| \*\*LLM\d\d:/gm) || []).length, 10);
-assert.equal((between("WHO nêu sáu nguyên tắc", "Tại Việt Nam, V-RHAIN").match(/^- /gm) || []).length, 6);
+assert.equal((between("WHO nêu sáu nguyên tắc", "Tại Việt Nam,").match(/^- /gm) || []).length, 6);
 assert.equal((chapter.match(/### Tầng [1-4]:/g) || []).length, 4);
 assert.match(chapter, /### Tầng nền:/);
 assert.doesNotMatch(chapter, /Tầng 5|tầng thứ năm|bốn tình huống|bảy nguy cơ|bảy quy tắc/i);

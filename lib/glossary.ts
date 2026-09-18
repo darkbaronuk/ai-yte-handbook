@@ -8,6 +8,7 @@ export type GlossaryEntry = {
   en: string;
   short: string;
   long: string;
+  sources?: { title: string; url: string }[];
 };
 
 const GLOSSARY_PATH = path.join(process.cwd(), "content", "glossary.yml");

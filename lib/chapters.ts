@@ -21,14 +21,15 @@ export type RenderedBlock =
   | { kind: "timeline"; items: Array<{ year: string; event: string; kind?: string }> }
   | { kind: "mermaid"; code: string };
 
-// Chuyển cú pháp {t:slug}text{/t} thành <span class="term" data-slug="slug">text</span>
+// Thuật ngữ là liên kết thật: hover/focus xem ngắn, bấm/Enter đến danh mục.
 // trước khi qua remark. Slug không hợp lệ vẫn được hiển thị nhưng đánh dấu để dev thấy.
 function expandTermSyntax(md: string): string {
   const glossary = getGlossaryMap();
   return md.replace(/\{t:([a-z0-9\-]+)\}([\s\S]*?)\{\/t\}/g, (_, slug, text) => {
     const known = glossary.has(slug);
     const cls = known ? "term" : "term term-unknown";
-    return `<span class="${cls}" data-slug="${slug}">${text}</span>`;
+    if (!known) return `<span class="${cls}" data-slug="${slug}">${text}</span>`;
+    return `<a class="${cls}" data-slug="${slug}" href="/thuat-ngu#${slug}">${text}</a>`;
   });
 }
 
