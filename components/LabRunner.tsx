@@ -12,6 +12,7 @@ type GradeResult = {
 };
 
 export default function LabRunner({ lab }: { lab: Lab }) {
+  const isSafetyLab = lab.id === "lab-14";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [answer, setAnswer] = useState("");
@@ -90,13 +91,18 @@ export default function LabRunner({ lab }: { lab: Lab }) {
       {lab.tools && lab.tools.length > 0 && (
         <section className="bg-indigo-50 border border-indigo-200 rounded-lg p-5">
           <h2 className="font-semibold text-lg mb-1 text-indigo-900">
-            🧰 Công cụ AI miễn phí gợi ý
+            {isSafetyLab ? "Công cụ và nguồn tham khảo gợi ý" : "🧰 Công cụ AI miễn phí gợi ý"}
           </h2>
           <p className="text-sm text-indigo-700 mb-3">
             Bạn có thể dùng bất kỳ công cụ nào dưới đây để nghiên cứu, so
             sánh, hoặc draft. Mục tiêu là giúp bạn làm bài có chất lượng — không
             phải nộp output của AI.
           </p>
+          {isSafetyLab && (
+            <p className="mb-4 text-sm text-red-800">
+              <strong>CẤM DÁN PHI vào Perplexity, Gemini, ChatGPT. Chỉ dùng ca mô phỏng đã cho, không dùng bệnh án thật dù đã xóa tên.</strong>
+            </p>
+          )}
           <ul className="space-y-2">
             {lab.tools.map((t) => (
               <li key={t.url}>
@@ -131,15 +137,23 @@ export default function LabRunner({ lab }: { lab: Lab }) {
 
       {/* Textarea */}
       <section className="bg-white border border-slate-200 rounded-lg p-5">
-        <label className="block font-semibold text-lg mb-2">Câu trả lời của bạn</label>
+        <label htmlFor={`answer-${lab.id}`} className="block font-semibold text-lg mb-2">Câu trả lời của bạn</label>
+        {isSafetyLab && (
+          <div id="lab14-data-warning" className="mb-3 rounded border border-red-200 bg-red-50 p-3 text-sm text-red-900">
+            <strong>CẤM NHẬP PHI HOẶC DỮ LIỆU NGƯỜI BỆNH THẬT VÀO Ô NỘP BÀI. CHỈ SỬ DỤNG CA MÔ PHỎNG.</strong>
+            <p className="mt-2">Bài nộp được gửi đến dịch vụ AI để chấm. Không nhập bệnh án, mã người bệnh, ảnh, hoặc chi tiết có thể kết hợp để nhận diện một người. Kết quả chấm chỉ phục vụ học tập, không chứng nhận tuân thủ pháp luật.</p>
+          </div>
+        )}
         <textarea
+          id={`answer-${lab.id}`}
+          aria-describedby={isSafetyLab ? "lab14-data-warning" : undefined}
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
-          placeholder="Viết đoạn văn 150–250 từ tại đây…"
+          placeholder={isSafetyLab ? "Chọn 01 ca mô phỏng và trả lời năm câu hỏi trong 400–700 từ. Không nhập dữ liệu người bệnh thật." : "Viết đoạn văn 150–250 từ tại đây…"}
           className="w-full min-h-[240px] border border-slate-300 rounded p-3 leading-relaxed focus:outline-none focus:ring-2 focus:ring-accent"
           disabled={loading || result !== null}
         />
-        <div className="mt-2 flex justify-between text-sm text-slate-500">
+        <div className="mt-2 flex flex-wrap gap-2 justify-between text-sm text-slate-500">
           <span>
             {wordCount} từ · {charCount} ký tự
           </span>

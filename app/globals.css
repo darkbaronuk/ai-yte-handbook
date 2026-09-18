@@ -53,6 +53,18 @@ html, body {
 .prose table {
   font-size: 0.9rem;
 }
+/* Keep comparison tables readable without widening the mobile page. */
+@media (max-width: 639px) {
+  .prose table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .prose table th,
+  .prose table td {
+    min-width: 12rem;
+  }
+}
 .prose blockquote {
   border-left-color: var(--accent);
 }

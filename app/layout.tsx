@@ -19,11 +19,11 @@ export default function RootLayout({
     <html lang="vi">
       <body className="min-h-screen font-sans antialiased">
         <header className="border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-10">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="font-serif text-xl font-bold">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <Link href="/" className="font-serif text-xl font-bold whitespace-nowrap">
               AI Y tế Việt Nam
             </Link>
-            <nav className="text-sm flex gap-6">
+            <nav className="text-sm flex flex-wrap gap-x-5 gap-y-2">
               <Link href="/muc-luc" className="hover:text-accent">Mục lục</Link>
               <Link href="/ma-tran" className="hover:text-accent">Ma trận</Link>
               <Link href="/dashboard" className="hover:text-accent">Tiến độ</Link>
