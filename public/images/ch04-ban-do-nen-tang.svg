@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" role="img" aria-label="Bản đồ 6 nhóm nền tảng AI đa nhiệm">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0f9ff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="900" height="580" rx="16" fill="url(#bg)" stroke="#e2e8f0"/>
+
+  <text x="450" y="44" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">Bản đồ 6 nhóm nền tảng AI đa nhiệm</text>
+  <text x="450" y="70" text-anchor="middle" font-size="14" fill="#64748b">Một công cụ làm nhiều việc — chọn theo năng lực bạn cần, không chọn theo tin đồn</text>
+
+  <!-- connecting lines -->
+  <g stroke="#cbd5e1" stroke-width="2">
+    <line x1="450" y1="310" x2="450" y2="140"/>
+    <line x1="450" y1="310" x2="727" y2="225"/>
+    <line x1="450" y1="310" x2="727" y2="395"/>
+    <line x1="450" y1="310" x2="450" y2="480"/>
+    <line x1="450" y1="310" x2="173" y2="395"/>
+    <line x1="450" y1="310" x2="173" y2="225"/>
+  </g>
+
+  <!-- center: healthcare worker -->
+  <circle cx="450" cy="310" r="48" fill="#ffffff" stroke="#0ea5e9" stroke-width="3"/>
+  <g fill="#0ea5e9">
+    <rect x="442" y="288" width="16" height="44" rx="3"/>
+    <rect x="428" y="302" width="44" height="16" rx="3"/>
+  </g>
+  <text x="450" y="384" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Nhân viên y tế</text>
+  <text x="450" y="404" text-anchor="middle" font-size="12" fill="#64748b">người chọn và kiểm chứng</text>
+
+  <!-- node 1: Perplexity -->
+  <g>
+    <circle cx="450" cy="140" r="30" fill="#0ea5e9"/>
+    <text x="450" y="148" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">1</text>
+    <text x="450" y="188" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Perplexity</text>
+    <text x="450" y="206" text-anchor="middle" font-size="12" fill="#64748b">Tra cứu có nguồn trích dẫn</text>
+  </g>
+
+  <!-- node 2: ChatGPT -->
+  <g>
+    <circle cx="727" cy="225" r="30" fill="#8b5cf6"/>
+    <text x="727" y="233" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">2</text>
+    <text x="727" y="273" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">ChatGPT</text>
+    <text x="727" y="291" text-anchor="middle" font-size="12" fill="#64748b">Hệ sinh thái rộng nhất</text>
+  </g>
+
+  <!-- node 3: Claude -->
+  <g>
+    <circle cx="727" cy="395" r="30" fill="#f59e0b"/>
+    <text x="727" y="403" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">3</text>
+    <text x="727" y="443" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Claude</text>
+    <text x="727" y="461" text-anchor="middle" font-size="12" fill="#64748b">Văn bản dài, tiếng Việt tốt</text>
+  </g>
+
+  <!-- node 4: Gemini -->
+  <g>
+    <circle cx="450" cy="480" r="30" fill="#22c55e"/>
+    <text x="450" y="488" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">4</text>
+    <text x="450" y="528" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Gemini</text>
+    <text x="450" y="546" text-anchor="middle" font-size="12" fill="#64748b">Gắn với Google Workspace</text>
+  </g>
+
+  <!-- node 5: Copilot -->
+  <g>
+    <circle cx="173" cy="395" r="30" fill="#14b8a6"/>
+    <text x="173" y="403" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">5</text>
+    <text x="173" y="443" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Copilot</text>
+    <text x="173" y="461" text-anchor="middle" font-size="12" fill="#64748b">Trong Microsoft 365</text>
+  </g>
+
+  <!-- node 6: Grok & others -->
+  <g>
+    <circle cx="173" cy="225" r="30" fill="#64748b"/>
+    <text x="173" y="233" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">6</text>
+    <text x="173" y="273" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a">Grok &amp; khác</text>
+    <text x="173" y="291" text-anchor="middle" font-size="12" fill="#64748b">Giá rẻ, mã nguồn mở</text>
+  </g>
+</svg>
