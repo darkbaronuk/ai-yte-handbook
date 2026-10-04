@@ -322,12 +322,12 @@ Bài học rút ra cho người mới: **quy trình 3 bước — kiểm tra nă
 ## 9. Nguồn và đọc thêm
 
 **Văn bản pháp luật Việt Nam:**
-- Quốc hội (2025), *Luật Trí tuệ nhân tạo số 134/2025/QH15* (thông qua ngày 10/12/2025, hiệu lực từ 01/03/2026) — quy định về tính minh bạch của hệ thống AI và dấu hiệu nhận biết nội dung do AI tạo ra.
+- Quốc hội (2025), [*Luật Trí tuệ nhân tạo số 134/2025/QH15*](https://vanban.chinhphu.vn/?pageid=27160&docid=216334&classid=1&typegroupid=3) (thông qua ngày 10/12/2025, hiệu lực từ 01/03/2026) — quy định về tính minh bạch của hệ thống AI và dấu hiệu nhận biết nội dung do AI tạo ra.
 
 **Khuyến nghị quốc tế (tham khảo, không phải nghĩa vụ pháp lý tại Việt Nam):**
-- WHO (2021), *Ethics and governance of artificial intelligence for health* — khung đạo đức và quản trị AI trong y tế.
-- WHO (2024), *Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models* — hướng dẫn về mô hình đa phương thức lớn trong y tế.
-- UNESCO (2021), *Recommendation on the Ethics of Artificial Intelligence* — khuyến nghị về đạo đức AI.
+- WHO (2021), [*Ethics and governance of artificial intelligence for health*](https://www.who.int/publications/i/item/9789240029200) — khung đạo đức và quản trị AI trong y tế.
+- WHO (2024), [*Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models*](https://www.who.int/publications/i/item/9789240084759) — hướng dẫn về mô hình đa phương thức lớn trong y tế.
+- UNESCO (2021), [*Recommendation on the Ethics of Artificial Intelligence*](https://www.unesco.org/en/artificial-intelligence/recommendation-ethics) — khuyến nghị về đạo đức AI.
 
 > Lưu ý phân biệt: các tài liệu WHO/UNESCO là khuyến nghị quốc tế để tham khảo; chỉ văn bản pháp luật Việt Nam mới là nghĩa vụ pháp lý áp dụng tại Việt Nam.
 
