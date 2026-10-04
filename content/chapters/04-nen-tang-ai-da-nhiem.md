@@ -283,7 +283,12 @@ AI hỗ trợ **chuẩn bị** quyết định, không thay thế người ra qu
 🎬 **Video minh họa:** [Phiên thảo luận về AI tại Hội đồng Bảo an Liên Hợp Quốc — Sam Altman (OpenAI), Dario Amodei (Anthropic), Yoshua Bengio cùng bàn về an toàn và quản trị AI, 23/09/2026](https://www.youtube.com/watch?v=5nAe_t6cy4s).
 
 ```callout kind=danger title="Checklist 1 phút trước khi dùng AI cho việc quan trọng"
-☐ Dữ liệu đưa vào có định danh ai không? ☐ Đầu ra đã được đối chiếu với nguồn gốc chưa? ☐ Có cần ghi nhãn "có sử dụng AI" không? ☐ Ai là người ký duyệt cuối cùng? Đủ 4 dấu tick mới dùng.
+<label style="display:block;margin:8px 0;cursor:pointer"><input type="checkbox" style="margin-right:10px;transform:scale(1.3);accent-color:#dc2626"> Dữ liệu đưa vào có định danh ai không?</label>
+<label style="display:block;margin:8px 0;cursor:pointer"><input type="checkbox" style="margin-right:10px;transform:scale(1.3);accent-color:#dc2626"> Đầu ra đã được đối chiếu với nguồn gốc chưa?</label>
+<label style="display:block;margin:8px 0;cursor:pointer"><input type="checkbox" style="margin-right:10px;transform:scale(1.3);accent-color:#dc2626"> Có cần ghi nhãn "có sử dụng AI" không?</label>
+<label style="display:block;margin:8px 0;cursor:pointer"><input type="checkbox" style="margin-right:10px;transform:scale(1.3);accent-color:#dc2626"> Ai là người ký duyệt cuối cùng?</label>
+
+Đủ 4 dấu tick mới dùng.
 ```
 
 ## 7. Case: hai giờ và một báo cáo 5 trang
