@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import TermTooltip from "@/components/TermTooltip";
+import Providers from "./providers";
 import { getGlossary } from "@/lib/glossary";
 
 export const metadata: Metadata = {
@@ -24,30 +25,37 @@ export default function RootLayout({
               AI Y tế Việt Nam
             </Link>
             <nav className="text-sm flex flex-wrap gap-x-5 gap-y-2">
-              <Link href="/muc-luc" className="hover:text-accent">Mục lục</Link>
-              <Link href="/ma-tran" className="hover:text-accent">Ma trận</Link>
-              <Link href="/dashboard" className="hover:text-accent">Tiến độ</Link>
+              <Link href="/" className="hover:text-accent">Trang chủ</Link>
+              <Link href="/lo-trinh" className="hover:text-accent">Lộ trình</Link>
+              <Link href="/muc-luc" className="hover:text-accent">Cẩm nang</Link>
+              <Link href="/hoc-tap" className="hover:text-accent">Học tập</Link>
               <Link href="/thuat-ngu" className="hover:text-accent">Thuật ngữ</Link>
-              <Link href="/dong-gop" className="hover:text-accent">Đóng góp</Link>
               <a href="/admin/" className="text-accent font-semibold hover:underline">✏️ Soạn</a>
             </nav>
           </div>
         </header>
-        <main className="max-w-6xl mx-auto px-6 py-10">{children}</main>
+        <main className="max-w-6xl mx-auto px-6 py-10">
+          <Providers>{children}</Providers>
+        </main>
         <TermTooltip
           glossary={Object.fromEntries(
             getGlossary().map((e) => [e.slug, { vi: e.vi, en: e.en, short: e.short, long: e.long }])
           )}
         />
         <footer className="border-t border-slate-200 mt-20">
-          <div className="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500 flex justify-between">
+          <div className="max-w-6xl mx-auto px-6 py-6 text-sm text-slate-500 flex flex-wrap gap-x-6 gap-y-2 justify-between">
             <span>Bản v0.1 — 2026. Cẩm nang cộng tác cộng đồng.</span>
-            <a
-              href="https://github.com/darkbaronuk/ai-yte-handbook"
-              className="hover:text-accent"
-            >
-              GitHub
-            </a>
+            <span className="flex gap-x-5">
+              <Link href="/dashboard" className="hover:text-accent">
+                Tiến độ biên soạn
+              </Link>
+              <a
+                href="https://github.com/darkbaronuk/ai-yte-handbook"
+                className="hover:text-accent"
+              >
+                GitHub
+              </a>
+            </span>
           </div>
         </footer>
       </body>
