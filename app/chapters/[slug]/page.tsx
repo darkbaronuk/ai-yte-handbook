@@ -3,14 +3,17 @@ import Link from "next/link";
 import {
   getChapter,
   getChapterSlugs,
+  getAllChapters,
   editUrl,
   vscodeDevUrl,
   cmsUrl,
   blobUrl,
   REPO_URL,
 } from "@/lib/chapters";
+import { countWords, readingMinutes } from "@/lib/paths";
 import { StatusPill } from "@/components/StatusPill";
 import ChapterRenderer from "@/components/ChapterRenderer";
+import LessonHeader from "@/components/LessonHeader";
 
 export async function generateStaticParams() {
   return getChapterSlugs().map((slug) => ({ slug }));
@@ -38,6 +41,18 @@ export default async function ChapterPage({
   }] Góp ý: ${encodeURIComponent(chapter.title)}&body=${encodeURIComponent(
     `Chương: ${chapter.title}\nFile: ${chapter.rawPath}\n\n---\n\n`
   )}`;
+
+  // Điều hướng chương trước / tiếp theo theo số chương
+  const all = await getAllChapters();
+  const idx = all.findIndex((c) => c.slug === chapter.slug);
+  const prev =
+    idx > 0
+      ? { slug: all[idx - 1].slug, title: all[idx - 1].title, number: all[idx - 1].number }
+      : null;
+  const next =
+    idx >= 0 && idx < all.length - 1
+      ? { slug: all[idx + 1].slug, title: all[idx + 1].title, number: all[idx + 1].number }
+      : null;
 
   return (
     <article>
@@ -121,6 +136,15 @@ export default async function ChapterPage({
           </div>
         </div>
       </header>
+
+      <LessonHeader
+        slug={chapter.slug}
+        part={chapter.part}
+        number={chapter.number}
+        minutes={readingMinutes(countWords(chapter.content))}
+        prev={prev}
+        next={next}
+      />
 
       <ChapterRenderer blocks={chapter.blocks} />
 
