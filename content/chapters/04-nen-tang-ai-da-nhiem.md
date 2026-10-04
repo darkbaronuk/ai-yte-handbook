@@ -7,7 +7,7 @@ domains: ["Technical", "Communication"]
 miller: "Knows How → Shows How"
 owners: ["Tú"]
 updated: "2026-10-05"
-summary: "Chương hook cho L0/L1. Bản đồ Perplexity, ChatGPT, Claude, Gemini, Copilot, Grok và cách chọn combo phù hợp công việc y tế. Có sơ đồ, biểu đồ, video minh họa; Lab 4 tách tab riêng."
+summary: "Chương hook cho L0/L1. Bản đồ Perplexity, ChatGPT, Claude, Gemini, Copilot, Grok và cách chọn combo phù hợp công việc y tế."
 ---
 
 # Chương 4. Nền tảng AI đa nhiệm: trợ lý số cho mọi nhân viên y tế
@@ -331,7 +331,7 @@ Bài học rút ra cho người mới: **quy trình 3 bước — kiểm tra nă
 
 > Lưu ý phân biệt: các tài liệu WHO/UNESCO là khuyến nghị quốc tế để tham khảo; chỉ văn bản pháp luật Việt Nam mới là nghĩa vụ pháp lý áp dụng tại Việt Nam.
 
-**Đọc thêm trong cẩm nang:** chương 13 (Hạ tầng tính toán — khi muốn tự chủ mô hình), chương 14 (An toàn, tuân thủ — khung quản trị đầy đủ).
+**Đọc thêm trong cẩm nang:** [chương 13 — Hạ tầng tính toán](/chapters/13-ha-tang-tinh-toan) (khi muốn tự chủ mô hình), [chương 14 — An toàn, tuân thủ](/chapters/14-an-toan-tuan-thu) (khung quản trị đầy đủ).
 
 **Video minh họa trong chương:**
 - Satya Nadella (Microsoft), "The Future of AI-Powered Coding and Multi-Agent Systems" — Build 2025 ([YouTube](https://www.youtube.com/watch?v=5P9nRF4lIwU)).
