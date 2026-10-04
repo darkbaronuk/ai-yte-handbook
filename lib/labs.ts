@@ -164,6 +164,56 @@ export const LABS: Lab[] = [
     ],
   },
 
+  {
+    id: "lab-04",
+    chapter: "04-nen-tang-ai-da-nhiem",
+    title: "Lab 4 — Chọn và làm chủ trợ lý AI của bạn",
+    intro:
+      "Chương 4 cho bạn bản đồ 6 nhóm nền tảng AI đa nhiệm và 10 tiêu chí chọn lựa. Trong lab này, bạn dùng chính các nền tảng đó để hoàn thành một báo cáo ngắn về ứng dụng AI trong quản lý tăng huyết áp ở tuyến cơ sở — có kiểm chứng nguồn, ghi nhận phần AI hỗ trợ, và tuân thủ tuyệt đối nguyên tắc không nhập dữ liệu định danh người bệnh thật.",
+    question:
+      "Chọn 1 trong 4 mức và hoàn thành nhiệm vụ tương ứng với chủ đề 'Ứng dụng AI trong quản lý tăng huyết áp ở tuyến cơ sở' (dùng bộ số liệu mô phỏng 200 người bệnh do lab cung cấp — không phải dữ liệu thật):\n\n**L0 — Làm quen (15 phút):** Dùng 1 nền tảng miễn phí trả lời 3 câu hỏi: (1) mục tiêu điều trị tăng huyết áp theo guideline hiện hành là gì, (2) vai trò của tuyến cơ sở, (3) AI có thể hỗ trợ khâu nào. Liệt kê nguồn của từng câu trả lời.\n\n**L1 — Khung báo cáo (30 phút):** Dùng AI lập dàn ý báo cáo 5 mục + viết nháp 1 mục 'đặt vấn đề' (~300 chữ), có ghi nguồn.\n\n**L2 — Báo cáo hoàn chỉnh (60 phút):** Báo cáo ~1.200 chữ gồm: đặt vấn đề, phân tích bộ số liệu mô phỏng, 3 đề xuất ứng dụng AI khả thi ở tuyến cơ sở, giới hạn và kiểm chứng. Tự đánh giá bằng checklist an toàn (chương 4, phần 6) trước khi nộp.\n\n**L3 — Báo cáo + kế hoạch (90 phút):** Như L2, cộng thêm kế hoạch triển khai 1 đề xuất tại đơn vị mình (ai làm, làm gì, kiểm chứng thế nào, dừng khi nào) + 1 đoạn phản biện: 'đề xuất này có thể sai ở đâu'.\n\nMọi mức đều phải kèm: (1) tên nền tảng đã dùng và lý do chọn (1–2 câu, theo 10 tiêu chí); (2) danh sách nguồn đã tự kiểm chứng (ít nhất 1 nguồn gốc); (3) dòng ghi nhận 'Phần nào của bài có sự hỗ trợ của AI'. Thiếu dữ kiện thì ghi 'chưa rõ' và đề xuất cách xác minh — tuyệt đối không bịa thêm, không nhập dữ liệu định danh người bệnh thật vào công cụ AI công cộng.",
+    rubric: `
+- **Hiểu đúng yêu cầu**: Đúng mức đã chọn, đủ các phần bắt buộc của mức đó. Không lạc đề sang nội dung khác.
+- **Lập luận và phân tích**: Có mạch lập luận rõ ràng; số liệu mô phỏng được dùng đúng chỗ, không liệt kê rời rạc.
+- **Dùng AI đúng cách**: Nêu được lý do chọn nền tảng theo tiêu chí; có kiểm chứng ít nhất 1 nguồn gốc; ghi nhận phần AI hỗ trợ.
+- **An toàn và tuân thủ**: Không nhập dữ liệu định danh; có ghi nhãn nội dung AI tạo ra; nêu được giới hạn của chính bài mình.
+- **Trình bày và hành động**: Rõ ràng, có đề xuất cụ thể, khả thi (L2–L3 có người chịu trách nhiệm và điểm dừng).
+
+**Grade 5**: Đạt 5/5 tiêu chí, có nhận định sắc sảo, đề xuất dùng được ngay.
+**Grade 4**: Đạt 4/5, có chiều sâu nhưng thiếu một ý.
+**Grade 3**: Đạt 3/5, đúng hướng nhưng thiếu bằng chứng kiểm chứng hoặc ghi nhận AI.
+**Grade 2**: Đạt 2/5, phó mặc cho AI, thiếu kiểm chứng hoặc sai mức yêu cầu.
+**Grade 1**: Không đạt — vi phạm nguyên tắc an toàn dữ liệu, hoặc lạc đề.`,
+    minLength: 300,
+    suggestedTimeMin: 60,
+    tools: [
+      {
+        name: "Perplexity (miễn phí)",
+        url: "https://www.perplexity.ai",
+        note: "Mạnh về tra cứu có trích dẫn nguồn. Dùng cho bước thu thập tài liệu và kiểm chứng guideline.",
+        free: true,
+      },
+      {
+        name: "Claude (bản miễn phí)",
+        url: "https://claude.ai",
+        note: "Mạnh về soạn thảo văn bản dài tiếng Việt. Dùng cho bước lập dàn ý và viết báo cáo.",
+        free: true,
+      },
+      {
+        name: "ChatGPT (bản miễn phí)",
+        url: "https://chat.openai.com",
+        note: "Trợ lý đa năng. Dùng để kiểm tra chéo kết quả với nền tảng khác.",
+        free: true,
+      },
+      {
+        name: "Workshop 'Ứng dụng AI cho Nhân viên Y tế' (BS Trương Công Hậu)",
+        url: "https://www.youtube.com/watch?v=m7UQsjKj3xE",
+        note: "Video tiếng Việt: phân loại công cụ, xử lý hallucination, kỹ thuật prompt cho nhân viên y tế. Xem trước khi làm bài.",
+        free: true,
+      },
+    ],
+  },
+
   LAB14,
 
 ];
