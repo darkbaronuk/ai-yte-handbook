@@ -7,7 +7,7 @@ domains: ["Technical", "Communication"]
 miller: "Knows How → Shows How"
 owners: ["Tú"]
 updated: "2026-10-05"
-summary: "Chương hook cho L0/L1. Bản đồ Perplexity, ChatGPT, Claude, Gemini, Copilot, Grok và cách chọn combo phù hợp công việc y tế."
+summary: "Chương hook cho L0/L1. Bản đồ Perplexity, ChatGPT, Claude, Gemini, Copilot, Grok và cách chọn combo phù hợp công việc y tế. Có sơ đồ, biểu đồ, video minh họa; Lab 4 tách tab riêng."
 ---
 
 # Chương 4. Nền tảng AI đa nhiệm: trợ lý số cho mọi nhân viên y tế
@@ -27,6 +27,16 @@ Câu chuyện này không phải về việc AI kém. Nó là về việc **thi�
 
 Chương này là "chương hook" cho người mới (L0/L1): đọc xong là dùng được ngay trong tuần, không cần biết lập trình.
 
+```metrics
+[
+  {"value":"6","label":"Nhóm nền tảng AI đa nhiệm","hint":"Perplexity → Grok"},
+  {"value":"10","label":"Tiêu chí chọn nền tảng","hint":"3 tiêu chí an toàn đầu tiên"},
+  {"value":"6","label":"Vai trò y tế có hướng dẫn","hint":"bác sĩ → kỹ sư HealthTech"},
+  {"value":"5","label":"Lằn ranh đỏ bắt buộc","hint":"dữ liệu · bịa đặt · agent…"}
+]
+```
+
+
 ## 1. Khái niệm: AI đa nhiệm là gì, khác gì AI chuyên dụng
 
 ### 1.1. Từ chatbot đến tác nhân AI
@@ -41,6 +51,16 @@ Hầu hết chúng ta lần đầu gặp AI qua một khung chat: gõ câu hỏi
 
 Điểm mấu chốt cần nhớ: **chatbot trả lời, agent làm việc**. Càng "làm việc" nhiều, bạn càng phải giới hạn quyền của nó — nguyên tắc này sẽ quay lại ở phần rủi ro.
 
+```mermaid
+flowchart LR
+    A[Chatbot<br/>gõ hỏi – nhận đáp] --> B(Tác nhân AI<br/>làm việc thay bạn)
+    B --> C[Deep Research<br/>báo cáo dài có nguồn]
+    B --> D[Browser use<br/>tự duyệt web]
+    B --> E[Computer use<br/>thao tác máy tính]
+```
+
+🎬 **Video minh họa:** [Satya Nadella (CEO Microsoft) nói về hệ thống AI đa tác vụ và case Stanford Medicine dùng multi-agent hỗ trợ tumor board ung thư — ghi hình tại Build 2025](https://www.youtube.com/watch?v=5P9nRF4lIwU).
+
 ### 1.2. AI đa nhiệm và AI chuyên dụng: hai tầng khác nhau
 
 {t:multi-modal}Đa phương thức{/t} ở đây được dùng theo nghĩa rộng của cuốn cẩm nang này: các nền tảng AI **đa nhiệm** (general-purpose) — một công cụ làm được nhiều việc: soạn văn bản, dịch thuật, đọc tài liệu, phân tích bảng số liệu, tạo slide, tra cứu web. ChatGPT, Claude, Gemini, Copilot, Perplexity đều thuộc nhóm này.
@@ -48,6 +68,8 @@ Hầu hết chúng ta lần đầu gặp AI qua một khung chat: gõ câu hỏi
 Ngược lại, **AI chuyên dụng** là công cụ làm một việc trong y tế: đọc ảnh X-quang (chương 5), hỗ trợ quyết định lâm sàng (chương 6), robot phẫu thuật (chương 16)... Hai tầng này bổ sung cho nhau, không thay thế nhau. Một bác sĩ có thể dùng trợ lý đa nhiệm để soạn báo cáo **và** dùng AI chuyên dụng để đọc ảnh — mỗi thứ đúng chỗ của nó.
 
 Vì sao chương này đặt ở Phần II (Hiện trạng) và đi trước các chương chuyên dụng? Vì trợ lý đa nhiệm là **lớp nền ai cũng chạm tới đầu tiên**: rẻ hoặc miễn phí, không cần cài đặt phức tạp, và là nơi hầu hết sai lầm về dữ liệu, nguồn tin xảy ra. Nắm chắc lớp nền thì các chương sau mới an toàn.
+
+🎬 **Xem thêm:** [Demis Hassabis (CEO Google DeepMind) về tương lai AI và đổi mới y sinh — đối thoại tại Davos, 01/2025](https://www.youtube.com/watch?v=yuz0mF1qSaw) — cầu nối giữa AI đa nhiệm của chương này và AI chuyên dụng y tế ở các chương sau.
 
 ### 1.3. Bốn thuật ngữ dùng suốt chương
 
@@ -59,6 +81,16 @@ Vì sao chương này đặt ở Phần II (Hiện trạng) và đi trước cá
 ## 2. Bản đồ 6 nhóm nền tảng (tình hình đến 10/2026)
 
 > **Lưu ý về tính thời điểm:** thị trường AI thay đổi theo tháng: tên gói, tính năng và giá có thể khác khi bạn đọc. Cách dùng đúng của phần này là nắm **nhóm năng lực** (làm được gì), rồi kiểm tra lại tên sản phẩm và giá tại thời điểm mua. Đừng học thuộc danh sách sản phẩm.
+
+```timeline
+[
+  {"year":"11/2022","event":"ChatGPT ra mắt — 100 triệu người dùng sau 2 tháng","kind":"milestone"},
+  {"year":"2023","event":"Claude, Gemini, Copilot nhập cuộc đua trợ lý AI","kind":"event"},
+  {"year":"2024","event":"Đọc tài liệu dài, NotebookLM, Deep Research xuất hiện","kind":"milestone"},
+  {"year":"2025","event":"AI agent tự thao tác trình duyệt và máy tính","kind":"event"},
+  {"year":"2026","event":"Trợ lý đa nhiệm thành công cụ hằng ngày của nhân viên y tế","kind":"success"}
+]
+```
 
 ### Nhóm 1. Perplexity — mạnh về tra cứu có nguồn
 
@@ -94,7 +126,11 @@ Copilot tích hợp vào Word, Excel, PowerPoint, Outlook, Teams. Nếu bệnh v
 
 Các nền tảng này cạnh tranh bằng giá thấp, một số mã nguồn mở (có thể tự triển khai nội bộ — xem chương 13 về hạ tầng tính toán). Chất lượng tiếng Việt và độ ổn định khác nhau giữa các mô hình, nên **luôn thử với việc thật của mình trước khi đưa vào quy trình**.
 
+🎬 **Video minh họa:** [Mark Zuckerberg (Meta) và Satya Nadella (Microsoft) đối thoại về xu hướng AI, AI agent và mã nguồn mở — LlamaCon, 29/04/2025](https://www.youtube.com/watch?v=WaJOONFllLc).
+
 **Dùng khi:** ngân sách hạn chế, cần thử nghiệm, hoặc đơn vị có năng lực kỹ thuật muốn tự chủ hạ tầng.
+
+![Bản đồ 6 nhóm nền tảng AI đa nhiệm](/images/ch04-ban-do-nen-tang.svg)
 
 ## 3. Mười tiêu chí chọn nền tảng cho công việc y tế
 
@@ -113,11 +149,22 @@ Các nền tảng này cạnh tranh bằng giá thấp, một số mã nguồn m
 | 9 | Cron / tác vụ định kỳ | Ví dụ: mỗi sáng thứ Hai tóm tắt tin y tế mới. Tiện nhưng phải kiểm tra lại kết quả — tác vụ chạy tự động càng cần giám sát. |
 | 10 | Kết nối apps (Gmail, Drive, Notion, Slack...) | Giúp AI làm việc với tài liệu sẵn có của bạn. Mỗi kết nối là một cánh cửa dữ liệu — chỉ kết nối những gì thật sự cần. |
 
-> **Ô nhấn mạnh — quy tắc 3 câu hỏi trước khi chọn:** (1) Việc quan trọng nhất tôi cần nó làm là gì? (2) Dữ liệu tôi đưa vào có nhạy cảm không, và nhà cung cấp cam kết gì? (3) Tôi kiểm chứng đầu ra bằng cách nào? Trả lời được 3 câu này thì chọn nền tảng nào cũng ít sai.
+```callout kind=tip title="Quy tắc 3 câu hỏi trước khi chọn"
+(1) Việc quan trọng nhất tôi cần nó làm là gì? (2) Dữ liệu tôi đưa vào có nhạy cảm không, và nhà cung cấp cam kết gì? (3) Tôi kiểm chứng đầu ra bằng cách nào? Trả lời được 3 câu này thì chọn nền tảng nào cũng ít sai.
+```
 
 ## 4. Hướng dẫn vận dụng cho 6 vai trò
 
 Nguyên tắc chung: **mô tả việc → chọn năng lực → chọn nền tảng → kiểm chứng**. Đừng làm ngược (chọn nền tảng trước rồi tìm việc cho nó). Dưới đây là gợi ý cho từng vai trò; bạn hoàn toàn có thể trộn các cách làm.
+
+```mermaid
+flowchart LR
+    A[Mô tả việc<br/>cần làm] --> B[Chọn năng lực<br/>cần có]
+    B --> C[Chọn nền tảng<br/>đáp ứng]
+    C --> D[Kiểm chứng<br/>đầu ra]
+```
+
+🎬 **Video tiếng Việt:** [Workshop "Ứng dụng AI cho Nhân viên Y tế" — BS Trương Công Hậu phân loại công cụ GPT/Claude/Gemini/Perplexity, xử lý hallucination và kỹ thuật prompt cho nhân viên y tế Việt Nam](https://www.youtube.com/watch?v=m7UQsjKj3xE).
 
 ### 4.1. Bác sĩ lâm sàng
 
@@ -233,7 +280,11 @@ Vận dụng thực tế cho nhân viên y tế:
 
 AI hỗ trợ **chuẩn bị** quyết định, không thay thế người ra quyết định — nhất là quyết định lâm sàng (chẩn đoán, chỉ định điều trị, kê đơn). Mọi sản phẩm AI tạo ra phục vụ công việc chuyên môn đều cần một người có chuyên môn kiểm tra, ký duyệt và chịu trách nhiệm. Nguyên tắc này áp dụng cho cả bài nộp ở Lab: AI có thể hỗ trợ, nhưng người học tự kiểm chứng và chịu trách nhiệm về bài của mình.
 
-> **Ô nhấn mạnh — checklist 1 phút trước khi dùng AI cho việc quan trọng:** ☐ Dữ liệu đưa vào có định danh ai không? ☐ Đầu ra đã được đối chiếu với nguồn gốc chưa? ☐ Có cần ghi nhãn "có sử dụng AI" không? ☐ Ai là người ký duyệt cuối cùng? Đủ 4 dấu tick mới dùng.
+🎬 **Video minh họa:** [Phiên thảo luận về AI tại Hội đồng Bảo an Liên Hợp Quốc — Sam Altman (OpenAI), Dario Amodei (Anthropic), Yoshua Bengio cùng bàn về an toàn và quản trị AI, 23/09/2026](https://www.youtube.com/watch?v=5nAe_t6cy4s).
+
+```callout kind=danger title="Checklist 1 phút trước khi dùng AI cho việc quan trọng"
+☐ Dữ liệu đưa vào có định danh ai không? ☐ Đầu ra đã được đối chiếu với nguồn gốc chưa? ☐ Có cần ghi nhãn "có sử dụng AI" không? ☐ Ai là người ký duyệt cuối cùng? Đủ 4 dấu tick mới dùng.
+```
 
 ## 7. Case: hai giờ và một báo cáo 5 trang
 
@@ -251,70 +302,17 @@ Bài học rút ra cho người mới: **quy trình 3 bước — kiểm tra nă
 
 ## 8. Lab 4 — Chọn và làm chủ trợ lý AI của bạn
 
-> **Trạng thái:** đề cương Lab (chưa phải bản triển khai đầy đủ). Các rubric và luồng chấm dưới đây là thiết kế để tác giả duyệt, sẽ được cụ thể hóa khi lên nền tảng học liệu.
+```chart
+{"type":"bar","title":"Lab 4 — thời lượng ước tính theo mức nhiệm vụ","data":[{"name":"L0 · Làm quen","phút":15},{"name":"L1 · Khung báo cáo","phút":30},{"name":"L2 · Báo cáo hoàn chỉnh","phút":60},{"name":"L3 · Báo cáo + kế hoạch","phút":90}],"keys":["phút"],"yLabel":"phút"}
+```
 
-### 8.1. Mục tiêu
-
-Sau Lab, người học thể hiện được 3 kỹ năng ở mức "Shows How":
-
-1. Chọn được (các) nền tảng AI phù hợp với một nhiệm vụ y tế cụ thể và giải thích được lý do chọn theo 10 tiêu chí (phần 3).
-2. Sử dụng AI để hoàn thành một sản phẩm viết, có kiểm chứng nguồn và ghi nhận phần AI hỗ trợ.
-3. Tuân thủ các giới hạn an toàn: không nhập dữ liệu định danh, ghi nhãn nội dung AI tạo ra.
-
-### 8.2. Đề bài và đầu vào
-
-**Nhiệm vụ chung:** hoàn thành một **báo cáo ngắn** với chủ đề *"Ứng dụng AI trong quản lý tăng huyết áp ở tuyến cơ sở"* — đúng loại việc mà nhân viên y tế tuyến xã/huyện có thể làm ngay tuần này.
-
-**Dữ kiện cho sẵn (mô phỏng):** một bộ số liệu tổng hợp giả lập về 200 người bệnh tăng huyết áp tại một trạm y tế xã (tuổi trung bình, tỷ lệ kiểm soát huyết áp, tỷ lệ tái khám đúng hẹn) — **không phải dữ liệu thật**, chỉ dùng để luyện phân tích. Thiếu thông tin nào, ghi rõ "chưa có dữ kiện" và đề xuất cách thu thập, không tự bịa thêm.
-
-**Bốn mức nhiệm vụ (chọn 1 mức phù hợp với mình):**
-
-| Mức | Nhiệm vụ | Thời lượng ước tính |
-|---|---|---|
-| L0 — Làm quen | Dùng 1 nền tảng miễn phí trả lời 3 câu hỏi: (1) mục tiêu điều trị tăng huyết áp theo guideline hiện hành là gì, (2) vai trò của tuyến cơ sở, (3) AI có thể hỗ trợ khâu nào. Liệt kê nguồn của từng câu trả lời. | 15 phút |
-| L1 — Khung báo cáo | Dùng AI lập dàn ý báo cáo 5 mục + viết nháp 1 mục "đặt vấn đề" (khoảng 300 chữ), có ghi nguồn. | 30 phút |
-| L2 — Báo cáo hoàn chỉnh | Hoàn thành báo cáo ~1.200 chữ gồm: đặt vấn đề, phân tích bộ số liệu mô phỏng, 3 đề xuất ứng dụng AI khả thi ở tuyến cơ sở, giới hạn và kiểm chứng. Tự đánh giá bằng checklist phần 6 trước khi nộp. | 60 phút |
-| L3 — Báo cáo + kế hoạch | Như L2, cộng thêm kế hoạch triển khai 1 đề xuất tại đơn vị mình (ai làm, làm gì, kiểm chứng thế nào, dừng khi nào) + 1 đoạn phản biện: "đề xuất này có thể sai ở đâu". | 90 phút |
-
-### 8.3. Công cụ và nguồn gợi ý
-
-- **Công cụ:** bất kỳ nền tảng nào ở phần 2 (khuyến nghị bắt đầu với bản miễn phí). Dùng ở bước: tra cứu (Deep Research/Perplexity) → dàn ý và soạn thảo (Claude/ChatGPT) → kiểm tra văn phong.
-- **Nguồn đối chiếu bắt buộc:** ít nhất 1 guideline hoặc văn bản chính thức (ví dụ tài liệu của WHO, Bộ Y tế) mà bạn tự mở đọc, không chỉ đọc qua AI tóm tắt.
-- **Prompt gợi ý:** *"Dựa trên các nguồn [liệt kê], hãy lập dàn ý báo cáo gồm 5 mục. Với mỗi mục, ghi 2–3 ý chính và nguồn tương ứng. Đánh dấu những ý bạn chưa chắc chắn."*
-
-> ⚠️ **CẢNH BÁO AN TOÀN — đọc trước khi làm bài:** **TUYỆT ĐỐI KHÔNG nhập thông tin định danh người bệnh thật** (họ tên, ngày sinh, địa chỉ, số hồ sơ, ảnh nhận diện được) vào bất kỳ công cụ AI công cộng nào trong quá trình làm Lab. Chỉ dùng bộ số liệu mô phỏng được cung cấp. Vi phạm nguyên tắc này = bài không đạt, không cần chấm tiếp.
-
-### 8.4. Sản phẩm nộp
-
-Tùy mức đã chọn: câu trả lời 3 câu hỏi (L0), dàn ý + 1 mục nháp (L1), báo cáo ~1.200 chữ (L2), báo cáo + kế hoạch + phản biện (L3). Mọi mức đều phải kèm:
-
-1. Tên (các) nền tảng đã dùng và lý do chọn (1–2 câu).
-2. Danh sách nguồn đã tự kiểm chứng (ít nhất 1 nguồn gốc).
-3. Dòng ghi nhận: "Phần nào của bài có sự hỗ trợ của AI".
-
-Định dạng: văn bản tiếng Việt, có tiêu đề mục rõ ràng. Không yêu cầu đồ họa phức tạp.
-
-### 8.5. Rubric chấm (thang 1–5 cho mỗi tiêu chí)
-
-| Tiêu chí | 1 — Chưa đạt | 3 — Đạt | 5 — Xuất sắc |
-|---|---|---|---|
-| Hiểu đúng yêu cầu | Lạc đề hoặc thiếu hẳn một phần bắt buộc | Đủ các phần, đúng chủ đề | Đúng và sâu: thấy được vấn đề thật của tuyến cơ sở |
-| Lập luận và phân tích | Liệt kê ý rời rạc, không có mạch | Có mạch lập luận, số liệu được dùng đúng chỗ | Phân tích sắc: chỉ ra được cái được/cái chưa của từng đề xuất |
-| Dùng AI đúng cách | Phó mặc cho AI, không kiểm chứng | Có kiểm chứng ít nhất 1 nguồn gốc, ghi nhận phần AI hỗ trợ | Kiểm chứng đa nguồn, phát hiện và sửa được chỗ AI sai |
-| An toàn và tuân thủ | Nhập dữ liệu nhạy cảm hoặc không ghi nhãn AI | Tuân thủ cảnh báo an toàn, có ghi nhãn | Chủ động nêu giới hạn và điều kiện áp dụng của chính bài mình |
-| Trình bày và hành động | Khó đọc, không có kết luận hành động | Rõ ràng, có đề xuất cụ thể | Đề xuất khả thi, có người chịu trách nhiệm và điểm dừng rõ ràng |
-
-**Điều kiện đạt:** không vi phạm cảnh báo an toàn; mọi tiêu chí ≥ 3; tổng ≥ 15/25. **Chưa đạt:** học viên nhận phản hồi theo từng tiêu chí và được nộp lại 1 lần.
-
-**Cách chấm:** rubric công khai trên + {t:llm-as-judge}AI chấm theo rubric{/t} (LLM-as-judge) để phản hồi nhanh; với L2/L3 có thêm **peer review** (đánh giá chéo giữa học viên). Điểm Lab chỉ phản ánh một bài tập — **không quy đổi thành mức trưởng thành hay chứng nhận năng lực** của cá nhân hay đơn vị.
-
-### 8.6. Kiểm chứng và những điều không được làm
-
-- Không dùng dữ liệu bệnh nhân thật dưới mọi hình thức (kể cả "đã xóa tên").
-- Không giao AI quyết định lâm sàng: bài này không phải chỉ định điều trị hay kê đơn.
-- Thiếu dữ kiện thì ghi "chưa rõ" và đề xuất cách xác minh — không tự kết luận.
-- Không nộp nguyên văn đầu ra AI: phải đối chiếu, phân tích và tự hoàn thiện.
-- Phản hồi của AI (kể cả AI chấm bài) phục vụ học tập, không phải kết luận pháp lý hay chứng nhận triển khai an toàn.
+<div class="lab-cta">
+<a href="/lab/lab-04" target="_blank" rel="noopener noreferrer" class="lab-btn">
+▶ Mở Lab 4 trong tab mới
+</a>
+<div class="lab-meta">15–90 phút tùy mức (L0–L3) · AI chấm rubric 5 tiêu chí · Lưu tiến độ vào sổ grading</div>
+<span class="lab-cta-note">Chọn 1 trong 4 mức: làm quen, khung báo cáo, báo cáo hoàn chỉnh, hoặc báo cáo + kế hoạch triển khai tại đơn vị bạn.</span>
+</div>
 
 ## 9. Nguồn và đọc thêm
 
@@ -329,6 +327,15 @@ Tùy mức đã chọn: câu trả lời 3 câu hỏi (L0), dàn ý + 1 mục nh
 > Lưu ý phân biệt: các tài liệu WHO/UNESCO là khuyến nghị quốc tế để tham khảo; chỉ văn bản pháp luật Việt Nam mới là nghĩa vụ pháp lý áp dụng tại Việt Nam.
 
 **Đọc thêm trong cẩm nang:** chương 13 (Hạ tầng tính toán — khi muốn tự chủ mô hình), chương 14 (An toàn, tuân thủ — khung quản trị đầy đủ).
+
+**Video minh họa trong chương:**
+- Satya Nadella (Microsoft), "The Future of AI-Powered Coding and Multi-Agent Systems" — Build 2025 ([YouTube](https://www.youtube.com/watch?v=5P9nRF4lIwU)).
+- Mark Zuckerberg & Satya Nadella, "LlamaCon 2025 — Conversation" — 29/04/2025 ([YouTube](https://www.youtube.com/watch?v=WaJOONFllLc)).
+- Demis Hassabis, "The Future of AI & Human-Machine Innovation" — Davos 01/2025 ([YouTube](https://www.youtube.com/watch?v=yuz0mF1qSaw)).
+- BS Trương Công Hậu, "Workshop Ứng dụng AI cho Nhân viên Y tế" ([YouTube](https://www.youtube.com/watch?v=m7UQsjKj3xE)).
+- UN Security Council, "AI session with Sam Altman, Dario Amodei, Yoshua Bengio" — 23/09/2026 ([YouTube](https://www.youtube.com/watch?v=5nAe_t6cy4s)).
+
+> Lưu ý: nội dung video mang tính thời điểm; kiểm tra lại thông tin trước khi trích dẫn.
 
 ---
 
