@@ -1,0 +1,69 @@
+{
+  "chapter": "13-ha-tang-tinh-toan",
+  "title": "Quiz chương 13 — Hạ tầng tính toán",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "13-ha-tang-tinh-toan-q1",
+      "question": "Nguyên tắc đúng khi chọn tầng hạ tầng AI (L1/L2/L3) cho đơn vị mình là gì?",
+      "options": [
+        "Ưu tiên cloud API cho mọi đơn vị vì không tốn vốn đầu tư ban đầu",
+        "Chọn tầng theo số lượng nhân viên của bệnh viện",
+        "Luôn chọn tầng cao nhất có thể mua được để đón đầu công nghệ",
+        "Bắt đầu từ tầng thấp nhất đáp ứng được yêu cầu bảo mật dữ liệu của đơn vị"
+      ],
+      "answer": 3,
+      "explanation": "Chương nêu rõ: bắt đầu từ tầng thấp nhất đáp ứng yêu cầu bảo mật dữ liệu — đừng mua cụm GPU khi một workstation đã đủ, và đừng dùng cloud cho dữ liệu không được phép ra biên giới."
+    },
+    {
+      "id": "13-ha-tang-tinh-toan-q2",
+      "question": "Vì sao RTX 6000 Ada (48GB) được gọi là 'điểm ngọt' cho bệnh viện tuyến tỉnh?",
+      "options": [
+        "Vì là card đồ họa mạnh nhất trên thị trường hiện nay",
+        "Vì cân bằng giữa năng lực (chạy LLM 30B–70B đã lượng tử hóa), chi phí trong tầm với, mua được qua phân phối chính hãng tại Việt Nam và không cần data center chuyên dụng",
+        "Vì chạy được mà không cần kỹ sư vận hành",
+        "Vì là card rẻ nhất trong các dòng card NVIDIA"
+      ],
+      "answer": 1,
+      "explanation": "'Điểm ngọt' không có nghĩa mạnh nhất hay rẻ nhất, mà là điểm mà mỗi đồng đầu tư thêm cho hiệu năng cao hơn bắt đầu không đáng — RTX 6000 nằm đúng giữa nhu cầu thực tế của tầng L2."
+    },
+    {
+      "id": "13-ha-tang-tinh-toan-q3",
+      "question": "Theo chương, trường hợp nào bệnh viện KHÔNG nên mua workstation mà nên dùng cloud?",
+      "options": [
+        "Khi cần chạy mô hình ngôn ngữ 70B",
+        "Khi bệnh viện không bố trí được người vận hành (tối thiểu 1 chính + 1 dự phòng) và phòng máy lạnh đảm bảo",
+        "Khi bệnh viện đã có kỹ sư CNTT giỏi",
+        "Khi bệnh viện có trên 1000 giường bệnh"
+      ],
+      "answer": 1,
+      "explanation": "Chương ghi rõ điều kiện dừng: nếu không bố trí được người vận hành và phòng máy lạnh đảm bảo thì dừng mua máy, chuyển sang phương án cloud cho dữ liệu đã khử định danh."
+    },
+    {
+      "id": "13-ha-tang-tinh-toan-q4",
+      "question": "Khi dùng cloud API cho công việc liên quan dữ liệu bệnh nhân, thực hành an toàn theo chương là gì?",
+      "options": [
+        "Cloud API không bao giờ lưu lại prompt của người dùng nên cứ dùng tự do",
+        "Không cần lưu ý gì vì các nhà cung cấp cloud quốc tế đều tự tuân thủ luật Việt Nam",
+        "Chỉ cần thanh toán đúng hạn là đủ",
+        "Ký DPA với nhà cung cấp, chọn gói enterprise cam kết không dùng dữ liệu để huấn luyện, khử định danh trước khi gửi — vì dữ liệu (kể cả prompt) được gửi ra máy chủ nước ngoài, chịu sự điều chỉnh của Nghị định 13/2023"
+      ],
+      "answer": 3,
+      "explanation": "Dùng cloud API nghĩa là dữ liệu được gửi ra biên giới; chương yêu cầu DPA, gói enterprise có cam kết, khử định danh trước khi gửi — hoặc tốt nhất là dữ liệu nhạy cảm chạy nội bộ ở tầng L2."
+    },
+    {
+      "id": "13-ha-tang-tinh-toan-q5",
+      "question": "Theo chương, thứ tự đầu tư đúng cho bệnh viện muốn ứng dụng AI là gì?",
+      "options": [
+        "Số hóa và chuẩn hóa dữ liệu (đạt EMRAM Stage 3–4) trước, rồi mới đầu tư sức tính toán AI — đừng mua GPU khi bệnh viện còn ở Stage 2",
+        "Mua GPU trước, số hóa bệnh án sau để tận dụng máy ngay",
+        "Mua cụm GPU ngay để thu hút bệnh nhân và nâng tầm bệnh viện",
+        "Thuê cloud 5 năm rồi mới tính chuyện mua máy"
+      ],
+      "answer": 0,
+      "explanation": "Bài học của chương: đừng mua GPU khi bệnh viện còn ở Stage 2 (chưa có EMR tử tế) — thứ tự đúng là dữ liệu trước (chương 12), sức tính toán sau."
+    }
+  ]
+}

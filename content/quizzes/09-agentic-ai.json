@@ -1,0 +1,69 @@
+{
+  "chapter": "09-agentic-ai",
+  "title": "Quiz chương 9 — Agentic AI — làn sóng 2025–2026",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "09-agentic-ai-q1",
+      "question": "Một hệ thống AI có đủ LLM, bộ nhớ, lập kế hoạch và rào chắn nhưng THIẾU khả năng gọi công cụ (tool calling) thì thực chất là gì?",
+      "options": [
+        "Một AGI thu nhỏ với đầy đủ năng lực",
+        "Một chatbot — “có não nhưng không có tay”, chỉ nói được chứ không tự thực hiện hành động nào",
+        "Một agent hoàn chỉnh vì tool calling không quan trọng",
+        "Một hệ thống RPA truyền thống"
+      ],
+      "answer": 1,
+      "explanation": "Chương 9 nhấn mạnh: có não không tay thì chỉ nói được (đó là chatbot); có tay không phanh thì nguy hiểm — thiếu một trong 5 thành phần (LLM, tool, memory, planning, guardrail) là hệ thống khập khiễng."
+    },
+    {
+      "id": "09-agentic-ai-q2",
+      "question": "Theo bảng phân biệt khái niệm trong chương 9, AGI (trí tuệ tổng quát ngang con người) hiện nay ở trạng thái nào?",
+      "options": [
+        "Chính là các chatbot mạnh nhất hiện nay",
+        "Đã được triển khai tại một số bệnh viện Mỹ",
+        "Chưa tồn tại — mọi tuyên bố ngược lại đều là marketing",
+        "Đã tồn tại trong các lab lớn nhưng chưa công bố"
+      ],
+      "answer": 2,
+      "explanation": "Agentic AI không phải AGI: nó không hiểu như con người, không có ý thức và vẫn mắc lỗi (bịa đặt, khuếch đại lỗi qua chuỗi dài) — nên toàn bộ kiến trúc kiểm soát của chương này là bắt buộc."
+    },
+    {
+      "id": "09-agentic-ai-q3",
+      "question": "Việc nào sau đây phù hợp với RPA truyền thống hơn là Agentic AI?",
+      "options": [
+        "Kiểm tra hồ sơ BHYT với đủ loại sai sót không đoán trước được",
+        "Soạn tài liệu giáo dục sức khỏe cá nhân hóa theo từng bệnh nhân",
+        "Tự động tải báo cáo BHYT theo mẫu cố định mỗi tháng — việc hoàn toàn chuẩn hóa, lặp lại y hệt",
+        "Điều phối lịch hẹn liên khoa với nhiều tình huống phát sinh"
+      ],
+      "answer": 2,
+      "explanation": "RPA là “công nhân dây chuyền”: ổn định, rẻ, dễ kiểm soát với việc hoàn toàn lặp lại theo kịch bản cứng; agent là “thợ lành nghề” cho việc mỗi ca mỗi khác, cần suy luận — hai thứ bổ sung nhau."
+    },
+    {
+      "id": "09-agentic-ai-q4",
+      "question": "Với agent theo dõi bệnh mạn tính (use case 7), đâu là lằn ranh đỏ “không thương lượng”?",
+      "options": [
+        "Agent không được tổng hợp chỉ số từ thiết bị đo tại nhà",
+        "Agent không bao giờ được tự điều chỉnh liều thuốc hay đưa ra chỉ định điều trị mới — mọi thay đổi điều trị do bác sĩ quyết định",
+        "Agent không được xem chỉ số huyết áp của bệnh nhân",
+        "Agent không được gửi tin nhắn nhắc uống thuốc quá 3 lần/tuần"
+      ],
+      "answer": 1,
+      "explanation": "Agent chỉ được tổng hợp chỉ số, phát hiện xu hướng bất thường và cảnh báo cho bác sĩ; tự ý điều chỉnh liều hay chỉ định mới là vượt lằn ranh đỏ tuyệt đối."
+    },
+    {
+      "id": "09-agentic-ai-q5",
+      "question": "Rút ra từ sự cố MediBot (tool tra cứu lịch bị timeout, agent bịa ra khung giờ không tồn tại), quy tắc sắt cho agent production khi công cụ lỗi là gì?",
+      "options": [
+        "Agent tự đoán kết quả hợp lý nhất để quy trình không bị gián đoạn",
+        "Thử lại vài lần rồi im lặng bỏ qua bước đó",
+        "Tự động khởi động lại toàn bộ hệ thống bệnh viện",
+        "Tool lỗi thì dừng và báo — không bao giờ được đoán; fallback theo kịch bản: thử lại → dùng cache → chuyển cho người xử lý → báo cáo"
+      ],
+      "answer": 3,
+      "explanation": "Agent “đơ” im lặng hoặc bịa kết quả khi tool lỗi là thiết kế tồi; kiến trúc production phải có fallback cho từng lỗi và ghi audit log đầy đủ để truy vết."
+    }
+  ]
+}

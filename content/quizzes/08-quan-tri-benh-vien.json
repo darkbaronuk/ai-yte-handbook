@@ -1,0 +1,69 @@
+{
+  "chapter": "08-quan-tri-benh-vien",
+  "title": "Quiz chương 8 — AI trong quản trị bệnh viện và ambient scribe",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "08-quan-tri-benh-vien-q1",
+      "question": "Trong quy trình ambient scribe (thu âm → chuyển văn bản → trích xuất SOAP → bác sĩ kiểm tra và ký), bước nào là bắt buộc để ghi chú AI có giá trị lưu vào bệnh án điện tử?",
+      "options": [
+        "AI phải tự động đẩy ghi chú vào EMR ngay khi soạn xong để tiết kiệm thời gian",
+        "Bước thu âm phải dùng thiết bị chuyên dụng đắt tiền",
+        "Bác sĩ phải đọc, sửa (nếu cần) và ký duyệt — không có chữ ký của bác sĩ, ghi chú của AI không có giá trị",
+        "Bản ghi âm phải được gửi cho công ty cung cấp AI để cải thiện mô hình"
+      ],
+      "answer": 2,
+      "explanation": "Chữ ký của bác sĩ không phải thủ tục hình thức: người ký chịu trách nhiệm chuyên môn và pháp lý về nội dung — AI viết sai mà bác sĩ ký mù thì lỗi thuộc về người ký."
+    },
+    {
+      "id": "08-quan-tri-benh-vien-q2",
+      "question": "Ghi chú SOAP do ambient scribe soạn gồm 4 phần nào?",
+      "options": [
+        "System – Output – Audit – Payment",
+        "Symptom – Observation – Analysis – Prescription",
+        "Search – Organize – Analyze – Publish",
+        "Subjective (chủ quan: triệu chứng bệnh nhân kể) – Objective (khách quan: dấu hiệu thăm khám) – Assessment (nhận định) – Plan (kế hoạch điều trị)"
+      ],
+      "answer": 3,
+      "explanation": "SOAP là mẫu ghi chú lâm sàng chuẩn: S-chủ quan, O-khách quan, A-nhận định, P-kế hoạch — AI trích xuất thông tin từ bản ghi hội thoại và sắp xếp theo đúng mẫu này."
+    },
+    {
+      "id": "08-quan-tri-benh-vien-q3",
+      "question": "“Pajama time” trong chương 8 chỉ điều gì?",
+      "options": [
+        "Thời gian bác sĩ mặc đồ ngủ trực đêm tại bệnh viện",
+        "Chế độ nghỉ phép mặc đồ ngủ của nhân viên y tế",
+        "Thời gian AI tự học vào ban đêm khi máy chủ rảnh",
+        "Thời gian bác sĩ phải làm việc với bệnh án điện tử ngoài giờ (buổi tối ở nhà) mà không được trả lương — một nguyên nhân hàng đầu gây kiệt sức nghề nghiệp"
+      ],
+      "answer": 3,
+      "explanation": "Nhiều khảo sát cho thấy bác sĩ dành 1–2 giờ mỗi ngày cho pajama time; ambient scribe ra đời để xóa chính khoảng thời gian này bằng cách tự soạn ghi chú nháp từ ghi âm buổi khám."
+    },
+    {
+      "id": "08-quan-tri-benh-vien-q4",
+      "question": "Theo “nguyên tắc vàng của AI hành chính”, một việc CHƯA nên giao cho AI khi thiếu điều kiện nào sau đây?",
+      "options": [
+        "Việc đó tốn nhiều thời gian của bác sĩ",
+        "Việc đó có thể làm ngoài giờ hành chính",
+        "Việc đó lặp đi lặp lại hằng ngày",
+        "Việc đó không có người ký duyệt cuối cùng chịu trách nhiệm"
+      ],
+      "answer": 3,
+      "explanation": "AI hành chính chỉ nên làm việc có (1) mẫu chuẩn rõ ràng, (2) sai sót phát hiện được khi đọc lại, và (3) luôn có người ký duyệt cuối cùng — thiếu một trong ba thì chưa nên giao cho AI."
+    },
+    {
+      "id": "08-quan-tri-benh-vien-q5",
+      "question": "Sau khi đã có bản ghi chữ và bác sĩ đã ký duyệt, file ghi âm gốc buổi khám nên được xử lý thế nào?",
+      "options": [
+        "Gửi cho nhà cung cấp AI để huấn luyện lại mô hình cho thông minh hơn",
+        "Đăng tải lên hệ thống lưu trữ dùng chung của bệnh viện để ai cũng truy cập được",
+        "Lưu vĩnh viễn để làm bằng chứng pháp lý cho mọi trường hợp",
+        "Xóa file audio gốc (hoặc ẩn danh hóa), chỉ lưu văn bản — không lưu audio “để dành”"
+      ],
+      "answer": 3,
+      "explanation": "Giọng nói là dữ liệu sinh trắc tiềm năng; quy tắc tốt nhất là xóa/ẩn danh audio sau khi ký duyệt, không dùng để huấn luyện lại mô hình trừ khi có consent riêng và đánh giá tuân thủ."
+    }
+  ]
+}

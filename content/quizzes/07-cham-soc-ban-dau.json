@@ -1,0 +1,69 @@
+{
+  "chapter": "07-cham-soc-ban-dau",
+  "title": "Quiz chương 7 — AI trong chăm sóc sức khỏe ban đầu và cộng đồng",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "07-cham-soc-ban-dau-q1",
+      "question": "Trong kiến trúc 3 lớp của chatbot y tế nghiêm túc (LLM + RAG + cây phân loại an toàn), lớp nào được chương này đánh giá là “lớp chống bịa đặt quan trọng nhất”?",
+      "options": [
+        "Lớp lưu trữ — lưu càng nhiều hội thoại thì chatbot càng chính xác",
+        "Lớp LLM — mô hình càng lớn thì càng ít bịa đặt",
+        "Lớp giao diện — thiết kế nút bấm đẹp giúp người dùng tin tưởng hơn",
+        "Lớp RAG — câu trả lời được sinh dựa trên tài liệu y khoa đã kiểm duyệt, không phải kiến thức “tự do” của LLM"
+      ],
+      "answer": 3,
+      "explanation": "Chương 7 nhấn mạnh: độ tin cậy của chatbot y tế không nằm ở LLM mạnh cỡ nào mà ở lớp RAG và quy trình kiểm duyệt nội dung — nên đầu tư 70% công sức vào kho tri thức và kiểm duyệt."
+    },
+    {
+      "id": "07-cham-soc-ban-dau-q2",
+      "question": "“Cửa thoát khẩn cấp” trong chatbot tư vấn triệu chứng có nghĩa là gì?",
+      "options": [
+        "Nút cho phép người dùng thoát app khi mất mạng giữa chừng",
+        "Chức năng chuyển cuộc trò chuyện sang chatbot khác thông minh hơn",
+        "Cơ chế tự động tắt máy chủ khi phát hiện quá tải",
+        "Khi phát hiện dấu hiệu nguy hiểm (đau ngực, khó thở, lơ mơ...), chatbot dừng tư vấn và chuyển ngay sang hướng dẫn cấp cứu/chuyển tuyến"
+      ],
+      "answer": 3,
+      "explanation": "Mọi luồng hội thoại của chatbot y tế nghiêm túc đều phải có cửa thoát khẩn cấp: dấu hiệu nguy hiểm thì dừng tư vấn, chuyển ngay sang cấp cứu — đây là yêu cầu an toàn bắt buộc."
+    },
+    {
+      "id": "07-cham-soc-ban-dau-q3",
+      "question": "Đâu KHÔNG thuộc nguyên tắc thiết kế offline-first cho AI tuyến xã?",
+      "options": [
+        "Lưu-chuyển sau (store-and-forward): lưu cục bộ khi mất mạng, đồng bộ khi có mạng",
+        "Xử lý các tác vụ nhẹ trực tiếp trên thiết bị (on-device), không cần mạng",
+        "Yêu cầu mọi trạm xã phải có đường truyền riêng tốc độ cao và máy chủ đặt tại chỗ",
+        "Dùng SMS/USSD để nhắc uống thuốc, lịch tái khám ở vùng không có internet"
+      ],
+      "answer": 2,
+      "explanation": "Offline-first nghĩa là AI vẫn chạy khi mất mạng (on-device, store-and-forward, SMS dự phòng, đồng bộ theo lịch) — chứ không phải đòi hỏi hạ tầng đắt đỏ cho mọi xã."
+    },
+    {
+      "id": "07-cham-soc-ban-dau-q4",
+      "question": "Theo ranh giới đỏ của chương 7, chatbot y tế phục vụ người dân được phép làm gì?",
+      "options": [
+        "Đưa ra chẩn đoán xác định khi độ tin cậy của AI trên 90%",
+        "Thay bác sĩ trực tuyến trả lời mọi câu hỏi sức khỏe của người dân",
+        "Phân loại mức độ (tự chăm sóc tại nhà / đến trạm trong 24–48 giờ / đi cấp cứu ngay) và hướng dẫn bước tiếp theo — không chẩn đoán, không kê đơn",
+        "Kê đơn thuốc thông thường cho bệnh nhẹ như cảm cúm, đau đầu"
+      ],
+      "answer": 2,
+      "explanation": "Chatbot tuyến đầu là công cụ phân loại và giáo dục, không phải bác sĩ trực tuyến: không bao giờ đưa chẩn đoán xác định hay kê đơn cụ thể."
+    },
+    {
+      "id": "07-cham-soc-ban-dau-q5",
+      "question": "Theo chương 7, “AI tuyến xã tốt” phải vượt qua 3 tiêu chí nào?",
+      "options": [
+        "Chạy trên máy chủ mạnh + giao diện tiếng Anh chuẩn + tích hợp được với mọi phần mềm",
+        "Dùng được khi mất mạng + y sĩ dùng được ngay không cần đào tạo dài + nói được ngôn ngữ người dân hiểu",
+        "Miễn phí hoàn toàn + do nước ngoài tài trợ + có phiên bản iOS và Android",
+        "Tự động chẩn đoán chính xác trên 95% + tự kê đơn + tự gửi báo cáo lên Bộ"
+      ],
+      "answer": 1,
+      "explanation": "Mọi tính năng AI cho tuyến xã không vượt qua 3 tiêu chí này đều chỉ là trang trí — vì tuyến xã thiếu mạng ổn định, thiếu nhân lực và đa ngôn ngữ dân tộc."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "chapter": "12-ha-tang-du-lieu",
+  "title": "Quiz chương 12 — Hạ tầng dữ liệu: điều kiện tiên quyết của AI y tế",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "12-ha-tang-du-lieu-q1",
+      "question": "Trong kiến trúc data lake y tế 3 lớp (bronze → silver → gold), lớp nào tốn công nhất và quyết định AI có dùng được dữ liệu không?",
+      "options": [
+        "Bronze — vì phải mua nhiều ổ cứng để chứa dữ liệu thô",
+        "Gold — vì phải mạ vàng máy chủ",
+        "Silver — dữ liệu đã được làm sạch, chuẩn hóa mã, thống nhất đơn vị, gắn khóa liên kết; thường chiếm 70–80% công sức dự án",
+        "Cả ba lớp tốn công như nhau"
+      ],
+      "answer": 2,
+      "explanation": "Bronze chỉ đổ dữ liệu thô vào kho “đúng như nó vốn có”; silver là nơi làm sạch và chuẩn hóa — lớp tốn công nhất nhưng quyết định tất cả; gold chỉ là “đóng gói” theo mục đích khai thác."
+    },
+    {
+      "id": "12-ha-tang-du-lieu-q2",
+      "question": "Cùng một chẩn đoán “tăng huyết áp” được ghi bằng 5 cách khác nhau trong hệ thống — đây là lỗi ở chiều chất lượng dữ liệu nào?",
+      "options": [
+        "Kịp thời (timeliness) — dữ liệu vào kho trễ",
+        "Nhất quán (consistency) — cùng một khái niệm không được ghi một kiểu, khiến máy đếm thành 5 bệnh khác nhau",
+        "Bảo mật (security) — dữ liệu bị rò rỉ",
+        "Đầy đủ (completeness) — thiếu trường dữ liệu"
+      ],
+      "answer": 1,
+      "explanation": "Bốn chiều đo chất lượng dữ liệu: đầy đủ, chính xác, nhất quán, kịp thời — “thổ ngữ” mỗi khoa một kiểu là bệnh nhất quán, và AI học trên dữ liệu này sẽ học cả sự cẩu thả."
+    },
+    {
+      "id": "12-ha-tang-du-lieu-q3",
+      "question": "Muốn kết quả xét nghiệm glucose của các bệnh viện khác nhau so sánh được với nhau thì cần chuẩn hóa theo bộ mã nào?",
+      "options": [
+        "HL7 v2 — chuẩn trao đổi bản tin cũ",
+        "SNOMED CT — thuật ngữ lâm sàng chi tiết",
+        "LOINC — mã hóa xét nghiệm và đo lường (ví dụ glucose máu là 2345-7); thiếu LOINC thì kết quả xét nghiệm liên viện không so sánh được",
+        "ICD-10 — mã hóa chẩn đoán bệnh"
+      ],
+      "answer": 2,
+      "explanation": "ICD-10 dùng cho chẩn đoán (đã phổ biến qua thanh toán BHYT), SNOMED CT cho thuật ngữ lâm sàng chi tiết, còn LOINC là “ngôn ngữ chung” của xét nghiệm và các phép đo."
+    },
+    {
+      "id": "12-ha-tang-du-lieu-q4",
+      "question": "Theo “quy tắc vàng trước mọi dự án AI”, bệnh viện KHÔNG nên ký hợp đồng mua AI khi nào?",
+      "options": [
+        "Khi chưa chọn được màu sắc giao diện dashboard",
+        "Khi ngân sách năm nay còn dư ít",
+        "Khi giám đốc đi công tác chưa về ký được",
+        "Khi chưa trả lời được: dữ liệu lấy từ đâu/định dạng gì? Ai là “chủ dữ liệu” chịu trách nhiệm chất lượng? Dữ liệu có xuất được ra chuẩn mở (FHIR/CSV) hay bị khóa trong phần mềm nhà cung cấp?"
+      ],
+      "answer": 3,
+      "explanation": "“Data-ready trước, AI-ready sau”: phần lớn dự án AI y tế thất bại không phải vì mô hình kém mà vì dữ liệu không dùng được — phải đo 4 chiều chất lượng dữ liệu cho từng nguồn trước khi ký hợp đồng."
+    },
+    {
+      "id": "12-ha-tang-du-lieu-q5",
+      "question": "Trong chuẩn HL7 FHIR, kết quả xét nghiệm của bệnh nhân được đóng gói thành “tài nguyên” (resource) nào?",
+      "options": [
+        "Patient — hồ sơ bệnh nhân",
+        "Appointment — lịch hẹn",
+        "Observation — kết quả quan sát/xét nghiệm/đo lường",
+        "MedicationRequest — đơn thuốc"
+      ],
+      "answer": 2,
+      "explanation": "FHIR định nghĩa dữ liệu y tế thành các tài nguyên chuẩn trao đổi qua API web: Patient (bệnh nhân), Observation (kết quả xét nghiệm/đo lường), MedicationRequest (đơn thuốc)... — nền tảng để mọi hệ thống “nói cùng một ngôn ngữ”."
+    }
+  ]
+}

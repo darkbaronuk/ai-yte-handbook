@@ -1,0 +1,69 @@
+{
+  "chapter": "05-ai-chan-doan-hinh-anh",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "answer": 1,
+      "explanation": "Với sàng lọc lao cộng đồng, sensitivity thấp nghĩa là người lao đi về nhà và tiếp tục lây trong cộng đồng — không chấp nhận được; đây là chỉ số quyết định AI có bỏ sót bệnh hay không.",
+      "id": "05-ai-chan-doan-hinh-anh-q1",
+      "options": [
+        "AUC",
+        "Sensitivity (độ nhạy)",
+        "Độ chính xác tổng (accuracy)",
+        "Specificity (độ đặc hiệu)"
+      ],
+      "question": "Trong sàng lọc lao cộng đồng, chỉ số nào quyết định AI có bỏ sót người bệnh hay không?"
+    },
+    {
+      "answer": 0,
+      "explanation": "Bốn chỉ số nói lên giá trị lâm sàng thật là sensitivity, specificity, PPV và NPV; PPV/NPV còn phụ thuộc vào tỷ lệ bệnh trong dân số sàng lọc — vì vậy con số accuracy đơn lẻ không cho biết AI có dùng được trong thực tế hay không.",
+      "id": "05-ai-chan-doan-hinh-anh-q2",
+      "options": [
+        "Vì accuracy bị chi phối bởi tỷ lệ bệnh trong tập dữ liệu thử nghiệm, không phản ánh giá trị lâm sàng thật",
+        "Vì bác sĩ lâm sàng không hiểu ý nghĩa toán học",
+        "Vì các hãng phần mềm luôn báo cáo sai sự thật",
+        "Vì accuracy là chỉ số không thể tính toán được"
+      ],
+      "question": "Vì sao chương cảnh báo con số “độ chính xác 95–99%” của nhà cung cấp là chỉ số dễ gây hiểu lầm nhất?"
+    },
+    {
+      "answer": 0,
+      "explanation": "Luồng chuẩn là: máy chụp → PACS → AI Engine (heatmap + điểm số) → RIS/worklist sắp xếp ưu tiên → bác sĩ đọc phim và ký báo cáo; AI chỉ được phép “hỗ trợ”, không được tự ban hành kết luận chẩn đoán.",
+      "id": "05-ai-chan-doan-hinh-anh-q3",
+      "options": [
+        "Bác sĩ đọc phim — chữ ký và trách nhiệm luôn thuộc về bác sĩ",
+        "AI Engine của nhà cung cấp",
+        "Hệ thống RIS/worklist tự động",
+        "Kỹ thuật viên chụp X-quang"
+      ],
+      "question": "Trong luồng tích hợp PACS + AI, ai ký báo cáo cuối cùng và chịu trách nhiệm?"
+    },
+    {
+      "answer": 2,
+      "explanation": "AI đọc ảnh chẩn đoán là phần mềm thiết bị y tế (SaMD), thường xếp loại C hoặc D, đồng thời thuộc nhóm rủi ro cao theo Luật AI 134/2025 — phải đi qua cửa đăng ký lưu hành và cửa quản trị rủi ro (đánh giá lâm sàng, giám sát sau triển khai, quy trình xử lý khi AI sai).",
+      "id": "05-ai-chan-doan-hinh-anh-q4",
+      "options": [
+        "Không cần thủ tục gì vì AI không phải thiết bị y tế",
+        "Chỉ cần giám đốc bệnh viện đồng ý bằng miệng",
+        "Sản phẩm phải có số đăng ký lưu hành thiết bị y tế (thường loại C/D) và đơn vị phải có hồ sơ quản trị rủi ro",
+        "Chỉ cần mua bản quyền phần mềm là đủ"
+      ],
+      "question": "Trước khi dùng AI đọc ảnh cho người bệnh thật, đơn vị bắt buộc phải hoàn thành thủ tục pháp lý nào?"
+    },
+    {
+      "answer": 0,
+      "explanation": "False negative nguy hiểm hơn false positive: người bệnh về nhà với khối u không được phát hiện. Quy tắc bắt buộc: AI không được là người duy nhất “cho về”; mọi ca AI và bác sĩ bất đồng phải hội chẩn; định kỳ rà soát các ca AI bỏ sót để hiệu chuẩn lại.",
+      "id": "05-ai-chan-doan-hinh-anh-q5",
+      "options": [
+        "Quy trình second read: mọi ca AI kết luận “bình thường” trong sàng lọc phải được bác sĩ đọc lại",
+        "Tăng độ phân giải ảnh chụp lên gấp đôi",
+        "Tắt AI mỗi khi kết quả khó hiểu",
+        "Mua thêm card đồ họa mạnh hơn cho máy chủ AI"
+      ],
+      "question": "Biện pháp phòng vệ chính chống lại rủi ro nguy hiểm nhất của AI đọc ảnh (bỏ sót bệnh — false negative) là gì?"
+    }
+  ],
+  "status": "draft",
+  "title": "Quiz chương 5 — AI trong chẩn đoán hình ảnh: qXR và Lunit tại Việt Nam"
+}

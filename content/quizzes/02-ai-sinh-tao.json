@@ -1,0 +1,69 @@
+{
+  "chapter": "02-ai-sinh-tao",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "answer": 2,
+      "explanation": "Mô hình có thể sai về kiến thức nội tại, nhưng nếu bị buộc trích dẫn nguồn từ một corpus đáng tin cậy (RAG, tra công cụ, citation bắt buộc), sai số giảm đi đáng kể — đây là lớp quyết định trong y tế.",
+      "id": "02-ai-sinh-tao-q1",
+      "options": [
+        "Foundation model (bộ não gốc)",
+        "Instruction tuning",
+        "Grounding tại thời điểm suy luận (RAG, tra công cụ, trích dẫn bắt buộc)",
+        "RLHF (học tăng cường từ phản hồi con người)"
+      ],
+      "question": "Trong ba lớp quyết định chất lượng output của AI sinh tạo, lớp nào có tính quyết định nhất trong y tế?"
+    },
+    {
+      "answer": 0,
+      "explanation": "Đây là nguyên tắc phòng ngừa duy nhất đủ chặt để bảo vệ bác sĩ khỏi bị AI “kéo xuống hố” bằng nguồn bịa: không viết vào bệnh án, không đưa vào tổng hợp hội chẩn.",
+      "id": "02-ai-sinh-tao-q2",
+      "options": [
+        "Nếu AI đưa khuyến nghị mà không dẫn được nguồn cụ thể tra ra bản gốc thì bỏ — không viết vào bệnh án",
+        "Chỉ trích dẫn bài báo của tác giả Việt Nam",
+        "Luôn tin AI nếu nó trích dẫn trông có vẻ dài và chi tiết",
+        "Chỉ dùng các công cụ AI có trả phí"
+      ],
+      "question": "Nguyên tắc “Cite hoặc bỏ” trong chương nghĩa là gì?"
+    },
+    {
+      "answer": 0,
+      "explanation": "Chương nêu rõ: đến tháng 9/2026 Việt Nam chưa có quy định pháp lý cụ thể về trách nhiệm khi AI đưa khuyến nghị dẫn đến tổn hại lâm sàng; V-RHAIN chỉ là sandbox thí điểm có kiểm soát.",
+      "id": "02-ai-sinh-tao-q3",
+      "options": [
+        "Bác sĩ — đến tháng 9/2026 Việt Nam chưa có quy định pháp lý cụ thể về trách nhiệm của AI",
+        "Không ai phải chịu trách nhiệm",
+        "Nhà cung cấp mô hình AI",
+        "Bệnh viện nơi triển khai"
+      ],
+      "question": "Theo chương, ai chịu trách nhiệm cuối cùng khi AI đưa ra khuyến nghị sai dẫn đến tổn hại lâm sàng?"
+    },
+    {
+      "answer": 1,
+      "explanation": "Kết quả JAMA đa trung tâm cho thấy ambient scribe tiết kiệm 14–27% thời gian ghi chép một cách ổn định qua nhiều trung tâm độc lập và đã được peer-review; trong khi AI chẩn đoán như Med-PaLM 2 dù ấn tượng trên benchmark nhưng chưa có triển khai lâm sàng cấp hệ thống với số liệu tương đương.",
+      "id": "02-ai-sinh-tao-q4",
+      "options": [
+        "AI phẫu thuật tự hành",
+        "Ambient scribe ghi chép lâm sàng — giảm 14–27% thời gian ghi chép, có bằng chứng đa trung tâm độc lập",
+        "Chatbot chẩn đoán thay thế bác sĩ",
+        "AI tự động kê đơn thuốc"
+      ],
+      "question": "Theo các case trong chương, ứng dụng AI sinh tạo nào có bằng chứng triển khai mạnh nhất hiện nay?"
+    },
+    {
+      "answer": 3,
+      "explanation": "Đây là giới hạn thiên kiến từ dữ liệu huấn luyện: tần suất bệnh, dịch tễ, phổ đề kháng kháng sinh và đặc điểm di truyền của dân số Việt Nam thường bị các mô hình huấn luyện chủ yếu trên y văn tiếng Anh đánh giá dưới hoặc sai.",
+      "id": "02-ai-sinh-tao-q5",
+      "options": [
+        "AI hoàn toàn không biết các bệnh này",
+        "Bộ Y tế cấm dùng AI cho các bệnh truyền nhiễm",
+        "Các bệnh này không hề có trong y văn quốc tế",
+        "Đa số foundation model huấn luyện chủ yếu trên y văn tiếng Anh (Bắc Mỹ, Tây Âu) nên dịch tễ Việt Nam thường bị đánh giá sai"
+      ],
+      "question": "Vì sao khi hỏi AI về bệnh có tính đặc thù địa lý (sốt xuất huyết, viêm gan B, viêm não Nhật Bản) phải luôn đối chiếu với hướng dẫn của Bộ Y tế?"
+    }
+  ],
+  "status": "draft",
+  "title": "Quiz chương 2 — AI sinh tạo: từ đồ chơi văn phòng đến trợ lý lâm sàng có kiểm chứng"
+}

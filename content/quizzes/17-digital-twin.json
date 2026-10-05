@@ -1,0 +1,69 @@
+{
+  "chapter": "17-digital-twin",
+  "title": "Quiz chương 17 — Physical AI, Digital Twin và y học chính xác",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "17-digital-twin-q1",
+      "question": "Ba từ khóa trong định nghĩa digital twin y tế theo chương là gì?",
+      "options": [
+        "Gen, thuốc và bệnh án điện tử",
+        "Robot, cảm biến và điện toán đám mây",
+        "Mô hình số chạy được — cập nhật liên tục từ dữ liệu thật — mô phỏng 'điều gì sẽ xảy ra nếu' trước khi hành động trong thế giới thật",
+        "Ảnh 3D, in 3D và thực tế ảo"
+      ],
+      "answer": 2,
+      "explanation": "Cả ba đều quan trọng: twin khác ảnh 3D tĩnh ở chỗ nó 'sống' cùng dữ liệu mới, và giá trị cốt lõi là thử nghiệm an toàn trong máy tính thay vì thử trên người bệnh."
+    },
+    {
+      "id": "17-digital-twin-q2",
+      "question": "Twin bệnh viện (cấp 3) trả lời câu hỏi nào?",
+      "options": [
+        "Thuốc này chuyển hóa trong cơ thể người bệnh ra sao",
+        "Quyết định này tác động lên hệ thống ra sao — luồng bệnh nhân, giường bệnh, lịch mổ, nhân lực",
+        "Phác đồ này tác động lên người bệnh cụ thể này ra sao",
+        "Thiết bị y tế này tác động lên cơ quan ra sao"
+      ],
+      "answer": 1,
+      "explanation": "Chương phân biệt rạch ròi: twin cơ quan hỏi về cơ quan, twin bệnh nhân hỏi về 'người này', twin bệnh viện hỏi về hệ thống — đừng dùng đáp án cấp này trả lời câu hỏi cấp kia."
+    },
+    {
+      "id": "17-digital-twin-q3",
+      "question": "Theo chương, thứ tự ưu tiên đúng khi bắt đầu digital twin tại Việt Nam là gì?",
+      "options": [
+        "Thuê công ty nước ngoài làm trọn gói từ đầu đến cuối",
+        "Bắt đầu ngay từ twin bệnh nhân vì giá trị lâm sàng cao nhất",
+        "Dữ liệu trước, mô hình sau — và bắt đầu từ twin bệnh viện (mô phỏng vận hành), chưa vội làm twin bệnh nhân",
+        "Mua nền tảng twin hào nhoáng trước, dữ liệu tính sau"
+      ],
+      "answer": 2,
+      "explanation": "Hai kết luận thực tế của chương: twin chạy trên dữ liệu rác chỉ cho ra mô phỏng rác nhanh hơn; twin bệnh viện dùng dữ liệu tổng hợp, ít rủi ro riêng tư và cho lợi ích thấy ngay — là 'bài tập vỡ lòng' hợp lý."
+    },
+    {
+      "id": "17-digital-twin-q4",
+      "question": "Về dữ liệu di truyền, phát biểu đúng theo chương là gì?",
+      "options": [
+        "Chỉ cần mã hóa tên người bệnh là đủ an toàn cho dữ liệu gen",
+        "Dữ liệu gen như xét nghiệm máu thường quy — đồng ý một lần là xong",
+        "Dữ liệu gen là dữ liệu cá nhân nhạy cảm (Nghị định 13/2023): lộ một lần là lộ vĩnh viễn, ảnh hưởng cả người thân — đồng ý một lần không có nghĩa là đồng ý mãi mãi",
+        "Dữ liệu gen được tự do gửi ra phòng lab nước ngoài phân tích"
+      ],
+      "answer": 2,
+      "explanation": "Bạn không thể 'đổi' gen như đổi mật khẩu; quy trình đồng ý phải giải thích rõ dữ liệu lưu ở đâu, ai truy cập, dùng cho nghiên cứu gì và quyền rút lại đồng ý — trách nhiệm của đơn vị triển khai."
+    },
+    {
+      "id": "17-digital-twin-q5",
+      "question": "Theo chương, rủi ro tinh vi nhất của digital twin KHÔNG phải mô hình sai, mà là gì?",
+      "options": [
+        "Máy tính chạy mô phỏng quá chậm",
+        "Chi phí bản quyền phần mềm mô phỏng quá cao",
+        "Con người ngừng tư duy vì mô hình trông quá thuyết phục — đồ họa 3D đẹp, con số hai chữ số thập phân (thiên lệch tự động hóa — automation bias)",
+        "Dữ liệu đầu vào quá ít"
+      ],
+      "answer": 2,
+      "explanation": "Chương gọi đây là rủi ro tinh vi nhất; cách khắc phục là quy trình: bác sĩ phải tự trả lời được 'nếu không có mô phỏng này, tôi quyết định thế nào' trước khi xem kết quả."
+    }
+  ]
+}

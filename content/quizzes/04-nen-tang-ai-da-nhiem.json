@@ -1,0 +1,69 @@
+{
+  "chapter": "04-nen-tang-ai-da-nhiem",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "answer": 3,
+      "explanation": "“Chatbot trả lời, agent làm việc”: agent (Deep Research, browser use, computer use) thực hiện chuỗi hành động để hoàn thành một việc — và càng “làm việc” nhiều, càng phải giới hạn quyền của nó.",
+      "id": "04-nen-tang-ai-da-nhiem-q1",
+      "options": [
+        "Tác nhân AI luôn rẻ hơn chatbot",
+        "Hai khái niệm này không có gì khác biệt",
+        "Chatbot thông minh hơn tác nhân AI",
+        "Chatbot chỉ trả lời, còn tác nhân AI thực hiện chuỗi hành động để hoàn thành một việc"
+      ],
+      "question": "Điểm phân biệt cốt lõi giữa chatbot và tác nhân AI (AI agent) là gì?"
+    },
+    {
+      "answer": 3,
+      "explanation": "Điểm phân biệt lớn nhất của Perplexity là mọi câu trả lời đều gắn nguồn trích dẫn ngay dưới từng đoạn — nhân viên y tế có thể bấm vào nguồn để kiểm tra xem AI có diễn giải đúng guideline hay không, thay vì tin mù mờ.",
+      "id": "04-nen-tang-ai-da-nhiem-q2",
+      "options": [
+        "Gemini",
+        "Microsoft Copilot",
+        "Claude",
+        "Perplexity — mọi câu trả lời đều gắn nguồn trích dẫn dưới từng đoạn"
+      ],
+      "question": "Trong 6 nhóm nền tảng, nền tảng nào nổi bật nhất khi cần tra cứu và đối chiếu nguồn ngay?"
+    },
+    {
+      "answer": 3,
+      "explanation": "Ba câu hỏi: (1) Việc quan trọng nhất tôi cần nó làm là gì? (2) Dữ liệu tôi đưa vào có nhạy cảm không, và nhà cung cấp cam kết gì? (3) Tôi kiểm chứng đầu ra bằng cách nào? Trả lời được 3 câu này thì chọn nền tảng nào cũng ít sai.",
+      "id": "04-nen-tang-ai-da-nhiem-q3",
+      "options": [
+        "Chỉ cần xem nền tảng nào đang quảng cáo nhiều nhất",
+        "Chỉ cần hỏi giá gói nào rẻ nhất",
+        "Chỉ cần hỏi đồng nghiệp đang dùng gì",
+        "Cả ba câu: việc quan trọng nhất là gì; dữ liệu có nhạy cảm không và nhà cung cấp cam kết gì; kiểm chứng đầu ra bằng cách nào"
+      ],
+      "question": "Theo “quy tắc 3 câu hỏi” của chương, cần trả lời những gì trước khi chọn nền tảng AI?"
+    },
+    {
+      "answer": 3,
+      "explanation": "Dữ liệu dán vào khung chat công cộng có thể bị lưu ở máy chủ nước ngoài hoặc dùng để huấn luyện tiếp; một báo cáo “đã xóa tên” nhưng còn tuổi + nghề nghiệp + địa phương + chẩn đoán hiếm vẫn có thể nhận diện lại được.",
+      "id": "04-nen-tang-ai-da-nhiem-q4",
+      "options": [
+        "Xóa họ tên là đủ an toàn tuyệt đối",
+        "Chỉ cấm với bệnh nhân là người nổi tiếng",
+        "Được dán thông tin bệnh nhân nếu ca bệnh thú vị",
+        "Không nhập, không dán, không tải lên thông tin định danh người bệnh — trừ khi đơn vị đã ký thỏa thuận bảo vệ dữ liệu (DPA) với nhà cung cấp"
+      ],
+      "question": "Quy tắc về dữ liệu bệnh nhân khi dùng các nền tảng AI công cộng quốc tế là gì?"
+    },
+    {
+      "answer": 1,
+      "explanation": "Luật AI 134/2025 yêu cầu tính minh bạch: hệ thống AI tương tác trực tiếp với con người phải để người dùng biết mình đang làm việc với máy; nội dung âm thanh, hình ảnh, video do AI tạo ra phải có dấu hiệu nhận biết.",
+      "id": "04-nen-tang-ai-da-nhiem-q5",
+      "options": [
+        "Giấu việc dùng AI để trông chuyên nghiệp hơn",
+        "Ghi rõ “nội dung có sử dụng AI” trên slide, poster, video giáo dục sức khỏe có hình ảnh/âm thanh do AI tạo ra",
+        "Chỉ cần ghi nhãn với video, hình ảnh thì không cần",
+        "Không có nghĩa vụ minh bạch nào"
+      ],
+      "question": "Theo Luật AI 134/2025, nghĩa vụ minh bạch nào áp dụng khi nhân viên y tế dùng AI tạo nội dung?"
+    }
+  ],
+  "status": "draft",
+  "title": "Quiz chương 4 — Nền tảng AI đa nhiệm: trợ lý số cho mọi nhân viên y tế"
+}

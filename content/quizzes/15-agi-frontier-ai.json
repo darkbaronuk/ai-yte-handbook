@@ -1,0 +1,69 @@
+{
+  "chapter": "15-agi-frontier-ai",
+  "title": "Quiz chương 15 — AGI và Frontier AI trong y tế",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "15-agi-frontier-ai-q1",
+      "question": "Theo chương, 'agentic AI' (AI tác nhân) là gì?",
+      "options": [
+        "Một tên gọi khác của AGI",
+        "Không phải một loại mô hình, mà là cách dùng mô hình — cho phép nó lập kế hoạch, gọi công cụ, hoàn thành công việc nhiều bước mà ít cần con người can thiệp giữa chừng",
+        "AI chỉ dùng để điều khiển robot",
+        "Một loại mô hình mạnh hơn hẳn các mô hình hiện nay"
+      ],
+      "answer": 1,
+      "explanation": "Chương phân biệt rõ: agentic AI là cách dùng (giao dự án nhiều bước), không phải một loại mô hình; nhầm lẫn khái niệm này là một trong những nguồn hiểu sai phổ biến."
+    },
+    {
+      "id": "15-agi-frontier-ai-q2",
+      "question": "Đến tháng 10/2026, trạng thái của AGI theo chương là gì?",
+      "options": [
+        "Đã được phê duyệt cho ứng dụng y tế tại Việt Nam",
+        "Chắc chắn sẽ đạt được trong 1–2 năm tới",
+        "Vẫn là mục tiêu nghiên cứu, chưa phải sản phẩm đang bán — khi ai đó nói 'AGI đã đến', hãy hỏi lại theo định nghĩa nào, đo bằng bài kiểm tra nào",
+        "Đã có sản phẩm AGI thương mại đang bán trên thị trường"
+      ],
+      "answer": 2,
+      "explanation": "Số liệu của chương: 0 sản phẩm AGI thương mại đến 10/2026; bài học là đừng gắn kỳ vọng vào tên sản phẩm, hãy gắn vào năng lực đã kiểm chứng."
+    },
+    {
+      "id": "15-agi-frontier-ai-q3",
+      "question": "Quy tắc giám sát agent gồm 3 điểm kiểm soát nào?",
+      "options": [
+        "Chỉ cần kiểm tra kết quả cuối cùng của agent",
+        "Giao việc rồi để agent tự chạy đến khi xong, không can thiệp",
+        "Chỉ kiểm tra khi agent chủ động yêu cầu",
+        "Trước khi chạy (task rõ mục tiêu, phạm vi, nguồn được phép, điều cấm làm) — giữa chừng (báo cáo tiến độ theo mốc) — sau khi xong (kiểm chứng độc lập các khẳng định quan trọng)"
+      ],
+      "answer": 3,
+      "explanation": "Đây là 3 điểm kiểm soát trong callout của chương: đừng để agent chạy 4 giờ mới xem, và nhất là phải kiểm chứng độc lập số liệu, trích dẫn, khuyến cáo lâm sàng."
+    },
+    {
+      "id": "15-agi-frontier-ai-q4",
+      "question": "Theo checklist dừng khẩn cấp, trường hợp nào là lý do ĐỦ để dừng agent ngay?",
+      "options": [
+        "Agent hỏi quá nhiều câu gây phiền",
+        "Bạn không còn hiểu agent đang làm gì",
+        "Agent làm việc chậm hơn dự kiến ban đầu",
+        "Agent dùng hết quota token trong tháng"
+      ],
+      "answer": 1,
+      "explanation": "Chương viết rõ: dừng ngay khi agent vượt phạm vi được giao, khi nó không giải thích được căn cứ khuyến cáo, hoặc khi bạn không còn hiểu nó đang làm gì — 'không hiểu' là lý do đủ để dừng."
+    },
+    {
+      "id": "15-agi-frontier-ai-q5",
+      "question": "Công thức trách nhiệm không đổi từ 2026 đến 2030 theo chương là gì?",
+      "options": [
+        "AI làm hết mọi việc, con người chỉ ký tên cho đủ thủ tục",
+        "AI quyết định — con người giám sát — AI chịu trách nhiệm",
+        "Con người đề xuất — AI quyết định — cùng chịu trách nhiệm",
+        "AI đề xuất — con người quyết định — con người chịu trách nhiệm"
+      ],
+      "answer": 3,
+      "explanation": "Ranh giới trách nhiệm 2030: công nghệ thay đổi, ranh giới này không thay đổi — bất kỳ quy trình nào để AI 'quyết' mà không ai ký đều là quy trình sai."
+    }
+  ]
+}

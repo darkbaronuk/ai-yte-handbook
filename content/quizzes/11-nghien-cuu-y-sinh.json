@@ -1,0 +1,69 @@
+{
+  "chapter": "11-nghien-cuu-y-sinh",
+  "title": "Quiz chương 11 — AI trong nghiên cứu y sinh: từ rà soát tài liệu đến xuất bản",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "11-nghien-cuu-y-sinh-q1",
+      "question": "Điểm khác biệt cốt lõi khiến LeapSpace ít bịa đặt trích dẫn hơn chatbot đa nhiệm thông thường là gì?",
+      "options": [
+        "LeapSpace dùng mô hình ngôn ngữ lớn hơn nhiều nên nhớ được nhiều bài báo hơn",
+        "LeapSpace chỉ trả lời bằng tiếng Anh nên ít bịa hơn",
+        "LeapSpace trả lời dựa trên tài liệu thật trong kho bình duyệt (kiến trúc RAG), kèm trích dẫn có DOI bấm được — không được phép “sáng tác” ngoài tài liệu",
+        "LeapSpace miễn phí nên được nhiều người kiểm tra lỗi hơn"
+      ],
+      "answer": 2,
+      "explanation": "Chatbot đa nhiệm trả lời từ trí nhớ của mô hình (dễ bịa); LeapSpace tra cứu trong kho 18M+ toàn văn bình duyệt trước rồi mới tổng hợp dựa trên tài liệu tìm được — với nghiên cứu y sinh, khác biệt này là quyết định."
+    },
+    {
+      "id": "11-nghien-cuu-y-sinh-q2",
+      "question": "Theo quy định của ICMJE về AI trong bản thảo khoa học, điều nào sau đây là ĐÚNG?",
+      "options": [
+        "Trách nhiệm về phần AI viết thuộc về nhà cung cấp công cụ AI",
+        "AI có thể đứng tên đồng tác giả nếu nó viết trên 50% bản thảo",
+        "AI không thể là tác giả (vì không thể chịu trách nhiệm); tác giả phải khai báo việc sử dụng AI và chịu trách nhiệm toàn bộ nội dung",
+        "Không cần khai báo việc dùng AI nếu chỉ dùng để sửa ngữ pháp"
+      ],
+      "answer": 2,
+      "explanation": "ICMJE quy định rõ: tác giả phải là con người chịu trách nhiệm về tính chính xác và liêm chính; phải mô tả rõ dùng công cụ gì vào việc gì; mọi nội dung AI tạo ra trong bài đều thuộc trách nhiệm của tác giả ký tên."
+    },
+    {
+      "id": "11-nghien-cuu-y-sinh-q3",
+      "question": "“Ghost authorship” (tác giả ma) trong nghiên cứu khoa học là hành vi nào?",
+      "options": [
+        "Quên ghi tên người hướng dẫn vào danh sách tác giả",
+        "Để AI (hoặc người khác) viết toàn bộ bản thảo mà không khai báo — vi phạm quy tắc minh bạch của ICMJE",
+        "Đăng bài trên tạp chí ma (predatory journal)",
+        "Trích dẫn bài báo của tác giả đã qua đời"
+      ],
+      "answer": 1,
+      "explanation": "Ba lằn ranh đỏ tuyệt đối: paper mill (xưởng sản xuất bài báo), ghost authorship (không khai báo người/AI thực sự viết), và bịa dữ liệu/trích dẫn — vi phạm có thể khiến bài bị rút và luận án bị hủy kết quả."
+    },
+    {
+      "id": "11-nghien-cuu-y-sinh-q4",
+      "question": "Trong quy trình 4 bước dùng AI cho luận án, kiểm chứng bắt buộc ở bước B1 (tìm rộng tài liệu) là gì?",
+      "options": [
+        "Đọc toàn văn tất cả abstract tìm được",
+        "Nhờ AI tự đánh giá chất lượng các bài báo",
+        "Bấm ngẫu nhiên 10% số DOI trích dẫn để mở bản gốc — nếu DOI chết hoặc nội dung không khớp thì dừng lại",
+        "Chỉ dùng các bài báo có trích dẫn trên 100 lần"
+      ],
+      "answer": 2,
+      "explanation": "Mỗi bước đều có điểm kiểm chứng; ở B1 là kiểm tra ngẫu nhiên 10% DOI — vì thông tin bịa đặt về tài liệu tham khảo là lỗi nguy hiểm nhất với người làm khoa học."
+    },
+    {
+      "id": "11-nghien-cuu-y-sinh-q5",
+      "question": "Khi dùng AI để phân tích số liệu (viết code R/Python), khi nào bạn nên DỪNG và không để AI “chọn hộ” phương pháp?",
+      "options": [
+        "Khi bạn không thể giải thích được vì sao chọn phương pháp phân tích đó — phải quay lại sách thống kê, hỏi chuyên gia",
+        "Khi code chạy quá chậm trên máy tính của bạn",
+        "Khi biểu đồ vẽ ra không đẹp mắt",
+        "Khi AI đề xuất dùng kiểm định mà bạn chưa nghe tên bao giờ nhưng kết quả có ý nghĩa thống kê"
+      ],
+      "answer": 0,
+      "explanation": "Quy tắc “hiểu trước, chạy sau”: code AI sinh ra thường chạy được ngay và tạo cảm giác đúng, nhưng nếu bạn không giải thích được mỗi khối code làm gì thì đừng đưa kết quả vào bài."
+    }
+  ]
+}

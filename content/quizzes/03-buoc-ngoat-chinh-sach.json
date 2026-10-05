@@ -1,0 +1,69 @@
+{
+  "chapter": "03-buoc-ngoat-chinh-sach",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "answer": 0,
+      "explanation": "Quốc hội thông qua Luật Trí tuệ nhân tạo số 134/2025/QH15 tháng 12/2025, có hiệu lực từ 1/1/2026 — văn bản đầu tiên tại châu Á đưa AI thành một luật riêng thay vì lồng vào luật khác.",
+      "id": "03-buoc-ngoat-chinh-sach-q1",
+      "options": [
+        "01/01/2026",
+        "09/09/2025",
+        "01/03/2026",
+        "22/12/2024"
+      ],
+      "question": "Luật Trí tuệ nhân tạo số 134/2025/QH15 có hiệu lực từ khi nào?"
+    },
+    {
+      "answer": 2,
+      "explanation": "Y tế được xếp vào nhóm rủi ro cao: yêu cầu đánh giá tác động trước triển khai; bệnh nhân có quyền biết mình đang tương tác với AI và quyền yêu cầu can thiệp của con người.",
+      "id": "03-buoc-ngoat-chinh-sach-q2",
+      "options": [
+        "Nhóm cấm triển khai",
+        "Nhóm không cần quản lý",
+        "Nhóm rủi ro cao — bắt buộc đánh giá tác động trước triển khai",
+        "Nhóm rủi ro thấp — chỉ cần đăng ký đơn giản"
+      ],
+      "question": "Theo Luật AI 134/2025, hệ thống AI y tế được phân loại vào nhóm nào?"
+    },
+    {
+      "answer": 1,
+      "explanation": "Đến 5/2026 mới 1.231/1.650 bệnh viện đạt (~75%); ai đi trước có dữ liệu, ai đi sau vừa phải chạy EMR vừa lo AI — hai gánh nặng cùng lúc.",
+      "id": "03-buoc-ngoat-chinh-sach-q3",
+      "options": [
+        "Chậm nhất 30/9/2025 — để kịp tham gia V-RHAIN",
+        "Chậm nhất 30/9/2026 — không có EMR không có dữ liệu, mọi bàn về AI đều là lý thuyết",
+        "01/01/2026 — theo hiệu lực của Luật AI",
+        "Không có mốc bắt buộc, chỉ là khuyến khích"
+      ],
+      "question": "Theo Thông tư 13/2025/TT-BYT, mốc bắt buộc triển khai bệnh án điện tử là khi nào và vì sao quan trọng với AI?"
+    },
+    {
+      "answer": 0,
+      "explanation": "V-RHAIN (Mạng lưới AI Y tế Có trách nhiệm Việt Nam, công bố 14/1/2026) đặt ba mục tiêu 2026: triển khai AI tại 3.321 trạm y tế xã/phường, tham gia HealthAI GRN và chạy sandbox chính sách AI.",
+      "id": "03-buoc-ngoat-chinh-sach-q4",
+      "options": [
+        "Triển khai AI tại 3.321 trạm y tế xã, phường",
+        "Xây mới 3.321 bệnh viện tuyến huyện",
+        "Đào tạo 3.321 bác sĩ chuyên ngành AI",
+        "Cấm triển khai AI tại tuyến xã"
+      ],
+      "question": "Mục tiêu 2026 của V-RHAIN là gì?"
+    },
+    {
+      "answer": 2,
+      "explanation": "Ba điểm kiểm tra bắt buộc là: (1) ứng dụng có tương tác với sổ sức khỏe điện tử VNeID/EMR không — phải tuân chuẩn HL7 FHIR, đừng xây dữ liệu song song; (2) rủi ro với người bệnh ở mức nào; (3) có nên đưa vào sandbox V-RHAIN không.",
+      "id": "03-buoc-ngoat-chinh-sach-q5",
+      "options": [
+        "Có nên đưa vào sandbox V-RHAIN không",
+        "Ứng dụng có tương tác với sổ sức khỏe điện tử VNeID / EMR bệnh viện không",
+        "Nhà cung cấp AI đặt trụ sở ở quốc gia nào",
+        "Rủi ro với người bệnh ở mức nào — có thuộc nhóm rủi ro cao không"
+      ],
+      "question": "Theo checklist của chương, câu hỏi nào KHÔNG thuộc ba điểm phải kiểm tra trước khi thiết kế ứng dụng AI y tế?"
+    }
+  ],
+  "status": "draft",
+  "title": "Quiz chương 3 — Bước ngoặt chính sách 2024–2026"
+}

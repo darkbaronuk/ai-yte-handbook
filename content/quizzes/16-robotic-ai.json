@@ -1,0 +1,69 @@
+{
+  "chapter": "16-robotic-ai",
+  "title": "Quiz chương 16 — Robotic AI trong y tế",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "16-robotic-ai-q1",
+      "question": "Robot phẫu thuật thế hệ hiện tại (da Vinci, Hugo) thực chất là gì?",
+      "options": [
+        "Robot thay thế toàn bộ ê-kíp gây mê và phụ mổ",
+        "Hệ thống phẫu thuật có robot hỗ trợ (robotic-assisted): bác sĩ ngồi ở console điều khiển, mọi chuyển động của tay máy đều bắt nguồn từ tay bác sĩ",
+        "Thiết bị mới chỉ dùng cho đào tạo, chưa được dùng trên lâm sàng",
+        "Robot tự mổ hoàn toàn, bác sĩ chỉ đứng quan sát"
+      ],
+      "answer": 1,
+      "explanation": "Chương nhấn mạnh: đây là công cụ mở rộng tay nghề bác sĩ, không thay thế bác sĩ — mọi ca mổ robot hiện nay đều có bác sĩ chịu trách nhiệm toàn bộ."
+    },
+    {
+      "id": "16-robotic-ai-q2",
+      "question": "Hai cơ chế cốt lõi giúp phẫu thuật có robot hỗ trợ chính xác hơn mổ thường là gì?",
+      "options": [
+        "Quét CT trong lúc mổ và in 3D dụng cụ tại chỗ",
+        "Gây mê tự động và theo dõi sinh tồn liên tục",
+        "Tự động khâu vết mổ và tự động cầm máu",
+        "Motion scaling (thu nhỏ chuyển động — tay bác sĩ đi 5 cm, tay máy chỉ đi 5 mm) và lọc rung sinh lý của tay người"
+      ],
+      "answer": 3,
+      "explanation": "Hai cơ chế này — thu nhỏ chuyển động và loại bỏ rung tay — cộng với tầm nhìn 3D là lý do phẫu thuật nội soi ít xâm lấn đạt độ chính xác vượt trội."
+    },
+    {
+      "id": "16-robotic-ai-q3",
+      "question": "Theo chương, ngách robot nào là 'mua sắm dễ nhất' cho bệnh viện tuyến tỉnh hiện nay?",
+      "options": [
+        "Robot phẫu thuật hạng nặng — mỗi tỉnh mua một máy",
+        "Robot khử khuẩn: so sánh chi phí trực tiếp được, rủi ro lâm sàng thấp (không chạm vào người bệnh), triển khai nhanh không cần đào tạo bác sĩ",
+        "Robot hình người thay thế điều dưỡng",
+        "Robot phẫu thuật từ xa xuyên quốc gia"
+      ],
+      "answer": 1,
+      "explanation": "Chương xếp robot phẫu thuật hạng nặng chỉ phù hợp trung tâm xuất sắc tuyến trung ương; với tuyến tỉnh, khử khuẩn/logistics có ROI rõ ràng nhất và nên đi trước."
+    },
+    {
+      "id": "16-robotic-ai-q4",
+      "question": "Theo checklist 5 câu hỏi trước khi ký hợp đồng robot, nguyên tắc ra quyết định là gì?",
+      "options": [
+        "Thiếu 1 dấu tick: chưa ký được — phải trả lời được cả 5 câu (nhu cầu lâm sàng, ê-kíp, TCO 5 năm, dữ liệu và bảo trì, lộ trình đánh giá)",
+        "Chỉ cần giám đốc đồng ý là đủ, không cần checklist",
+        "Trả lời được 3/5 câu hỏi là có thể ký",
+        "Hãng cam kết bảo hành dài hạn là đủ điều kiện ký"
+      ],
+      "answer": 0,
+      "explanation": "5 câu hỏi bao quát nhu cầu thật, ê-kíp vận hành, chi phí toàn vòng đời, dữ liệu/bảo trì và chỉ số đánh giá — thiếu một là quyết định chưa đủ cơ sở."
+    },
+    {
+      "id": "16-robotic-ai-q5",
+      "question": "Ê-kíp robot mới chỉ được phê duyệt mổ các ca loại A. Trước một ca loại B, bác sĩ chính muốn 'thử xem sao vì máy hiện đại'. Xử trí đúng theo chương?",
+      "options": [
+        "Dừng năng lực: không nâng độ khó 'thử xem sao' — chỉ thực hiện trong phạm vi đã được phê duyệt cho ê-kíp",
+        "Để AI của hệ thống quyết định có mổ được ca này không",
+        "Mổ thử nhưng không ghi vào hồ sơ bệnh án",
+        "Cứ thử vì máy hiện đại, có biến cố thì chuyển mổ mở sau"
+      ],
+      "answer": 0,
+      "explanation": "Đây là điểm dừng 'năng lực' trong bốn điểm dừng bắt buộc: ca vượt phạm vi đã phê duyệt thì máy nằm yên — nguyên tắc vàng là robot không bao giờ được đặt bác sĩ vào tình huống mà bác sĩ không dám chịu trách nhiệm."
+    }
+  ]
+}

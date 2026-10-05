@@ -1,0 +1,69 @@
+{
+  "chapter": "06-cdss",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "answer": 3,
+      "explanation": "Rule-based chạy các quy tắc “nếu-thì” do chuyên gia viết từ guideline: minh bạch tuyệt đối, mọi cảnh báo đều truy được về điều khoản cụ thể, dễ kiểm định và dễ cập nhật khi guideline đổi.",
+      "id": "06-cdss-q1",
+      "options": [
+        "LLM-based (mô hình ngôn ngữ lớn)",
+        "Không kiến trúc nào minh bạch được",
+        "ML-based (học máy)",
+        "Rule-based — mọi cảnh báo đều truy được về đúng điều luật/guideline cụ thể do chuyên gia viết"
+      ],
+      "question": "Trong ba kiến trúc CDSS, loại nào minh bạch nhất và phù hợp nhất khi cần truy về đúng điều guideline?"
+    },
+    {
+      "answer": 2,
+      "explanation": "Nghiên cứu quốc tế ghi nhận tỷ lệ bỏ qua cảnh báo tương tác thuốc lên tới 90%+ ở nhiều bệnh viện. Khi đó CDSS không những vô dụng mà còn nguy hiểm vì tạo ảo giác an toàn trong khi thực tế không ai đọc cảnh báo nữa.",
+      "id": "06-cdss-q2",
+      "options": [
+        "Hệ thống tiêu thụ quá nhiều điện năng",
+        "Cảnh báo hiển thị quá đẹp khiến bác sĩ mất tập trung",
+        "Bác sĩ bấm “bỏ qua” theo phản xạ kể cả với cảnh báo thật sự nguy hiểm, tạo ảo giác an toàn",
+        "Phần mềm chạy chậm làm treo máy tính"
+      ],
+      "question": "Vì sao alert fatigue (mệt mỏi cảnh báo) được coi là thất bại phổ biến và đắt giá nhất của CDSS?"
+    },
+    {
+      "answer": 2,
+      "explanation": "Năm nguyên tắc thiết kế cảnh báo có ý nghĩa: phân tầng nghiêm trọng, đưa ra hành động cụ thể (đề xuất thuốc thay thế), đúng thời điểm (lúc chọn thuốc, chưa ký đơn), giải thích được (trích guideline), và học từ phản hồi (theo dõi tỷ lệ bỏ qua để tinh chỉnh).",
+      "id": "06-cdss-q3",
+      "options": [
+        "Mọi cảnh báo đều ngắt quãng bác sĩ như nhau",
+        "Chỉ ngắt quãng với nhắc nhở hành chính",
+        "Chỉ cảnh báo nguy cơ cao; nguy cơ thấp chỉ hiển thị nhẹ — phải phân tầng nghiêm trọng",
+        "Không cảnh báo nào được phép ngắt quãng"
+      ],
+      "question": "Theo nguyên tắc thiết kế cảnh báo có ý nghĩa, loại cảnh báo nào được phép “ngắt quãng” bác sĩ?"
+    },
+    {
+      "answer": 0,
+      "explanation": "Mọi nút “tự động áp dụng gợi ý” trong CDSS dùng cho quyết định lâm sàng đều phải bị vô hiệu hóa; ngoại lệ duy nhất là cảnh báo an toàn thuần túy (ví dụ chặn đơn thuốc quá liều gây chết người) — và ngay cả khi đó bác sĩ vẫn có quyền ghi đè có lý do.",
+      "id": "06-cdss-q4",
+      "options": [
+        "CDSS tự động kê đơn, thay đổi liều, chỉ định/hủy xét nghiệm hay chuyển tuyến mà không có bác sĩ phê duyệt từng trường hợp",
+        "Bác sĩ ghi đè cảnh báo kèm lý do chính đáng",
+        "Bác sĩ tra cứu guideline trên máy tính",
+        "CDSS hiển thị gợi ý để bác sĩ xem xét"
+      ],
+      "question": "Nguyên tắc “human-in-the-loop tuyệt đối” cấm điều gì?"
+    },
+    {
+      "answer": 1,
+      "explanation": "Ví dụ một quyết định kê đơn đi qua 3 lớp: rule-based kiểm tra liều và tương tác tức thì, ML gắn gợi ý nguy cơ tái nhập viện, LLM tóm tắt vào bệnh án. Chuẩn vàng của CDSS tốt là hữu ích mà không làm chậm bác sĩ.",
+      "id": "06-cdss-q5",
+      "options": [
+        "Chỉ dùng LLM cho mọi việc vì hiện đại nhất",
+        "Rule-based cho những gì chắc chắn và cần minh bạch, ML cho dự báo nguy cơ, LLM cho tóm tắt và tra cứu — mỗi thứ đúng chỗ mạnh của nó",
+        "Dùng ML cho mọi việc vì “thông minh” nhất",
+        "Chỉ dùng rule-based, cấm hoàn toàn ML"
+      ],
+      "question": "Cách kết hợp ba kiến trúc CDSS được chương khuyến nghị là gì?"
+    }
+  ],
+  "status": "draft",
+  "title": "Quiz chương 6 — AI hỗ trợ ra quyết định lâm sàng (CDSS): case Leira của AstraZeneca × AI4Life"
+}

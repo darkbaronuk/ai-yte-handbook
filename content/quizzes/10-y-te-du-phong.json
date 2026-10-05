@@ -1,0 +1,69 @@
+{
+  "chapter": "10-y-te-du-phong",
+  "title": "Quiz chương 10 — AI trong y tế dự phòng và dịch tễ",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "10-y-te-du-phong-q1",
+      "question": "Ba trụ cột của y tế dự phòng thời AI theo chương 10 là gì?",
+      "options": [
+        "Mua máy chủ – thuê đội AI – xây data center",
+        "Khám chữa bệnh – cấp cứu – phẫu thuật",
+        "Phong tỏa – cách ly – tiêm chủng",
+        "Giám sát dịch bằng big data (dịch tễ học số) – dự báo bùng phát – phân tích bệnh không lây nhiễm và chấm điểm rủi ro dân số"
+      ],
+      "answer": 3,
+      "explanation": "AI bổ sung ba năng lực mới: đọc tín hiệu sớm từ big data, dự báo 2–4 tuần tới để can thiệp đón đầu, và chấm điểm rủi ro NCD để “tìm người cần khám” thay vì chờ bệnh nhân đến."
+    },
+    {
+      "id": "10-y-te-du-phong-q2",
+      "question": "Một CDC tỉnh mới bắt đầu, dữ liệu ít, cần kết quả nhanh và dễ giải thích cho lãnh đạo thì nên chọn họ mô hình dự báo nào?",
+      "options": [
+        "XGBoost vì chịu được dữ liệu thiếu",
+        "LSTM vì bắt được đợt dịch bất thường",
+        "ARIMA/Prophet — đơn giản, chạy nhanh, dễ giải thích; dùng mô hình đơn giản nhất mà vẫn trả lời được câu hỏi điều hành",
+        "Foundation models (Chronos, TimeGPT) vì hiện đại nhất"
+      ],
+      "answer": 2,
+      "explanation": "Nguyên tắc của chương: khi dữ liệu ít và người dùng là lãnh đạo không chuyên, mô hình đơn giản giải thích được có giá trị điều hành hơn mô hình phức tạp mà không ai hiểu vì sao."
+    },
+    {
+      "id": "10-y-te-du-phong-q3",
+      "question": "Theo chương 10, yếu tố nào quyết định tới 80% chất lượng của một mô hình dự báo dịch?",
+      "options": [
+        "Mua bản quyền phần mềm dự báo đắt tiền nhất",
+        "Thuê được đội ngũ AI giỏi nhất",
+        "Dữ liệu đầu vào đầy đủ, đúng hạn và sạch — mô hình ARIMA đơn giản trên dữ liệu tốt thắng mô hình học sâu trên dữ liệu rỗng",
+        "Chọn được mô hình học sâu hiện đại nhất"
+      ],
+      "answer": 2,
+      "explanation": "Dữ liệu đầu vào quyết định 80%, mô hình chỉ chiếm 20% — vì vậy bước đầu tiên luôn là gom và làm sạch dữ liệu (số ca theo tuần nhiều năm) trước khi nghĩ đến AI."
+    },
+    {
+      "id": "10-y-te-du-phong-q4",
+      "question": "Dự báo “70% khả năng huyện A bùng phát dịch trong 3 tuần tới” cần được hiểu như thế nào cho đúng?",
+      "options": [
+        "Đây là xác suất, không phải lời tiên tri: vẫn có 30% không xảy ra, và nơi dự báo thấp vẫn có thể bùng phát — người dùng phải hiểu ngôn ngữ xác suất",
+        "Chắc chắn 70% số xã trong huyện sẽ bùng phát",
+        "Huyện A sẽ có đúng 70 ca bệnh",
+        "Dự báo này vô giá trị vì không chắc chắn 100%"
+      ],
+      "answer": 0,
+      "explanation": "Một trong bốn giới hạn phải khắc cốt ghi tâm: dự báo cho biết khả năng chứ không cho biết chắc chắn — hiểu sai sẽ dẫn đến hoặc hoảng loạn thừa, hoặc chủ quan khi dự báo “thấp”."
+    },
+    {
+      "id": "10-y-te-du-phong-q5",
+      "question": "AI trong y tế dự phòng có được tự ra lệnh phong tỏa, cách ly hay đóng cửa trường học không?",
+      "options": [
+        "Được, trong tình huống khẩn cấp để tiết kiệm thời gian",
+        "Không — đó là quyết định hành chính có cơ sở pháp lý, do người có thẩm quyền ban hành sau khi cân nhắc y tế, kinh tế, xã hội; AI chỉ cung cấp bằng chứng",
+        "Được, nếu mô hình dự báo độ chính xác trên 95%",
+        "Được, nếu lãnh đạo ủy quyền bằng văn bản cho AI"
+      ],
+      "answer": 1,
+      "explanation": "Điểm chung của cả ba trụ cột: AI đề xuất, con người quyết định — không một mô hình nào được phép tự ra lệnh cưỡng chế hay phân bổ ngân sách."
+    }
+  ]
+}

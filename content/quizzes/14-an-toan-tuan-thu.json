@@ -1,0 +1,69 @@
+{
+  "chapter": "14-an-toan-tuan-thu",
+  "title": "Quiz chương 14 — An toàn, bảo mật và tuân thủ pháp luật",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "14-an-toan-tuan-thu-q1",
+      "question": "Theo điểm neo của chương, trước khi dùng AI cần trả lời ba câu hỏi nào?",
+      "options": [
+        "Bệnh viện đã có bao nhiêu máy tính, mạng có nhanh không, ai quản trị hệ thống",
+        "AI của hãng nào, giá bao nhiêu, ai cài đặt",
+        "Người bệnh có thể bị hại ở đâu, dữ liệu sẽ đi đâu, và ai có thẩm quyền quyết định",
+        "AI có chứng chỉ gì, đào tạo ở đâu, phiên bản mới nhất là gì"
+      ],
+      "answer": 2,
+      "explanation": "Chương mở đầu bằng điểm neo: một công cụ thuận tiện chưa chắc phù hợp cho bệnh án thật — ba câu hỏi trên là la bàn cho mọi quyết định dùng AI."
+    },
+    {
+      "id": "14-an-toan-tuan-thu-q2",
+      "question": "Khi AI và đánh giá chuyên môn của bác sĩ khác nhau, quy tắc đúng theo chương là gì?",
+      "options": [
+        "Bỏ qua AI, tin hoàn toàn vào kinh nghiệm cá nhân",
+        "Hỏi thêm một AI khác để 'bỏ phiếu' quyết định",
+        "Nghe theo AI vì AI khách quan, không bị cảm xúc chi phối",
+        "Dừng để đánh giá lại — không tự động theo AI, nhưng cũng không mặc nhiên cho rằng người đọc luôn đúng; bổ sung bằng chứng hoặc hội chẩn khi cần"
+      ],
+      "answer": 3,
+      "explanation": "Đây là quy tắc 6 trong mười quy tắc an toàn lâm sàng: bất đồng là tín hiệu phải dừng và kiểm chứng thêm, không phải để một bên thắng."
+    },
+    {
+      "id": "14-an-toan-tuan-thu-q3",
+      "question": "Về khử nhận dạng dữ liệu, phát biểu đúng theo chương là gì?",
+      "options": [
+        "Dữ liệu đã xóa tên thì được tự do đưa lên AI công cộng",
+        "Xóa tên chưa đủ — ngày sinh, thời điểm khám, mã khoa phòng, địa bàn và bệnh hiếm có thể kết hợp để nhận ra một người",
+        "Xóa tên là đủ để khử nhận dạng dữ liệu bệnh nhân",
+        "Đổi mã bệnh án thành mã số nghiên cứu là đã khử nhận dạng hoàn toàn"
+      ],
+      "answer": 1,
+      "explanation": "Chương nhấn mạnh: xóa tên chưa đủ; 'thay mã' (pseudonymization) mà còn bảng đối chiếu thì chưa phải khử nhận dạng — phải rà cả các trường gián tiếp, văn bản tự do và ảnh."
+    },
+    {
+      "id": "14-an-toan-tuan-thu-q4",
+      "question": "Về mốc 72 giờ thông báo vi phạm dữ liệu cá nhân, cách hiểu và thực hành đúng là gì?",
+      "options": [
+        "Sự cố nhỏ thì không cần báo cáo gì cả",
+        "SOP nên yêu cầu nhân viên báo nội bộ ngay khi phát hiện, để đầu mối có trách nhiệm đánh giá nghĩa vụ thông báo — không chờ đến sát mốc 72 giờ mới báo",
+        "Nhân viên tự quyết định có báo cáo hay không, không cần quy trình",
+        "Mọi lần dán nhầm dữ liệu đều mặc nhiên phải báo cáo trong đúng 72 giờ"
+      ],
+      "answer": 1,
+      "explanation": "Chương lưu ý: không diễn đạt thành mọi sự cố đều chịu cùng một nghĩa vụ 72 giờ, nhưng SOP phải yêu cầu báo nội bộ ngay và để đầu mối đánh giá — không để nhân viên chờ sát hạn."
+    },
+    {
+      "id": "14-an-toan-tuan-thu-q5",
+      "question": "Luật Trí tuệ nhân tạo 134/2025/QH15 đặt nguyên tắc nào tại khoản 2 Điều 4?",
+      "options": [
+        "AI không thay thế thẩm quyền và trách nhiệm của con người",
+        "Cấm hoàn toàn AI tham gia khám chữa bệnh",
+        "Mọi hệ thống AI trong y tế đều phải đăng ký với Bộ Y tế",
+        "AI được thay thế thẩm quyền của bác sĩ trong trường hợp khẩn cấp"
+      ],
+      "answer": 0,
+      "explanation": "Đây là nguyên tắc nền của Luật AI được chương trích dẫn — cũng là lý do mọi quyết định lâm sàng cuối cùng phải gắn với một con người chịu trách nhiệm."
+    }
+  ]
+}

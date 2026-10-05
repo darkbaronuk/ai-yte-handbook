@@ -1,0 +1,69 @@
+{
+  "chapter": "01-hau-covid",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "answer": 0,
+      "explanation": "Chương ghi ngày 14/02/2020 — chỉ hai tuần sau ca COVID đầu tiên tại Vĩnh Phúc — Cục CNTT Bộ Y tế tích hợp chatbot tra cứu COVID-19 trên Zalo, được coi là ứng dụng AI đối thoại quy mô đại chúng đầu tiên trong y tế Việt Nam.",
+      "id": "01-hau-covid-q1",
+      "options": [
+        "Chatbot tra cứu COVID-19 trên Zalo của Bộ Y tế (14/02/2020)",
+        "Bluezone truy vết tiếp xúc gần",
+        "PC-COVID Quốc gia",
+        "DrAid đọc X-quang phổi của VinBrain"
+      ],
+      "question": "Ứng dụng AI đối thoại quy mô đại chúng đầu tiên trong y tế Việt Nam là gì?"
+    },
+    {
+      "answer": 2,
+      "explanation": "Bài học thứ nhất của chương: vấn đề không nằm ở thuật toán mà ở dữ liệu bị chia cắt — mỗi bệnh viện là một ốc đảo, không theo chuẩn liên thông như HL7 FHIR.",
+      "id": "01-hau-covid-q2",
+      "options": [
+        "Thuật toán AI của Việt Nam quá yếu",
+        "Người dân Việt Nam không quen dùng công nghệ số",
+        "Dữ liệu y tế phân mảnh — mỗi bệnh viện là một ốc đảo dữ liệu riêng",
+        "Thiếu vốn đầu tư nước ngoài vào y tế"
+      ],
+      "question": "Theo chương, rào cản lớn nhất của AI y tế Việt Nam giai đoạn COVID là gì — chứ không phải thuật toán?"
+    },
+    {
+      "answer": 3,
+      "explanation": "Chương trích công bố khi bàn giao: độ nhạy tới 95%, độ đặc hiệu 99%, F1 đạt 94% khi sàng lọc COVID trên X-quang; thời gian phân tích dưới 5 giây cho mỗi ảnh.",
+      "id": "01-hau-covid-q3",
+      "options": [
+        "Độ nhạy 99%, độ đặc hiệu 95%, phân tích dưới 1 phút/ảnh",
+        "Độ chính xác tổng 98%, phân tích dưới 10 giây/ảnh",
+        "F1 đạt 99%, phân tích dưới 30 giây/ảnh",
+        "Độ nhạy 95%, độ đặc hiệu 99%, phân tích dưới 5 giây/ảnh"
+      ],
+      "question": "Ba con số kỹ thuật được công bố của DrAid khi bàn giao cho Bộ Y tế (25/08/2020) là gì?"
+    },
+    {
+      "answer": 0,
+      "explanation": "VinDr-CXR công bố mở 18.000 ảnh với 28 phát hiện/chẩn đoán; mỗi ảnh tập huấn luyện được 3 bác sĩ gán nhãn độc lập, tập kiểm thử qua đồng thuận 5 bác sĩ — mức chi tiết mà ngay cả ChestX-ray14 của NIH cũng không có.",
+      "id": "01-hau-covid-q4",
+      "options": [
+        "Chất lượng gán nhãn vượt trội: 3 bác sĩ gán độc lập mỗi ảnh huấn luyện, đồng thuận 5 bác sĩ cho tập kiểm thử, 28 nhãn chi tiết",
+        "Số lượng ảnh lớn nhất thế giới",
+        "Được huấn luyện bằng kiến trúc đối kháng XPGAN",
+        "Chỉ sử dụng ảnh CT thay vì X-quang"
+      ],
+      "question": "Điểm khiến VinDr-CXR nổi bật so với các bộ dữ liệu ảnh y khoa quốc tế là gì?"
+    },
+    {
+      "answer": 0,
+      "explanation": "Điểm đáng học nằm ở thiết kế triển khai: AI không thay thế bác sĩ mà làm phân tầng nhanh — giúp giảm 60–70% thời gian phân loại ca cần chú ý ngay; bác sĩ vẫn đọc lại và ký báo cáo cuối.",
+      "id": "01-hau-covid-q5",
+      "options": [
+        "AI làm phân tầng nhanh trong khủng hoảng, bác sĩ vẫn đọc lại và ký báo cáo cuối",
+        "AI thay thế hoàn toàn bác sĩ đọc phim",
+        "Chỉ bệnh viện tuyến trung ương mới dùng được AI đọc ảnh",
+        "Nên chờ mô hình đạt độ chính xác tuyệt đối mới triển khai"
+      ],
+      "question": "Bài học quan trọng nhất từ đợt triển khai DrAid trong đợt Delta tại TP.HCM (2021) là gì?"
+    }
+  ],
+  "status": "draft",
+  "title": "Quiz chương 1 — Hậu COVID: cú huých số hóa y tế Việt Nam"
+}

@@ -1,0 +1,69 @@
+{
+  "chapter": "18-lo-trinh-ca-nhan",
+  "title": "Quiz chương 18 — Lộ trình cá nhân và tổ chức 2026–2030",
+  "status": "draft",
+  "note": "Bản nháp — chờ tác giả duyệt",
+  "passScore": 4,
+  "questions": [
+    {
+      "id": "18-lo-trinh-ca-nhan-q1",
+      "question": "Kế hoạch 90 ngày đầu tiên được chia thành ba chặng nào?",
+      "options": [
+        "30 ngày đầu: audit hiện trạng + chọn 3 quick win → 30 ngày tiếp: triển khai 1 use case + đo lường trước–sau → 30 ngày cuối: mở rộng + huấn luyện đội",
+        "30 ngày học lý thuyết → 60 ngày thi chứng chỉ",
+        "90 ngày triển khai AI cho toàn bệnh viện cùng lúc",
+        "30 ngày mua công cụ → 30 ngày đào tạo toàn viện → 30 ngày báo cáo tổng kết"
+      ],
+      "answer": 0,
+      "explanation": "Nguyên tắc xuyên suốt: bắt đầu nhỏ, đo được, rồi mới mở rộng — đừng triển khai AI cho cả bệnh viện trong 90 ngày; hãy làm cho đúng một việc, đo được kết quả, rồi nhân rộng."
+    },
+    {
+      "id": "18-lo-trinh-ca-nhan-q2",
+      "question": "Một 'quick win' phải hội đủ 3 điều kiện nào?",
+      "options": [
+        "Dùng AI công cộng cho nhanh, không cần kiểm chứng đầu ra",
+        "Được lãnh đạo yêu thích, dễ báo cáo thành tích, hình ảnh trình bày đẹp",
+        "Công nghệ mới nhất, chi phí đầu tư cao, cần nhiều người tham gia",
+        "Việc lặp đi lặp lại tốn thời gian rõ rệt — đầu ra kiểm chứng được dễ dàng — không chạm dữ liệu định danh người bệnh"
+      ],
+      "answer": 3,
+      "explanation": "Ba điều kiện này giúp quick win vừa tạo kết quả thấy được, vừa an toàn: ví dụ tóm tắt guideline thành 1 trang, bàn giao ca theo mẫu SBAR."
+    },
+    {
+      "id": "18-lo-trinh-ca-nhan-q3",
+      "question": "Lằn ranh đỏ của cộng đồng học viên AI y tế là gì?",
+      "options": [
+        "Không được hỏi những câu quá cơ bản trong nhóm",
+        "Chỉ chia sẻ case thành công, không chia sẻ case thất bại",
+        "Chỉ người đạt Grade cao mới được trả lời câu hỏi",
+        "Tuyệt đối không đưa dữ liệu bệnh nhân thật (kể cả đã 'xóa tên' sơ sài) lên nhóm chat hay diễn đàn — chỉ chia sẻ bằng case mô phỏng, số liệu tổng hợp hoặc bài học quy trình"
+      ],
+      "answer": 3,
+      "explanation": "Ngược lại, chương khuyến khích chia sẻ cả case thất bại ('tôi đã thử và phải dừng vì lý do này') vì nó giúp người khác không lặp lại sai lầm — miễn là không dùng dữ liệu thật."
+    },
+    {
+      "id": "18-lo-trinh-ca-nhan-q4",
+      "question": "Một trong bốn giới hạn của cẩm nang mà chương nêu rõ là gì?",
+      "options": [
+        "Cẩm nang không áp dụng được cho bệnh viện tư nhân",
+        "Cẩm nang không thay thế đào tạo lâm sàng chính quy — AI là trợ lý, không phải thầy thuốc; mọi quyết định lâm sàng thuộc về đào tạo chuyên môn và người có chứng chỉ hành nghề",
+        "Cẩm nang chỉ có giá trị trong năm 2026",
+        "Cẩm nang không dành cho điều dưỡng và kỹ thuật viên"
+      ],
+      "answer": 1,
+      "explanation": "Bốn giới hạn: không thay đào tạo lâm sàng; không giải bài toán tài chính bệnh viện; cập nhật 6 tháng/lần; đọc với tinh thần kiểm chứng — để người đọc dùng sách đúng cách."
+    },
+    {
+      "id": "18-lo-trinh-ca-nhan-q5",
+      "question": "Cẩm nang cam kết cập nhật với chu kỳ nào, và thái độ đọc đúng giữa hai kỳ cập nhật là gì?",
+      "options": [
+        "Cập nhật mỗi 5 năm; tin hoàn toàn vào mọi nội dung trong sách",
+        "Không bao giờ cập nhật sau khi xuất bản",
+        "Rà soát và cập nhật mỗi 6 tháng; giữa hai kỳ, những gì liên quan đến tên sản phẩm, giá cả, tính năng cụ thể cần được kiểm chứng lại tại thời điểm đọc",
+        "Cập nhật hằng ngày nên không cần kiểm chứng gì thêm"
+      ],
+      "answer": 2,
+      "explanation": "AI thay đổi theo tháng nên sách cam kết rà soát 6 tháng/lần; quy tắc 'sách là bản đồ, không phải mệnh lệnh' — nếu lời khuyên mâu thuẫn với quy chế bệnh viện hoặc văn bản pháp luật mới hơn, hãy theo văn bản và quy chế."
+    }
+  ]
+}
