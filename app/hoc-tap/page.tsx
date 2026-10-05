@@ -17,10 +17,12 @@ export default async function HocTap() {
 
   return (
     <div>
-      <h1 className="font-serif text-4xl font-bold mb-2">Học tập của tôi</h1>
-      <p className="text-slate-600 mb-8 max-w-3xl">
-        Tiến độ được lưu trên thiết bị này (localStorage) — không cần tài khoản.
-      </p>
+      <div className="page-band">
+        <h1 className="font-serif text-4xl font-bold mb-2 relative z-10">Học tập của tôi</h1>
+        <p className="text-slate-600 max-w-3xl relative z-10">
+          Tiến độ được lưu trên thiết bị này (localStorage) — không cần tài khoản.
+        </p>
+      </div>
       <DashboardClient
         chapters={chapters.map((c) => ({
           slug: c.slug,

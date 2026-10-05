@@ -5,7 +5,7 @@ export default function RoleCard({ role }: { role: Role }) {
   return (
     <Link
       href={`/lo-trinh/${role.id}`}
-      className="group block bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all"
+      className="card-lift group block bg-white border border-slate-200 rounded-2xl p-5 relative overflow-hidden"
       style={{ borderTop: `4px solid ${role.accent}` }}
     >
       <div className="text-3xl mb-3">{role.icon}</div>

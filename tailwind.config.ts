@@ -15,8 +15,12 @@ const config: Config = {
       },
       colors: {
         ink: "#0f172a",
-        paper: "#fafaf7",
-        accent: "#0f766e",
+        paper: "#f6f8fc",
+        accent: "#2563eb",
+        "accent-deep": "#1e40af",
+        navy: "#0a1740",
+        "navy-2": "#10255e",
+        glow: "#38bdf8",
       },
       typography: {
         DEFAULT: {

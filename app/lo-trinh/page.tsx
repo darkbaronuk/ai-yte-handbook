@@ -35,17 +35,19 @@ export default async function LoTrinhIndex() {
 
   return (
     <div>
-      <h1 className="font-serif text-4xl font-bold mb-2">Lộ trình học tập</h1>
-      <p className="text-slate-600 mb-10 max-w-3xl">
-        6 lộ trình theo vai trò — mỗi lộ trình sắp xếp lại 18 chương của cẩm
-        nang theo thứ tự phù hợp công việc của bạn. Chọn một lộ trình để xem
-        chi tiết và theo dõi tiến độ.
-      </p>
+      <div className="page-band">
+        <h1 className="font-serif text-4xl font-bold mb-2 relative z-10">Lộ trình học tập</h1>
+        <p className="text-slate-600 max-w-3xl relative z-10">
+          6 lộ trình theo vai trò — mỗi lộ trình sắp xếp lại 18 chương của cẩm
+          nang theo thứ tự phù hợp công việc của bạn. Chọn một lộ trình để xem
+          chi tiết và theo dõi tiến độ.
+        </p>
+      </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {cards.map(({ role, totalMinutes }) => (
           <div
             key={role.id}
-            className="bg-white border border-slate-200 rounded-xl p-6 flex flex-col"
+            className="card-lift bg-white border border-slate-200 rounded-2xl p-6 flex flex-col"
             style={{ borderTop: `4px solid ${role.accent}` }}
           >
             <div className="text-4xl mb-3">{role.icon}</div>
@@ -58,7 +60,7 @@ export default async function LoTrinhIndex() {
             </div>
             <Link
               href={`/lo-trinh/${role.id}`}
-              className="text-center px-4 py-2.5 rounded-md text-sm font-medium text-white hover:opacity-90"
+              className="text-center px-4 py-2.5 rounded-lg text-sm font-semibold text-white hover:brightness-110 hover:-translate-y-px transition-all shadow-[0_8px_18px_-8px_rgba(37,99,235,0.6)]"
               style={{ background: role.accent }}
             >
               Xem lộ trình

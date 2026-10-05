@@ -41,42 +41,51 @@ export default async function Home() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="mb-14">
-        <p className="text-sm uppercase tracking-widest text-accent mb-3">
-          Hệ học tập hybrid · Cẩm nang + E-learning
-        </p>
-        <h1 className="font-serif text-5xl font-bold leading-tight mb-6">
-          AI trong Y tế Việt Nam
-        </h1>
-        <p className="text-xl text-slate-600 max-w-3xl leading-relaxed">
-          Vừa là <strong className="text-slate-800">cẩm nang tra cứu</strong> 18
-          chương về AI y tế, vừa là <strong className="text-slate-800">lớp học
-          trực tuyến</strong> với lộ trình theo vai trò, Lab thực hành có chấm
-          điểm và theo dõi tiến độ cá nhân.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link
-            href="/lo-trinh"
-            className="px-6 py-3 bg-accent text-white rounded-md font-medium hover:opacity-90"
-          >
-            🎓 Học theo lộ trình
-          </Link>
-          <Link
-            href="/muc-luc"
-            className="px-6 py-3 border border-slate-300 rounded-md font-medium hover:border-accent"
-          >
-            📖 Tra cứu cẩm nang
-          </Link>
+      {/* Hero — navy digital */}
+      <section className="hero-digital rounded-3xl px-6 py-14 md:px-12 md:py-20 mb-12 text-white shadow-[0_30px_60px_-30px_rgba(10,23,64,0.7)]">
+        <div className="relative z-10 max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-sky-400/15 border border-sky-300/30 text-sky-200 mb-6">
+            <span className="w-2 h-2 rounded-full bg-sky-300 animate-pulse" />
+            Chuyển đổi số y tế · Hybrid Learning 2026
+          </div>
+          <h1 className="font-serif text-4xl md:text-6xl font-bold leading-[1.15] mb-6">
+            AI trong <span className="text-gradient">Y tế</span>
+            <br />
+            Việt Nam
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100/90 max-w-2xl leading-relaxed mb-4">
+            Vừa là <strong className="text-white">cẩm nang tra cứu</strong> 18
+            chương về AI y tế, vừa là{" "}
+            <strong className="text-white">lớp học trực tuyến</strong> với lộ
+            trình theo vai trò, Lab thực hành có chấm điểm và theo dõi tiến độ
+            cá nhân.
+          </p>
+          {/* ECG pulse */}
+          <svg className="w-full max-w-md h-10 mb-8 opacity-80" viewBox="0 0 340 40" fill="none" preserveAspectRatio="none">
+            <path
+              className="ecg-line"
+              d="M0 20 H90 l8-14 10 28 8-20 6 6 H150 l8-14 10 28 8-20 6 6 H230 l8-14 10 28 8-20 6 6 H340"
+              stroke="#38bdf8"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <div className="flex flex-wrap gap-3 mb-10">
+            <Link href="/lo-trinh" className="btn-gradient">
+              🎓 Học theo lộ trình
+            </Link>
+            <Link href="/muc-luc" className="btn-glass">
+              📖 Tra cứu cẩm nang
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <HeroStat label="Chương" value="18" />
+            <HeroStat label="Lab thực hành" value={LABS.length.toString()} />
+            <HeroStat label="Lộ trình vai trò" value="6" />
+            <HeroStat label="Phần" value="4" />
+          </div>
         </div>
-      </section>
-
-      {/* Số liệu */}
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-14">
-        <Stat label="Chương" value="18" />
-        <Stat label="Lab thực hành" value={LABS.length.toString()} />
-        <Stat label="Lộ trình vai trò" value="6" />
-        <Stat label="Phần" value="4" />
       </section>
 
       {/* Bạn là ai? */}
@@ -93,20 +102,39 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Bạn là ai? */}
+      <section className="mb-14">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="step-badge !w-8 !h-8 text-sm">1</span>
+          <h2 className="font-serif text-2xl font-bold">Bạn là ai?</h2>
+        </div>
+        <p className="text-slate-600 mb-6">
+          Chọn vai trò để xem lộ trình học gợi ý — thứ tự chương được sắp xếp
+          theo nhu cầu công việc của bạn.
+        </p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {ROLES.map((r) => (
+            <RoleCard key={r.id} role={r} />
+          ))}
+        </div>
+      </section>
+
       {/* Học như thế nào */}
       <section className="mb-14">
-        <h2 className="font-serif text-2xl font-bold mb-6">Học như thế nào</h2>
+        <div className="flex items-center gap-3 mb-6">
+          <span className="step-badge !w-8 !h-8 text-sm">2</span>
+          <h2 className="font-serif text-2xl font-bold">Học như thế nào</h2>
+        </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {STEPS.map((s, i) => (
             <div
               key={s.title}
-              className="bg-white border border-slate-200 rounded-xl p-5"
+              className="card-lift bg-white border border-slate-200 rounded-2xl p-5 relative overflow-hidden"
             >
-              <div className="flex items-center gap-3 mb-2">
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-sky-400 opacity-0 hover:opacity-100 transition-opacity" />
+              <div className="flex items-center gap-3 mb-3">
+                <span className="step-badge">{i + 1}</span>
                 <span className="text-2xl">{s.icon}</span>
-                <span className="text-xs font-bold text-accent">
-                  Bước {i + 1}
-                </span>
               </div>
               <div className="font-semibold mb-1">{s.title}</div>
               <p className="text-sm text-slate-600 leading-relaxed">{s.desc}</p>
@@ -117,17 +145,20 @@ export default async function Home() {
 
       {/* Bốn phần chính */}
       <section>
-        <h2 className="font-serif text-2xl font-bold mb-4">Bốn phần chính</h2>
+        <div className="flex items-center gap-3 mb-4">
+          <span className="step-badge !w-8 !h-8 text-sm">3</span>
+          <h2 className="font-serif text-2xl font-bold">Bốn phần chính</h2>
+        </div>
         <div className="grid md:grid-cols-2 gap-4">
           {PARTS.map((p) => (
             <Link
               key={p.key}
               href="/muc-luc"
-              className="block border border-slate-200 rounded-lg p-5 bg-white hover:shadow-sm hover:border-accent transition-all"
+              className="card-lift group block border border-slate-200 rounded-2xl p-5 bg-white"
             >
-              <div className="font-serif text-lg font-semibold">{p.title}</div>
+              <div className="font-serif text-lg font-semibold group-hover:text-accent transition-colors">{p.title}</div>
               <div className="text-slate-600 text-sm mt-1">{p.desc}</div>
-              <div className="text-xs text-slate-400 mt-3">
+              <div className="text-xs text-accent font-semibold mt-3">
                 {countByPart(p.key)} chương →
               </div>
             </Link>
@@ -138,11 +169,11 @@ export default async function Home() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function HeroStat({ label, value }: { label: string; value: string }) {
   return (
-    <div className="border border-slate-200 rounded-lg p-4 bg-white">
-      <div className="text-3xl font-bold font-serif text-accent">{value}</div>
-      <div className="text-xs uppercase tracking-wider mt-1 text-slate-500">
+    <div className="stat-glass">
+      <div className="text-3xl font-bold font-serif text-white">{value}</div>
+      <div className="text-[11px] uppercase tracking-wider mt-1 text-sky-200/80">
         {label}
       </div>
     </div>
