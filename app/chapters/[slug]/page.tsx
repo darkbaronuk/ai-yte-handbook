@@ -13,6 +13,7 @@ import {
 import { countWords, readingMinutes } from "@/lib/paths";
 import { StatusPill } from "@/components/StatusPill";
 import ChapterRenderer from "@/components/ChapterRenderer";
+import { hasQuiz } from "@/lib/quiz";
 import LessonHeader from "@/components/LessonHeader";
 
 export async function generateStaticParams() {
@@ -144,6 +145,7 @@ export default async function ChapterPage({
         minutes={readingMinutes(countWords(chapter.content))}
         prev={prev}
         next={next}
+        hasQuiz={hasQuiz(chapter.slug)}
       />
 
       <ChapterRenderer blocks={chapter.blocks} />

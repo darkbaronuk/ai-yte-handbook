@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import TermTooltip from "@/components/TermTooltip";
+import UserMenu from "@/components/UserMenu";
 import Providers from "./providers";
 import { getGlossary } from "@/lib/glossary";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className="min-h-screen font-sans antialiased">
+        <Providers>
         <header className="border-b border-blue-100 bg-white/85 backdrop-blur sticky top-0 z-10 shadow-[0_2px_20px_-12px_rgba(37,99,235,0.35)]">
           <div className="max-w-6xl mx-auto px-6 py-3.5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <Link href="/" className="flex items-center gap-2.5 whitespace-nowrap group">
@@ -38,6 +40,7 @@ export default function RootLayout({
               <Link href="/hoc-tap" className="text-slate-600 hover:text-accent font-medium transition-colors">Học tập</Link>
               <Link href="/thuat-ngu" className="text-slate-600 hover:text-accent font-medium transition-colors">Thuật ngữ</Link>
               <a href="/admin/" className="text-accent font-semibold hover:underline">✏️ Soạn</a>
+              <UserMenu />
               <Link
                 href="/lo-trinh"
                 className="px-4 py-2 rounded-lg text-white text-sm font-semibold bg-gradient-to-r from-blue-600 to-sky-500 shadow-[0_8px_20px_-8px_rgba(37,99,235,0.7)] hover:brightness-110 hover:-translate-y-px transition-all"
@@ -48,7 +51,7 @@ export default function RootLayout({
           </div>
         </header>
         <main className="max-w-6xl mx-auto px-6 py-10">
-          <Providers>{children}</Providers>
+          {children}
         </main>
         <TermTooltip
           glossary={Object.fromEntries(
@@ -101,6 +104,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        </Providers>
       </body>
     </html>
   );

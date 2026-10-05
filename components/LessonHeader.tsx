@@ -16,6 +16,7 @@ export default function LessonHeader({
   minutes,
   prev,
   next,
+  hasQuiz = false,
 }: {
   slug: string;
   part: string;
@@ -23,16 +24,25 @@ export default function LessonHeader({
   minutes: number;
   prev: NavChapter;
   next: NavChapter;
+  hasQuiz?: boolean;
 }) {
   return (
     <div className="mb-8 not-prose">
       <div className="bg-white border border-slate-200 rounded-xl p-4 flex flex-wrap items-center gap-3">
-        <span className="text-xs px-2.5 py-1 rounded-full bg-teal-50 text-accent font-medium">
+        <span className="text-xs px-2.5 py-1 rounded-full bg-blue-50 text-accent font-medium">
           {part || "Cẩm nang"}
         </span>
         <span className="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-medium">
           ⏱ ~{minutes} phút đọc
         </span>
+        {hasQuiz && (
+          <Link
+            href={`/quiz/${slug}`}
+            className="text-xs px-3 py-1.5 rounded-full font-semibold text-white bg-gradient-to-r from-blue-600 to-sky-500 hover:brightness-110 transition shadow-[0_6px_14px_-6px_rgba(37,99,235,0.7)]"
+          >
+            ✍️ Làm quiz
+          </Link>
+        )}
         <span className="flex-1" />
         <MarkCompleteButton kind="chapter" id={slug} />
       </div>

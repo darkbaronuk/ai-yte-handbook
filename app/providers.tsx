@@ -1,7 +1,12 @@
 "use client";
 
+import { SessionProvider } from "next-auth/react";
 import { ProgressProvider } from "@/lib/progress";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  return <ProgressProvider>{children}</ProgressProvider>;
+  return (
+    <SessionProvider>
+      <ProgressProvider>{children}</ProgressProvider>
+    </SessionProvider>
+  );
 }
