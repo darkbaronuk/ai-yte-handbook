@@ -1,13 +1,16 @@
 ---
 number: 3
-title: "Bước ngoặt chính sách 2024–2026"
-part: "Phần I — Tiến trình"
+title: Bước ngoặt chính sách 2024–2026
+part: Phần I — Tiến trình
 status: draft
-domains: ["Digital Professionalism", "Administration"]
-miller: "Knows How"
-owners: ["Tú"]
-updated: "2026-09-09"
-summary: "Trong 24 tháng, Việt Nam ban hành ba nghị quyết Bộ Chính trị và hai đạo luật khung, chuyển AI y tế từ vùng xám sang khung pháp lý rõ ràng. Chương này giải thích ý nghĩa cho người triển khai."
+domains:
+  - Digital Professionalism
+  - Administration
+miller: Knows How
+owners:
+  - Nguyễn Hữu Tú
+updated: 2026-09-09
+summary: Trong 24 tháng, Việt Nam ban hành ba nghị quyết Bộ Chính trị và hai đạo luật khung, chuyển AI y tế từ vùng xám sang khung pháp lý rõ ràng. Chương này giải thích ý nghĩa cho người triển khai.
 ---
 
 # Bước ngoặt chính sách 2024–2026
@@ -78,8 +81,8 @@ và [10 điểm đáng chú ý của Luật AI 134/2025 (LuatVietnam)](https://w
 ### Thông tư 13/2025/TT-BYT — hạ tầng dữ liệu bắt buộc
 
 [Thông tư 13/2025/TT-BYT](https://thuvienphapluat.vn/van-ban/EN/Cong-nghe-thong-tin/Circular-13-2025-TT-BYT-providing-guidance-on-adoption-of-electronic-medical-records/662324/tieng-anh.aspx)
-đặt mốc bắt buộc: **mọi bệnh viện phải triển khai bệnh án điện tử chậm nhất
-30/9/2026**. Không có EMR không có dữ liệu; không có dữ liệu, mọi bàn về AI
+đặt mốc bắt buộc: \*\*mọi bệnh viện phải triển khai bệnh án điện tử chậm nhất
+30/9/2026\*\*. Không có EMR không có dữ liệu; không có dữ liệu, mọi bàn về AI
 đều là lý thuyết. Video giới thiệu triển khai:
 
 - [Phóng sự VTV1 Viettel EMR (10/2025)](https://www.youtube.com/watch?v=-eYXL_j2qmY)
@@ -101,7 +104,7 @@ và [10 điểm đáng chú ý của Luật AI 134/2025 (LuatVietnam)](https://w
 
 - **Quyết định 3516/QĐ-BYT (11/2025)** — kiến trúc y tế số phiên bản 3, chuẩn hoá
   liên thông dữ liệu giữa các cơ sở y tế.
-- **[Quyết định 2146/QĐ-BYT (15/7/2026)](https://luatvietnam.vn/y-te/quyet-dinh-2146-qd-byt-2026-ban-hanh-khung-kien-truc-so-bo-y-te-440771-d1.html)** —
+- [**Quyết định 2146/QĐ-BYT (15/7/2026)**](https://luatvietnam.vn/y-te/quyet-dinh-2146-qd-byt-2026-ban-hanh-khung-kien-truc-so-bo-y-te-440771-d1.html) —
   khung kiến trúc số Bộ Y tế cập nhật, tuân thủ HL7 FHIR và các chuẩn quốc tế.
 - **Quyết định 2551/QĐ-BYT (8/2026)** — quản lý an ninh mạng phần mềm thống kê y tế.
 
@@ -139,7 +142,7 @@ nào chạy trong cơ sở y tế từ 1/1/2026 phải: (1) đăng ký hệ th�
 đang tương tác với AI, (4) có cơ chế con người can thiệp khi cần.
 
 **Thứ hai, không có EMR — mọi bàn luận AI đều lý thuyết.** Thông tư 13/2025 đã đặt
-mốc 30/9/2026. Đến 5/2026 mới 1.231/1.650 bệnh viện đạt (~75%), còn khoảng 420
+mốc 30/9/2026. Đến 5/2026 mới 1.231/1.650 bệnh viện đạt (\~75%), còn khoảng 420
 bệnh viện phải chạy nước rút trong 4 tháng cuối. Ai đi trước có dữ liệu, ai đi
 sau vừa phải chạy EMR vừa lo AI — hai gánh nặng cùng lúc.
 
@@ -180,8 +183,8 @@ Trước khi thiết kế bất kỳ ứng dụng AI y tế nào, kiểm tra 3 �
 1. **Ứng dụng có tương tác với sổ sức khỏe điện tử VNeID / EMR bệnh viện không?**
    Nếu có, phải tuân chuẩn HL7 FHIR theo QĐ 2146 và có cơ chế đồng bộ với hệ thống
    quốc gia. Đừng xây dữ liệu song song.
-
 2. **Rủi ro với người bệnh ở mức nào?** Nếu ảnh hưởng quyết định chẩn đoán/điều
+
    trị, xếp vào "rủi ro cao" theo Luật AI 134/2025 — bắt buộc đánh giá tác động
    và có phương án con người can thiệp.
 
@@ -211,9 +214,9 @@ Trước khi thiết kế bất kỳ ứng dụng AI y tế nào, kiểm tra 3 �
 12. VTV1. [Phóng sự Viettel triển khai Bệnh án điện tử EMR](https://www.youtube.com/watch?v=-eYXL_j2qmY) (YouTube). 10/2025.
 13. HealthAI. [Guidance on Ethics & Governance of Artificial Intelligence For Health](https://www.youtube.com/watch?v=2ep59OLD-vg) (YouTube). 9/2025.
 
----
+***
 
-*Ghi chú biên tập*: chương này ghép nội dung ba nghị quyết + hai đạo luật khung
+_Ghi chú biên tập_: chương này ghép nội dung ba nghị quyết + hai đạo luật khung
 để người triển khai không phải đọc riêng từng văn bản. Khi Bộ Y tế cập nhật số
 liệu EMR mới, khung phân tích không đổi. Video là phần bổ trợ trực quan, người
 đọc nên xem sau khi đọc văn bản gốc, không thay thế.
